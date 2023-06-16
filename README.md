@@ -1,2 +1,2 @@
-# Patika.dev-frontEnd-egitimi
-Patika.dev-frontEnd-egitimi
+# Patika.dev-egitimi
+Patika.dev-egitimi
