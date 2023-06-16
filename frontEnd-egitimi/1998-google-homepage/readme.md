@@ -8,4 +8,4 @@ HTML ve CSS kullanarak, eski Google tarama motorunun görünümünü temel alara
 
 ### Proje Görünümü
 ---
-![github](img/google.jpg.PNG)
+![github](img/google.jpg)
