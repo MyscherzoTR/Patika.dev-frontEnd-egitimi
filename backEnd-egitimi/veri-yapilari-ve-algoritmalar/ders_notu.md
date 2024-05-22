@@ -137,12 +137,12 @@ Queue (Kuyruk)'da eleman eklemesi yaparken enqueue methodunu kullanıyoruz. Elem
 - Kaynak Siteler
     * [Doğrusal Veri Yapıları 4 - Kuyruk (Queue) Kodlu Örnek](https://medium.com/@tolgahan.cepel/do%C4%9Frusal-veri-yap%C4%B1lar%C4%B1-4-kuyruk-queue-dcbd07e8ba77)
 
-### G. Hash Function/ Hash Table - Detaylı Araştır!
+### G. Hash Function(Karma Fonksiyonu)/ Hash Table(Karma Tablosu) - Detaylı Araştır!
 - Indexleme
 Arraylerde 0 bazlı bir indexleme vardır. Bazı programlama dillerin de 1 bazlı indexlemeler olsa da genel olarak 0 bazlı indexleme kullanılır. Yani 0'dan başlar index sayısı.
 ![Indexleme](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/hash-table/figures/Indexleme.png)
-- Hash Function/ Hash Table
-Hash Table, key value prensibine dayanan bir array kümesidir. Key olarak çağırdığınız elemanın değerini (value) yansıtır. 
+- Hash Function(Karma Fonksiyonu)/ Hash Table(Karma Tablosu)
+Hash Table(Karma Tablosu), key value prensibine dayanan bir array kümesidir. Key olarak çağırdığınız elemanın değerini (value) yansıtır. 
 Hash Table yerine dizileri kullanabilirdik. Fakat her ürünü ve fiyatını tek tek aramak istemediğimiz için hash table kullanıyoruz. Peki bu süreç nasıl işliyor? Hemen bir örnek yapalım. Örneğimiz bir kuru yemiş dükkanından gelecek.
 ![yok](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/hash-table/figures/%C3%B6rnek-ilk-k%C4%B1s%C4%B1m.png)
     
@@ -153,8 +153,35 @@ Hash Table yerine dizileri kullanabilirdik. Fakat her ürünü ve fiyatını tek
 ![yok](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/hash-table/figures/%C3%B6rnek-ikinci-k%C4%B1s%C4%B1m.png)
 Şifrelendiği için artık her badem keyi gönderildiğinde 85TL, fıstık keyi gönderildiğinde ise 69 sonucu verecektir.
 
-Özetle, elimizde var olan verileri bir fonksiyondan geçirip indexliyoruz. Bu fonksiyona hash function, bu fonksiyon ile birleştiğimiz dizi yapısına ise Hash Table diyoruz.
+Özetle, elimizde var olan verileri bir fonksiyondan geçirip indexliyoruz. Bu fonksiyona hash function(karma fonksiyonu), bu fonksiyon ile birleştiğimiz dizi yapısına ise Hash Table(Karma Tablosu) diyoruz.
 
 - Kaynak Siteler
     * [Hash Table #13](https://www.youtube.com/watch?v=jhc-KG3htrM)
     * [Hash Table (Karım Tablosu, Özet Tablosu) Veri Yapıları 22. Video](https://www.youtube.com/watch?v=_TCkO3DnVs4)
+
+### H. Hash Function(Karma Fonksiyonu)
+Hash Function (Karma Fonksiyonu), karma fonksiyonu olabilmesi için bazı temel şartlar vardır.Bunlar;
+
+- Gönderdiğimiz ***anahtarlar (keys) farklı*** olmasına rağmen aynı sonuçları alıyorsak bu bir ***hash function*** değildir.
+    * *Farklı girdilere farklı sonuç/çıktı vermeli!*
+- Fonksiyona gönderilen ***anahtarlar aynı*** fakat sonuç farklı ise ***hash function*** değildir.
+    * *Hash Function sonucu her seferinde aynı girdiye aynı sonuç/çıktı vermeli!*
+- Hash Table(Karma Tablosu) için kullanılan dizinin boyutu verilen sonuçların sayısı kadar olmalıdır. Kaç key varsa o kadar elemanlı olmalı dizi(array).
+    * *Hash functiondan 8 değer döndü dizinin boyutu 8 elemanlı olmalıdır.*
+
+Fakat her zaman tutarlı olmuyor. Bazen **Collision** dediğimiz sorun ortaya çıkıyor.
+- Farklı girdiye farklı sonuç veremiyor. Farklı çıktılar aynı sonuçlar doğurabiliyor.
+
+- Kaynak Siteler
+    * [Hash Function #14](https://www.youtube.com/watch?v=ZX-1qPSYC_k)
+
+### I. Hash Collision
+Hash Function'da ***farklı iki değerden aynı sayı üretilirse*** bu duruma ***Collison (çarpışma)*** denir. Bu olay istediğimiz bir durum değildir.
+
+- Hash Function'lar bazen farklı durumlar için farklı sonuçlar üretemeyebilir. *Örnek verelim;* 
+    * Araçları bir hash function dan geçirelim. Bu fonksiyonumuz **araçların son harflerine** göre değer atasın. Motor ve tır, bunların son harfleri ***"R"*** olduğu için fonksiyon çıktısında aynı değerler verilir ve bu **collision'a neden olur.**
+- Collision sorunuyla az karşılaşabilmek için kaliteli bir hash function olmalı. Bu sayede verimli bir Hash Table elde etmiş oluyoruz.
+- Çarpışma sayısı arttıkça aradığımız şeyi bulma hızı azalır.
+
+- Kaynak Siteler
+    * [Hash Collision #15](https://www.youtube.com/watch?v=FD7nKLnrguE)
