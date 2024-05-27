@@ -7,20 +7,32 @@ A. CTRL + P => Eğer proje localdeyse, repository Publish yapma yerini açar. Gi
 
 B. CTRL + R => Pull Request işlemini başlatır.
   
-- C. CTRL + I => Repository için Github'da Issue oluşturma (sorun kaydı oluşturur. Detaylı araştırılmalı!).
-- D. CTRL + ` => Seçilen Komut istemcisinde açar Repository dizini/path.
-- E. CTRL + Shift + A => Repository'i varsayılan External Editör veya IDE'de açar. Benim bilgisayarımda "VS Code"
-- F. CTRL + Shift + F => Repository klasörünü açar.
-- G. CTRL + Shift + G => Repository Github hesabında varsa onun sayfasını açar.
-- H. CTRL + Shift + P => Pull işlemi yapar. Github dan güncel değişiklikleri çeker.
-- I. CTRL + Shift + N => New branch; Yeni Branch açar.
-- J. CTRL + Shift + R => Rename; Aktif Branch adını değiştirir.
-- K. CTRL + Shift + D => Delete; Aktif Branchi siler.
-- L. CTRL + Shift + Backspace => Discard all changes; Yapılan tüm değişiklikler geri alınır, iptal edilir.
-- M. CTRL + Shift + S => Stash all changes; Commit yapmak istenilmediğinde kullanılır stash'e alma. Bunu detaylı araştır.!
-- N. CTRL + Shift + U => Update from main; Aktif branch'e, main branchde ki son değişiklikleri çeker.
-- O. CTRL + Shift + B => Compare to branch; 2 farklı branch'i karşılaştırır(origin main ve local main içinde karışlaştırma yapılır. Branch seçimini kullanıcı kendi yapar).
-- P. CTRL + Shift + C => Compare on Github; Githab üzerinden 2 farklı branch'i karşılaştırır(origin main ve local main içinde karışlaştırma yapılır. Branch seçimini kullanıcı kendi yapar).
+C. CTRL + I => Repository için Github'da Issue oluşturma (sorun kaydı oluşturur. Detaylı araştırılmalı!).
+D. CTRL + ` => Seçilen Komut istemcisinde açar Repository dizini/path.
+
+E. CTRL + Shift + A => Repository'i varsayılan External Editör veya IDE'de açar. Benim bilgisayarımda "VS Code"
+
+F. CTRL + Shift + F => Repository klasörünü açar.
+
+G. CTRL + Shift + G => Repository Github hesabında varsa onun sayfasını açar.
+
+H. CTRL + Shift + P => Pull işlemi yapar. Github dan güncel değişiklikleri çeker.
+
+I. CTRL + Shift + N => New branch; Yeni Branch açar.
+
+J. CTRL + Shift + R => Rename; Aktif Branch adını değiştirir.
+
+K. CTRL + Shift + D => Delete; Aktif Branchi siler.
+
+L. CTRL + Shift + Backspace => Discard all changes; Yapılan tüm değişiklikler geri alınır, iptal edilir.
+
+M. CTRL + Shift + S => Stash all changes; Commit yapmak istenilmediğinde kullanılır stash'e alma. Bunu detaylı araştır.!
+
+N. CTRL + Shift + U => Update from main; Aktif branch'e, main branchde ki son değişiklikleri çeker.
+
+O. CTRL + Shift + B => Compare to branch; 2 farklı branch'i karşılaştırır(origin main ve local main içinde karışlaştırma yapılır. Branch seçimini kullanıcı kendi yapar).
+
+P. CTRL + Shift + C => Compare on Github; Githab üzerinden 2 farklı branch'i karşılaştırır(origin main ve local main içinde karışlaştırma yapılır. Branch seçimini kullanıcı kendi yapar).
 ___
 
 <br>
