@@ -37,7 +37,7 @@ D. Link için;
 
 E. Fotoğraf/IMG için;
 - ![alt_tagı]---(fotoğrafın_konum_linki) => fotoğraf eklemek bu şekilde kullanılıyor. ***alt_tag*** yazısı fotoğraf bulunamadıysa görünür, istediğiniz mesajı yazabilirsiniz. Arada tireler olmayacak =>
-    * ![alt_tagı](https://cdn-dbcei.nitrocdn.com/uxKISBOnHYmxdEahjrIbaeEmFYftmpcT/assets/images/optimized/rev-7180140/technovadi.com/wp-content/uploads/2018/08/technovadi-logo.png)
+    * ![alt_tagı](https://technovadi.com/wp-content/uploads/2018/08/technovadi-logo.png)
 
 F. HR tagı koyma (Ayırıcı);
 - "---" veya "***" => 3 tane yan yana. Tırnaklar olmayacak.
