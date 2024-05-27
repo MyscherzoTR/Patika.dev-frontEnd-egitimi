@@ -8,6 +8,7 @@ A. CTRL + P => Eğer proje localdeyse, repository Publish yapma yerini açar. Gi
 B. CTRL + R => Pull Request işlemini başlatır.
   
 C. CTRL + I => Repository için Github'da Issue oluşturma (sorun kaydı oluşturur. Detaylı araştırılmalı!).
+
 D. CTRL + ` => Seçilen Komut istemcisinde açar Repository dizini/path.
 
 E. CTRL + Shift + A => Repository'i varsayılan External Editör veya IDE'de açar. Benim bilgisayarımda "VS Code"
