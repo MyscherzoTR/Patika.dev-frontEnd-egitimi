@@ -62,7 +62,7 @@ Hemmen bir örnek çözelim.
 
 - Kaynak Siteler
  * [Youtube - Recursive Fonksiynlar Nasıl Çalışır ve Örnek Kodlama](https://www.youtube.com/watch?v=cv7CY8UmFL0)
- * [Java Dersleri #43 - Recursive (Özyineli) Metotlar](https://www.youtube.com/watch?v=I3_wU5fr3Zo)
+ * [Youtube - Java Dersleri #43 - Recursive (Özyineli) Metotlar](https://www.youtube.com/watch?v=I3_wU5fr3Zo)
 
 
 <hr>
@@ -156,8 +156,8 @@ Hash Table yerine dizileri kullanabilirdik. Fakat her ürünü ve fiyatını tek
 Özetle, elimizde var olan verileri bir fonksiyondan geçirip indexliyoruz. Bu fonksiyona hash function(karma fonksiyonu), bu fonksiyon ile birleştiğimiz dizi yapısına ise Hash Table(Karma Tablosu) diyoruz.
 
 - Kaynak Siteler
-    * [Hash Table #13](https://www.youtube.com/watch?v=jhc-KG3htrM)
-    * [Hash Table (Karım Tablosu, Özet Tablosu) Veri Yapıları 22. Video](https://www.youtube.com/watch?v=_TCkO3DnVs4)
+    * [Youtube - Hash Table #13](https://www.youtube.com/watch?v=jhc-KG3htrM)
+    * [Youtube - Hash Table (Karım Tablosu, Özet Tablosu) Veri Yapıları 22. Video](https://www.youtube.com/watch?v=_TCkO3DnVs4)
 
 ### H. Hash Function(Karma Fonksiyonu)
 Hash Function (Karma Fonksiyonu), karma fonksiyonu olabilmesi için bazı temel şartlar vardır.Bunlar;
@@ -173,7 +173,7 @@ Fakat her zaman tutarlı olmuyor. Bazen **Collision** dediğimiz sorun ortaya ç
 - Farklı girdiye farklı sonuç veremiyor. Farklı çıktılar aynı sonuçlar doğurabiliyor.
 
 - Kaynak Siteler
-    * [Hash Function #14](https://www.youtube.com/watch?v=ZX-1qPSYC_k)
+    * [Youtube - Hash Function #14](https://www.youtube.com/watch?v=ZX-1qPSYC_k)
 
 ### I. Hash Collision
 Hash Function'da ***farklı iki değerden aynı sayı üretilirse*** bu duruma ***Collison (çarpışma)*** denir. Bu olay istediğimiz bir durum değildir.
@@ -184,7 +184,7 @@ Hash Function'da ***farklı iki değerden aynı sayı üretilirse*** bu duruma *
 - Çarpışma sayısı arttıkça aradığımız şeyi bulma hızı azalır.
 
 - Kaynak Siteler
-    * [Hash Collision #15](https://www.youtube.com/watch?v=FD7nKLnrguE)
+    * [Youtube - Hash Collision #15](https://www.youtube.com/watch?v=FD7nKLnrguE)
 
 
 <hr>
@@ -198,7 +198,7 @@ Hash Function'da ***farklı iki değerden aynı sayı üretilirse*** bu duruma *
 - Donanımlar veya programlama dilleri farklı cihazlarda aynı performansı vermeyebilir. Örnek verecek olursak, cep telefonları için uygulama tasarladığımızı varsayalım. Bu uygulamanın performansı Apple telefonlar için farklı, Android telefonlar için farklı, arasında donanım farklı olanlar için ayrı olacaktır. Donanım ve diller ile algoritma analizi pek sağlıklı değildir.
 
 - Kaynak Siteler
-    * [Algoritma Analizi #16](https://www.youtube.com/watch?v=Pi32FSu1TNg)
+    * [Youtube - Algoritma Analizi #16](https://www.youtube.com/watch?v=Pi32FSu1TNg)
     * [Derinlemesine Algoritma Analizi](https://birhankarahasan.com/algoritma-analizi-nedir-zaman-karmasikligi-big-o-gosterimi)
 
 ### B. Ram Modeli
@@ -212,5 +212,24 @@ Bu hayalî cihaza ***RAM (Random Access Machine)*** diyoruz. Ram, algoritmalar a
     * Hafızadan her okuma işlemi 1 birim zaman alır.
 
 - Kaynak Siteler
-    * [Ram Modeli(Random Access Machine) #17](https://www.youtube.com/watch?v=lrHoiZig3Z8)
+    * [Youtube - Ram Modeli(Random Access Machine) #17](https://www.youtube.com/watch?v=lrHoiZig3Z8)
     * [ChatGPT - RAM Modeli ve Kullanımı](https://chatgpt.com/share/5acbf049-521c-4593-90b5-44b9cc4b4b48)
+
+## C. Time Complexity
+Algoritmanın verimli olması için belli kurallar vardır. ***Örnek: Raflara kitap yerleştirmek.***
+
+- Kitapları, gelişigüzel raflara dağıtırsak aradığımız kitabı daha fazla zamanda bulabiliriz. Aslında bu bir ***[worst case](https://bilgisayarkavramlari.com/2008/12/22/en-kotu-durum-analizi-worst-case-analysis/)***'dir. Beklenilen en kötü durum(vereceğimiz inputun algoritmamızı en yavaş/en fazla işlem yapacak şekilde çalıştırdığı durum). Kitapları filtrelememiz gerekir. Kalın olanları bir rafa, ince olanları bir rafa, küçük boyutta olanları bir rafa koyduğumuz zaman aradığımız şeyi daha rahat bulabiliriz. Algoritma, en kötü senaryoya ne kadar hazırsa, bizi o kadar memnun edebilir.
+- Algoritmalar için genellikle sık kullanılan ***average case***'dir. Kısacası genel olarak beklenilen durum. Kitapların bölümüne göre kaç tane olduğunu biliyorsak average case kullanabiliriz. En büyük rafı miktarı fazla olana ayırabiliriz. Input yoksa average zordur!!!!
+- Bir diğer senaryomuz ise ***best case***'dir. Beklediğimiz en iyi durum(vereceğimiz inputun algoritmamızı en hızlı şekilde çalıştırdığı durum). Kitap örneğine devam edecek olursak, bütün kitapların ayrı raflarda olması, alfabeye göre sıralanması best case olarak ifade edilebilir. Çünkü aradığımızı rahatlıkla bulabiliyoruz.
+
+- Kaynak Siteler
+    * [Youtube - Time Complexity #18](https://www.youtube.com/watch?v=Ie_Ax6KLI80)
+    * [Youtube - Algoritma Analizi ve Big O (Time Complexity, Space Complexity)](https://www.youtube.com/watch?v=wMp0BrWaoz8)
+    * [worst case nedir?](https://bilgisayarkavramlari.com/2008/12/22/en-kotu-durum-analizi-worst-case-analysis/)
+
+## D. Nedir Bu “Big O Notation”?
+
+- Kaynak Siteler
+    * [Youtube - Big O Notation #19](https://www.youtube.com/watch?v=AeeSlV64TOI)
+    * [Nedir Bu “Big O Notation”?](https://medium.com/kodcular/nedir-bu-big-o-notation-b8b9f1416d30)
+    * [Algoritma Karmaşıklığı (Big-O)](https://medium.com/algorithms-data-structures/algoritma-karma%C5%9F%C4%B1kl%C4%B1%C4%9F%C4%B1-big-o-5f14316890a4)
