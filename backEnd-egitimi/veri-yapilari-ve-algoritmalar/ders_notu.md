@@ -185,3 +185,32 @@ Hash Function'da ***farklı iki değerden aynı sayı üretilirse*** bu duruma *
 
 - Kaynak Siteler
     * [Hash Collision #15](https://www.youtube.com/watch?v=FD7nKLnrguE)
+
+
+<hr>
+
+
+## 3. Algoritma Analizi
+
+### A. Algoritma Analizi Giriş
+- Algoritma analizi, bir algoritmanın çalışabilmesi için gerekli koşulların sağlanıp sağlanamadığını gösteren bir parametredir.
+-Algoritma analizi, var olan kaynaklara göre en uygun algoritmayı seçmek için uygulanır. Peki algoritma analizi en iyi nasıl yapılır? Kulağa karmaşık geliyor ama çok basit. Programlama dillerinden ve donanımlardan bağımsız bir şekilde Algoritma analizi yapılmalıdır. Aksi taktirde en uygun sonuç alınamayabilir.
+- Donanımlar veya programlama dilleri farklı cihazlarda aynı performansı vermeyebilir. Örnek verecek olursak, cep telefonları için uygulama tasarladığımızı varsayalım. Bu uygulamanın performansı Apple telefonlar için farklı, Android telefonlar için farklı, arasında donanım farklı olanlar için ayrı olacaktır. Donanım ve diller ile algoritma analizi pek sağlıklı değildir.
+
+- Kaynak Siteler
+    * [Algoritma Analizi #16](https://www.youtube.com/watch?v=Pi32FSu1TNg)
+    * [Derinlemesine Algoritma Analizi](https://birhankarahasan.com/algoritma-analizi-nedir-zaman-karmasikligi-big-o-gosterimi)
+
+### B. Ram Modeli
+Bir algoritmayı farklı cihazlarda denemek bize pek fazla bir sonuç çıkarmıyordu. Çünkü kaynaklar değişebiliyordu. Bu probleme genel bir çözüm getirebilmek için hayalî bir cihaz düşünelim. Bu cihaz üzerinde bütün algoritmaları çalıştırdıktan sonra bize bir sonuç verecek. Kısacası; **genellenebilir bir analiz yapmak için her algoritmayı aynı bilgisayar ile test ediyor gibi düşüneceğiz.**
+
+Bu hayalî cihaza ***RAM (Random Access Machine)*** diyoruz. Ram, algoritmalar arasındaki farkları belirlemek için kullanacağımız bir araç olacak.
+
+- Her işlemin birim zamanı mevcuttur. Bunlara örnek;
+    * Döngüler kaç defa işlem yapıyorsa (işlem sayısı * kaç kere tekrar edeceği) o kadar birim zaman alır. 
+    *Toplama, Çıkarma, and, or gibi *basit aritmetik/logic işlemler* 1 birim zaman alır.
+    * Hafızadan her okuma işlemi 1 birim zaman alır.
+
+- Kaynak Siteler
+    * [Ram Modeli(Random Access Machine) #17](https://www.youtube.com/watch?v=lrHoiZig3Z8)
+    * [ChatGPT - RAM Modeli ve Kullanımı](https://chatgpt.com/share/5acbf049-521c-4593-90b5-44b9cc4b4b48)
