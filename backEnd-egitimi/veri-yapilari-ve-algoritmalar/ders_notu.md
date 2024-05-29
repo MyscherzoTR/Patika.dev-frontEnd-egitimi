@@ -228,6 +228,31 @@ Algoritmanın verimli olması için belli kurallar vardır. ***Örnek: Raflara k
     * [worst case nedir?](https://bilgisayarkavramlari.com/2008/12/22/en-kotu-durum-analizi-worst-case-analysis/)
 
 ## D. Nedir Bu “Big O Notation”?
+***Bu örnekleme worst case(en kötü duruma) göre yapılan bir örneklemedir!***
+
+1000 sayfalık bir sözlük düşünelim. **Normal bir A algoritması** 1.sayfadan başlayıp aranılan kelimeyi sayfa sayfa tarar. Bu çok fazla işlem yükü ve beraberinde zaman kaybı getirir.
+
+Bu seferde **B algoritması** diyelim. Sözlük alfabetik olarak sıralanmıştır. Aradığımız kelime için ilk olarak sözlüğü 2'ye böleriz. ***Sol da ilk 500 sayfa sağda son 500 sayfa olarak.*** Sonra aradığımız kelimeye bakarız. Eğer ilk 500 sayfa içinde ki harflerle eşleşiyorsa sağdaki yani son 500 sayfayı eleriz. Tam tersi durumda ise sağ daki 500 sayfa ile eşleşirse bu sefer ilk 500 sayfayı eleriz. Böylece elimizde her **durumda sadece 500 sayfalık** arama yapılacak yer kalmış olur.
+
+Şuan elimizde ***sadece 500 sayfa kaldı.*** Bu sayfalar içinde aynısını yapıyoruz. Yine 2'ye bölüyoruz. Sol ve sağ olarak yine kontrol ediyoruz. Böyle böyle yani 2'ye böle böle aramamız gereken alanı azaltıyoruz. En son elimizde aradığımız kelimeye ait sayfa kalıyor ve bu sayfada da **aynı yöntemi yaparak(bu sefer sayfayı 2'ye bölüyoruz sürekli)** kelimeyi buluyoruz. 
+
+1000 sayfalık sözlüğün tamamını teker teker aramak yerine böyle bir yöntemle çok daha az efor ve kısa zamanda aradığımız kelimeyi bulmuş oluyoruz. ***Yani problem her seferinde yarı boyutuna inmiş oluyor.***
+
+Bu örnek 1000 sayfalık bir sözlükte yapılan bir değerlendirmeydi. Algoritmanın faydalı olup olmaması bir çok faktöre/input(sözlük boyutu, aranılan kelime vb.) bağlı olabilir. 10.000 sayfalık bir sözlükte çok daha hızlı olacaktır son sayfalardaki kelimeyi ararken. 
+
+***Worst Case örneği değil! Bir dipnot daha iyi anlaşılması için;* Fakat diyelim ki ilk sayfa da bizim aradığımız kelime. Bu durumda **normal A algoritması çok daha hızlı çalışacaktır** Çünkü 1.sayfadan taramaya başladığı için direkt bulacaktır ama B algoritması sürekli sözlüğün ortasından 2'ye böldüğü için çok daha fazla vakit ve işlem alacaktır. Buna rağmen B algoritmasının Worst Case A algoritmasının worst case'inden daha iyi olacaktır. Çünkü A algoritması için Worst Case en sonuncu sayfa artık sözlük kaç sayfa ise.
+
+#### İşte bu noktada devreye **"Big O Notation"** girer. ***Peki nedir bu Big O Notation?;***
+
+Bog o natation algoritmanın ne kadar sürede çalışacağını bize söylemeyecej. Bize algoritmamızın çalışma zamanının inputun boyutu ile nasıl değişeceğini söyleyece/gösterecek.
+
+Input Boyutuna(input size), *n* diyelim. Algoritmamızın en kötü durumda n işlem yapması beklenir. Inputum n boyutunda olunca çalışma süremin de en kötü durumda n olmasını *O(n)* ile göstereceğim. Aynısı B algoritması için de geçerli *O(logn)*
+
+Kısacası A algoritması input size göre sürekli artış gösterirken B algoritması bir süre sonra sabit zamanda işlemler(arama vb.) yaptırır.
+
+
+Big O notation da yapılacak toplam işlem sayısının input size ile nasıl scale olacağına bakıyoruz. Bizim için fonksiyonun yapısı önemli. İşlem sayısı nasıl artıyor; Linear, karesi ile orantılı, logaritmik mi nasıl? Big o notaion bana bunu vermiş oluyor.
+
 
 - Kaynak Siteler
     * [Youtube - Big O Notation #19](https://www.youtube.com/watch?v=AeeSlV64TOI)
