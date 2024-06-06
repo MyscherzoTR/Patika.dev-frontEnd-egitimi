@@ -3,7 +3,7 @@
 
 ## 1. Temel Kavramlar
 
-#### A. Algoritma nedir;
+### A. Algoritma nedir;
 
 Algoritma belirli bir durumdan başlayıp belirli bir sonuçta biten problemlere çözüm getiren adımlar bütünüdür.
 
@@ -12,7 +12,7 @@ Algoritma belirli bir durumdan başlayıp belirli bir sonuçta biten problemlere
     * https://tr.khanacademy.org/computing/computer-science/algorithms
     * https://tr.khanacademy.org/computing/computer-science/algorithms/intro-to-algorithms/v/what-are-algorithms
 
-#### B. Makine Dili (0 ve 1);
+### B. Makine Dili (0 ve 1);
 
 İkili sayılarda bulunan **0 ve 1 rakamları (bit)**, bilgisayarın elektrik iletimi için kullandığı transistörlerin ***(elektrik akımı iletir)*** açık veya kapalı olma durumunu gösterir. Transistörlerde iki tane komut vardır, 0 (kapat, elektrik geçmiyor/yok) ve 1 (aç, elektrik geçiyor/var).
 
@@ -25,14 +25,14 @@ Algoritma belirli bir durumdan başlayıp belirli bir sonuçta biten problemlere
     * [Compiler (Derleyici) ve Interpreter (Yorumlayıcı) Nedir?](https://medium.com/@msenell/derleyi%CC%87ci%CC%87-compiler-ve-yorumlayici-interpreter-%C3%BCzeri%CC%87ne-bi%CC%87r-deneme-d8656619ef6)
     * [Java - Bytecode](https://tr.wikipedia.org/wiki/Java_bytecode)
 
-#### C. Sayı Tabanları (İkilik ve Onluk);
+### C. Sayı Tabanları (İkilik ve Onluk);
 - [Onluk Tabanından İkilik Tabana Çevirme Kod Örneği](https://prog.asmaamir.com/e-tabancevirme)
 
 
-#### D. Binary Symbols - Araştır!
+### D. Binary Symbols - Araştır!
 Sayısal olmayan verilerin bir sembol olduğunu ve 0 ve 1'lerdan oluştuğunu hep birlikte öğrendik. Binary olarak gördüğümüz ifade makine kodundan dolayı farklı bir nesneyi işaret edebilir.
 
-#### E. Bilgisayarda Verilerin Tutulması
+### E. Bilgisayarda Verilerin Tutulması
 Bilgisayar, yapısından dolayı içerisinde tutulabilecek veri miktarı sınırlıdır. Bu verilerin en küçük yapı taşları bitlerdir. *Bilgisayar hafızasında ki bir kutucuğa **1 bit** denir*. Kutucuk arttıkça bit sayısıda artar yani ***2 kutucuk varsa 2 bit*** demektir bu. bitler 0 ve 1'lerden oluşur. 
 
 Bu bitleri bir hafıza gibi düşünebiliriz. Ne kadar çok bit dolar ise boyut o kadar artar ve daha az veri depolama alanımız kalır. 8 kutucuk yan yana geldiğinde yani 8 bit olduğunda 1 Byte deniyor. ***8 bit = 1 Byte*** adlandırma ile alakalı bir şey. **Metre, Santimetre gibi düşünülebilir tamamen adlandırma.**
@@ -58,7 +58,7 @@ Hemmen bir örnek çözelim.
     * [Bit Nedir](https://tr.wikipedia.org/wiki/Bit_(bili%C5%9Fim))
     * [Byte Nedir](https://tr.wikipedia.org/wiki/Bayt)
 
-#### F. Recursion - Araştır!
+### F. Recursion - Araştır!
 
 - Kaynak Siteler
  * [Youtube - Recursive Fonksiynlar Nasıl Çalışır ve Örnek Kodlama](https://www.youtube.com/watch?v=cv7CY8UmFL0)
@@ -215,7 +215,7 @@ Bu hayalî cihaza ***RAM (Random Access Machine)*** diyoruz. Ram, algoritmalar a
     * [Youtube - Ram Modeli(Random Access Machine) #17](https://www.youtube.com/watch?v=lrHoiZig3Z8)
     * [ChatGPT - RAM Modeli ve Kullanımı](https://chatgpt.com/share/5acbf049-521c-4593-90b5-44b9cc4b4b48)
 
-## C. Time Complexity
+### C. Time Complexity
 Algoritmanın verimli olması için belli kurallar vardır. ***Örnek: Raflara kitap yerleştirmek.***
 
 - Kitapları, gelişigüzel raflara dağıtırsak aradığımız kitabı daha fazla zamanda bulabiliriz. Aslında bu bir ***[worst case](https://bilgisayarkavramlari.com/2008/12/22/en-kotu-durum-analizi-worst-case-analysis/)***'dir. Beklenilen en kötü durum(vereceğimiz inputun algoritmamızı en yavaş/en fazla işlem yapacak şekilde çalıştırdığı durum). Kitapları filtrelememiz gerekir. Kalın olanları bir rafa, ince olanları bir rafa, küçük boyutta olanları bir rafa koyduğumuz zaman aradığımız şeyi daha rahat bulabiliriz. Algoritma, en kötü senaryoya ne kadar hazırsa, bizi o kadar memnun edebilir.
@@ -227,7 +227,7 @@ Algoritmanın verimli olması için belli kurallar vardır. ***Örnek: Raflara k
     * [Youtube - Algoritma Analizi ve Big O (Time Complexity, Space Complexity)](https://www.youtube.com/watch?v=wMp0BrWaoz8)
     * [worst case nedir?](https://bilgisayarkavramlari.com/2008/12/22/en-kotu-durum-analizi-worst-case-analysis/)
 
-## D. Nedir Bu “Big O Notation”?
+### D. Nedir Bu “Big O Notation”?
 ***Bu örnekleme worst case(en kötü duruma) göre yapılan bir örneklemedir!***
 
 1000 sayfalık bir sözlük düşünelim. **Normal bir A algoritması** 1.sayfadan başlayıp aranılan kelimeyi sayfa sayfa tarar. Bu çok fazla işlem yükü ve beraberinde zaman kaybı getirir.
@@ -264,3 +264,5 @@ Big O notation da yapılacak toplam işlem sayısının input size ile nasıl sc
 
 
 ## 4. Sorting (Sıralama) Algoritmaları
+
+## A.
