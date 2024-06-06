@@ -265,4 +265,74 @@ Big O notation da yapılacak toplam işlem sayısının input size ile nasıl sc
 
 ## 4. Sorting (Sıralama) Algoritmaları
 
-## A.
+### A. Sorting Nedir?
+Sorting, kendinden sıralama algoritmaları olarak bahsetmektedir. Sorting, bir eleman dizisini, belirli sıralama kurallarına göre sıralama yapar.
+
+##### Searcing: Elemanları en başta sıralamak, eleman aramayı hızlandırabilir.
+
+Sıralama algoritmaları kullanmamızdaki amaç, algoritmanın isminden de anlaşılacağı üzere sahip olduğumuz veriyi en hızlı şekilde büyükten küçüğe ya da küçükten büyüğe bir sıraya sokmak. Bunun için kullanılan bir çok sıralama algoritması vardır. Bazısı çok hızlı ama yazımı zor, bazısı az sayıda veri için çok hızlı, bazısının da yazması kolaydır.
+
+Herhangi bir sayıdaki tip verilerin sınırlı bellek ve işlem gücü ile belirli bir sıraya göre dizilmesinin sağlanmasıdır. Burada önemli olan en optimum bellek ve performans ikilisini verecek bir algoritmanın elde edilmesidir.
+
+- Sıralama algoritmalarının bazı kriterlere göre sınıflandırılabiliriz:
+    * **Bellek Kullanımı:** Çalışırken ek bellek ihtiyacı duyan algoritmalarda kullanılabilecek bir ölçüttür buna ek olarak ayrıca da sıralama işleminin yapılması sırasında hafızanın kullanımına göre de sıralama algoritmaları; Harici sıralama (External Sort) ve Dahili Sıralama (Internal Sort).
+    * **Hesaplama Karmaşıklığı:** Oluşturulmuş olan algoritmanın yaptığı işlem sayısının genel bir yapı ile ifade edilmesidir. Temel üç grup ölçek kullanılır. Bunlar en iyi (best), ortalama (average) ve en kötü (worst) durumu olarak belirtilir. İşlem yoğunluğu zaman işleyişiyle paralel olduğundan (ne kadar çok işlem yapılırsa o kadar uzun süre geçer) algoritmanın işleyiş süresini de etkiler.
+    * **Yerdeğiştirmenin Karmaşıklığı:** İçerisinde ek bellek kullanmayan (in place) algoritmalarda kullanılan karşılaştırılabilmesi için önemli bir ölçüttür.
+    * **Durağanlık(stability):** Algoritmanın uygulanması sırasında sıralanmış bir verinin tekrar sıralamaya tabi tutulup tutulmadığını belirten ölçektir.
+    * **Rekürsiflik:** İç içe kendi kendini çağıran algoritmalarda kullanılan bir ölçüttür. Burada en önemli kriter stack dediğimiz maksimum iç içe çağırım kapasitesine dikkat edilmesi ve bu kapasitenin kullanılma sıklığıdır.
+    * **Fakat en önemli kriterler**
+        + Hafıza Verimliliği (Memory efficiency)
+        + Zaman Verimliliği (Time efficiency)
+
+- Aşağıda bazı sıralama algoritmaları verilmiştir:
+    * Seçerek Sıralama (Selection Sort)
+    * Eklemeli Sıralama (Insertion Sort)
+    * Kabuk Sıralaması (Shell Sort)
+    * Birleştirmeli Sıralama (Merge Sort)
+    * Hızlı Sıralama (Quick Sort)
+    * Kabarcık Sıralaması (Bubble Sort)
+
+##### Sıralama Algoritmalarının Karşılaştırılması
+Sık kullanılan sıralama algoritmalarının, verinin karmaşıklığına göre gösterdiği performans:
+
+![Sıralama Algoritmalarının Karşılaştırılması](https://www.halildurmus.com/wp-content/uploads/2021/01/593-Siralama-Algoritmalarini-Karsilastirma-1.png)
+
+- Kaynak Siteler
+    * [Youtube -Sorting #20](https://www.youtube.com/watch?v=v3Z6crtZVek)
+    * [Sıralama Algoritmaları (Sorting Algorithms)](https://www.halildurmus.com/2021/02/22/siralama-algoritmalari-sorting-algorithms/)
+    * [Sıralama Algoritmaları](https://serdarkuzucu.com/siralama-algoritmalari/)
+
+### B. Insertion Sort
+En basit sorting algoritmalarından biridir.
+
+Yerleştirerek sıralama işlevi belirli bir anda dizinin belirli bir kısmını sıralı tutarak ve bu kısmı her adımda biraz daha genişleterek çalışmaktadır. Sıralı kısım işlev son bulunca dizinin tamamına ulaşmaktadır. Elemanların sırasına uygun olarak listeye tek tek eklenmesi ile gerçekleştirilen sıralamadır.
+
+ ```python
+    for i in range(1,len(arr)):
+        deger = arr[i]
+        j = i-1
+        while(j>= 0 and deger < arr[j]):
+            arr[j+1] = arr[j]
+            j -= 1
+        arr[j+1] = deger
+ ```
+
+ ![Eklemeli Sıralama (Insertion Sort) Nasıl Çalışır?](https://www.halildurmus.com/wp-content/uploads/2021/01/Insertion-Sort-Algorithms.gif)
+
+ - Kaynak Siteler
+    * [Youtube - 2 dakikada Insertion Sort](https://www.youtube.com/watch?v=JU767SDMDvA&list=PL9xmBV_5YoZOZSbGAXAPIq1BeUf4j20pl&index=4)
+    * [Insertion Sort Data Structure and Algorithm Tutorials](https://www.geeksforgeeks.org/insertion-sort/)
+
+### C. Selection Sort
+En basit sorting algoritmalarından biridir.
+
+![Selection Sort](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/insertion-sort/figures/insertion-sort.png)
+
+Verilen örüntüye ait ***en küçük elemanı buluyor ve en baştaki sayı ile yer değiştiriyor.*** Peki ya devamı? İkinci en küçük elemanı buluyor ve 2. sıra ile değiştiriyor. Baktın ki ***2.sıradaki eleman en küçük hiç dokunma!!!. Hemen 3. sıraya geç.*** 4, 5 derken dizi bitti. İşte insertion sort'un temel çalışma prensibini öğrendin.
+
+![Selection Sort](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/insertion-sort/figures/insertion-sort.png)
+
+- Kaynak Siteler
+    * [Youtube - Insertion Sort #21](https://www.youtube.com/watch?v=GBXm2h4Eu-0)
+    * [Youtube - 3 dakikada Selection Sort](https://www.youtube.com/watch?v=JU767SDMDvA&list=PL9xmBV_5YoZOZSbGAXAPIq1BeUf4j20pl&index=4)
+    * [Selection Sort Data Structure and Algorithm Tutorials](https://www.geeksforgeeks.org/selection-sort/)
