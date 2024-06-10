@@ -61,8 +61,10 @@ Hemmen bir örnek çözelim.
 ### F. Recursion - Araştır!
 
 - Kaynak Siteler
- * [Youtube - Recursive Fonksiynlar Nasıl Çalışır ve Örnek Kodlama](https://www.youtube.com/watch?v=cv7CY8UmFL0)
- * [Youtube - Java Dersleri #43 - Recursive (Özyineli) Metotlar](https://www.youtube.com/watch?v=I3_wU5fr3Zo)
+    * [Youtube - Veri Yapıları Ders 8 Rekürsif Yapılar](https://www.youtube.com/watch?v=PNWOP_QoBGI&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=9)
+    * [Youtube - Recursive Fonksiyonlar Nasıl Çalışır ve Örnek Kodlama](https://www.youtube.com/watch?v=cv7CY8UmFL0)
+    * [Youtube - Java Dersleri #43 - Recursive (Özyineli) Metotlar](https://www.youtube.com/watch?v=I3_wU5fr3Zo)
+    * [Youtube - Öz Yineleme (Recursion) - Veri Yapıları Ders 02](https://www.youtube.com/watch?v=qT-Fh2kxR6s)
 
 
 <hr>
@@ -81,6 +83,8 @@ Hemmen bir örnek çözelim.
 Yukarıdaki örnekte gördüğünüz üzere, her bir düğüm bir sonrakinin adresini tutar. Her bir önceki eleman bir sonraki eleman ile bağlıdır.
 
 - Kaynak Siteler
+    * [Youtube - Veri Yapıları Ders 2 Listeler](https://www.youtube.com/watch?v=hnE9_7VBKyI&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=3&t=591s)
+    * [Youtube - Veri Yapıları Ders 3 Bağlı Listeler (Tek Yönlü,İki Yönlü,Dairesel)](https://www.youtube.com/watch?v=7vjRwtDP0J4&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=4)
     * [Linked List Nedir](http://cagataykiziltan.net/veri-yapilari-data-structures/1-linked-list-bagli-listeler/)
 
 ### C. Linked List vs Array - Farklarını Detaylı Araştır!
@@ -122,6 +126,7 @@ Yığınlara eleman eklerken veya çıkartırken bazı methodlar uygulanır. Bun
     * Pop: Stack'ten eleman almak. Yığının en üstünden tabak almak. En son tabak en üstteki olduğu için yığından tabak aldığımızda üstten alırız.
 
 - Kaynak Siteler
+    * [Youtube - Veri Yapıları Ders 4 Yığıt (Stack) Yapısı]()
     * [stack-kod-örneği](https://www.baskent.edu.tr/~tkaracay/etudio/ders/prg/dataStructures/Collections/ClassStack.pdf)
 
 ### F. Queue (FIFO) - Detaylı Araştır!
@@ -135,6 +140,7 @@ Queue (Kuyruk)'da eleman eklemesi yaparken enqueue methodunu kullanıyoruz. Elem
     * Enqueue: Yeni elemanın Kuyruğa eklenmesi (yeni birinin sıraya girmesi)
     * Dequeue: Elemanın Kuyruktan çıkarılması (sırası gelenin sıradan çıkması/işi bitenin sıradan ayrılması)
 - Kaynak Siteler
+    * [Youtube - Veri Yapıları Ders 5 Kuyruk Kavramı](https://www.youtube.com/watch?v=W-wCqjKSpys&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=6)
     * [Doğrusal Veri Yapıları 4 - Kuyruk (Queue) Kodlu Örnek](https://medium.com/@tolgahan.cepel/do%C4%9Frusal-veri-yap%C4%B1lar%C4%B1-4-kuyruk-queue-dcbd07e8ba77)
 
 ### G. Hash Function(Karma Fonksiyonu)/ Hash Table(Karma Tablosu) - Detaylı Araştır!
@@ -174,6 +180,10 @@ Fakat her zaman tutarlı olmuyor. Bazen **Collision** dediğimiz sorun ortaya ç
 
 - Kaynak Siteler
     * [Youtube - Hash Function #14](https://www.youtube.com/watch?v=ZX-1qPSYC_k)
+    * [Youtube - Veri Yapıları Ders 9 / Hash Fonksiyonları 1](https://www.youtube.com/watch?v=OYiNo0BTVxQ&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=10)
+    * [Youtube - Veri Yapıları Ders 10 / Hash Fonksiyonları - 2](https://www.youtube.com/watch?v=jxwcjv12TG8&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=11)
+    * [Youtube - Veri Yapıları Ders 11 / Hash Fonksiyonları - 3](https://www.youtube.com/watch?v=Vcr3LizkCuo&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=12)
+    * [Youtube - Veri Yapıları Ders 12 / Hash Fonksiyonları - 4](https://www.youtube.com/watch?v=5h5mBf4k2do&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=13)
 
 ### I. Hash Collision
 Hash Function'da ***farklı iki değerden aynı sayı üretilirse*** bu duruma ***Collison (çarpışma)*** denir. Bu olay istediğimiz bir durum değildir.
@@ -298,7 +308,7 @@ Sık kullanılan sıralama algoritmalarının, verinin karmaşıklığına göre
 ![Sıralama Algoritmalarının Karşılaştırılması](https://www.halildurmus.com/wp-content/uploads/2021/01/593-Siralama-Algoritmalarini-Karsilastirma-1.png)
 
 - Kaynak Siteler
-    * [Youtube -Sorting #20](https://www.youtube.com/watch?v=v3Z6crtZVek)
+    * [Youtube - Sorting #20](https://www.youtube.com/watch?v=v3Z6crtZVek)
     * [Sıralama Algoritmaları (Sorting Algorithms)](https://www.halildurmus.com/2021/02/22/siralama-algoritmalari-sorting-algorithms/)
     * [Sıralama Algoritmaları](https://serdarkuzucu.com/siralama-algoritmalari/)
 
@@ -321,6 +331,7 @@ Yerleştirerek sıralama işlevi belirli bir anda dizinin belirli bir kısmını
 
  - Kaynak Siteler
     * [Youtube - 2 dakikada Insertion Sort](https://www.youtube.com/watch?v=JU767SDMDvA&list=PL9xmBV_5YoZOZSbGAXAPIq1BeUf4j20pl&index=4)
+    * [Youtube - Veri Yapıları Ders 34 Insertion Sort](https://www.youtube.com/watch?v=0lpT0XUy29Q&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=35)
     * [Insertion Sort Data Structure and Algorithm Tutorials](https://www.geeksforgeeks.org/insertion-sort/)
 
 ### C. Selection Sort
@@ -335,4 +346,6 @@ Verilen örüntüye ait ***en küçük elemanı buluyor ve en baştaki sayı ile
 - Kaynak Siteler
     * [Youtube - Insertion Sort #21](https://www.youtube.com/watch?v=GBXm2h4Eu-0)
     * [Youtube - 3 dakikada Selection Sort](https://www.youtube.com/watch?v=JU767SDMDvA&list=PL9xmBV_5YoZOZSbGAXAPIq1BeUf4j20pl&index=4)
+    * [Youtube - Veri Yapıları Ders 32 Selection Sort](https://www.youtube.com/watch?v=Hr-cghhg-Co&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=33)
+    * [Youtube - Veri Yapıları Ders 33 Selection Sort Örnek 2](https://www.youtube.com/watch?v=DzgmtogFFfw&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=34)
     * [Selection Sort Data Structure and Algorithm Tutorials](https://www.geeksforgeeks.org/selection-sort/)
