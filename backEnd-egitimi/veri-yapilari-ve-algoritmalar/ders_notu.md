@@ -354,8 +354,27 @@ Verilen örüntüye ait ***en küçük elemanı buluyor ve en baştaki sayı ile
 ![Selection Sort](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/insertion-sort/figures/insertion-sort.png)
 
 - Kaynak Siteler
-    * [Youtube - Insertion Sort #21](https://www.youtube.com/watch?v=GBXm2h4Eu-0)
+    * [Youtube - Insertion Sort #21(Adı yanlış yazılmış)](https://www.youtube.com/watch?v=GBXm2h4Eu-0)
     * [Youtube - 3 dakikada Selection Sort](https://www.youtube.com/watch?v=JU767SDMDvA&list=PL9xmBV_5YoZOZSbGAXAPIq1BeUf4j20pl&index=4)
     * [Youtube - Veri Yapıları Ders 32 Selection Sort](https://www.youtube.com/watch?v=Hr-cghhg-Co&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=33)
     * [Youtube - Veri Yapıları Ders 33 Selection Sort Örnek 2](https://www.youtube.com/watch?v=DzgmtogFFfw&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=34)
     * [Selection Sort Data Structure and Algorithm Tutorials](https://www.geeksforgeeks.org/selection-sort/)
+
+### D. Merge Sort
+
+Selection Sort'da, Big-O gösteriminden dolayı input'um arttığında ***n^2*** olduğunda dolayı çalışma zamanı artıyor.
+
+Peki daha hızlı bir şekilde sıralama yapılabilir mi? Evet, Merge Sort burada yardımımıza koşuyor. Bir listeyi her adımda parçaya ayırıp tek eleman kalıncaya kadar bölüyor. Böldükten sonra sıralı bir şekilde bize sunuyor (Performans).
+
+![Merge Sort](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/merge-sort/figures/merge-sort.png)
+
+![Merge Sort](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/merge-sort/figures/big-o-merge.png)
+
+Selection Sort'da, time complexity ***n^2*** olduğundan ötürü çalışma zamanımız artıyordu. Merge sort'da ise ***nlogn*** olduğu için açık ara performans olarak daha iyi diyebiliriz.
+
+- Kaynak Siteler
+  * [Youtube - Merge Sort #22](https://www.youtube.com/watch?v=Sx1VfR7EvnA)
+  * [Youtube - 3 dakikada Merge Sort](https://www.youtube.com/watch?v=4VqmGXwpLqc)
+  * [Youtube - Birleştirme Sıralaması (Merge Sort) ve Parçala Fethet (Divide and Conquer) (Algoritma Analizi 10)](https://www.youtube.com/watch?v=f9CNp_uuNJg)
+  * [4. BİRLEŞTİRMELİ SIRALAMA (MERGE SORT)](http://cagataykiziltan.net/algoritmalar/1-siralama-algoritmalari/4-birlestirmeli-siralama/)
+  * [Birleştirme Sıralaması (Merge Sort)](https://bilgisayarkavramlari.com/2008/08/09/birlestirme-siralamasi-merge-sort/)
