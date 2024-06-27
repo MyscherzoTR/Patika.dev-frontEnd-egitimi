@@ -428,7 +428,7 @@ Linear search, tek tek elemanları dolandıktan sonra istediğim elemanın olup 
 
 - İkili arama algoritması, diziyi her seferinde ikiye bölerek ikili arama yapar. Sıralı bir listem var ise benim Big-o logn olarak karşımıza çıkıyor.
 
-- Aradığım sayı **15** ve benim değer kümem ***[10,15,20,16,22,36,23]*** diyelim. Binary Search bu diziyi manipüle ederek şu ifadeye dönüştürüyor. ***[10,15,16,20,22,23,36]***. *36 sayısını en yüksek sayı, 10 sayısını en düşük sayı ilan ediyor.* Benim aradığım sayı ile ortada kalan sayıyı kıyaslıyor eğer benim aradığım sayım küçükse kendinden büyük bütün sayıları siliyor. Ve kendine yeni bir ortanca belirliyor. Böylelikle gereksiz arama yapmaktan kurtarıyor. ![Binary Search](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/binary-search/figures/binary-search.png)
+- Aradığım sayı **15** ve benim değer kümem ***[10,15,20,16,22,36,23]*** diyelim. Binary Search bu diziyi manipüle ederek şu ifadeye dönüştürüyor. ***[10,15,16,20,22,23,36]***. *36 sayısını en yüksek sayı, 10 sayısını en düşük sayı ilan ediyor.* Benim aradığım sayı ile ortada kalan sayıyı kıyaslıyor eğer benim aradığım sayım küçükse, ortada ki sayıdan büyük bütün sayıları siliyor. Ve kendine yeni bir ortanca belirliyor. Böylelikle gereksiz arama yapmaktan kurtarıyor. ![Binary Search](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/binary-search/figures/binary-search.png)
 
 - Kaynak Siteler
   * [Youtube - Binary Search #26](https://www.youtube.com/watch?v=cvsZCh_0H9A)
@@ -437,3 +437,15 @@ Linear search, tek tek elemanları dolandıktan sonra istediğim elemanın olup 
   * [Doğrusal & İkili Arama Algoritmaları (Linear & Binary Search Algorithms)](https://medium.com/@ozgurmehmetakif/do%C4%9Frusal-i%CC%87kili-arama-algoritmalar%C4%B1-linear-binary-search-algorithms-ed5fefc1f003)
   * [İkili Arama Algoritması (Binary Search Algorithm)](https://bilgisayarkavramlari.com/2009/12/21/ikili-arama-algoritmasi-binary-search-algorithm/)
   * [Big O Notation ve Binary Search](https://medium.com/@alifurkangokce/big-o-notation-ve-binary-search-d6f3d4cf4574)
+
+### D. Binary Search Tree
+
+Bir düğüm her iki tarafa da referans verebiliyor. Sağ ve sol olarak. Sağ tarafından kendinden büyük elemanlar, sol tarafında ise kendinden küçük elemanlar bulunacak. ![Binary Search Tree](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/binary-search-tree/figures/binary-search-tree.png)
+
+- Tree'ye eleman eklemek istediğimde root'dan başlıyorum. Örnek olarak ben 26 sayısını ağaç yapısına eklemek istiyorum. Root'a soruyorum senin değerin ne 56. Baştaki açıklamamızı hatırlayalım. Sağ tarafında kendinden büyük, sol tarafında kendinden küçük elemanlar var. O yüzden sırasıyla 56 ve 30 a kadar ilerliyorum. 30 bana benim sol tarafıma geçmelisin çünkü sen benden küçüksün diyor. Karşıma 22 değerinde olan düğüm çıkıyor ve 22 den büyük olduğum için sağ tarafına bir köşe çekiyorum ve 26 sayısını bağlıyorum.
+
+- Kaynak Siteler
+  * [Youtube - Binary Search Tree #27](https://www.youtube.com/watch?v=ec0f3Bh-CJE)
+  * [Youtube - 4 dakikada Binary Search Tree](https://www.youtube.com/watch?v=fDKIpRe8GW4&t=1s)
+  * [Veri Yapıları — Binary Search Tree Nedir?](https://tsafaelmali.medium.com/binary-search-tree-nedir-2e6fb0621d9)
+  * [Binary Search Tree' yi Anlamak](https://www.buraksenyurt.com/post/Binary-Search-Tree-yi-Anlamak)
