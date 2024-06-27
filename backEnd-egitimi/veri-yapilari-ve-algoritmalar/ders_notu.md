@@ -66,6 +66,7 @@ Hemmen bir örnek çözelim.
     * [Youtube - Recursive Fonksiyonlar Nasıl Çalışır ve Örnek Kodlama](https://www.youtube.com/watch?v=cv7CY8UmFL0)
     * [Youtube - Java Dersleri #43 - Recursive (Özyineli) Metotlar](https://www.youtube.com/watch?v=I3_wU5fr3Zo)
     * [Youtube - Öz Yineleme (Recursion) - Veri Yapıları Ders 02](https://www.youtube.com/watch?v=qT-Fh2kxR6s)
+    * [Recursive fonksiyonlar ve Python ile Hanoi Kuleleri çözümü](https://www.youtube.com/watch?v=4GvMYiPLRtU)
 
 <hr>
 
@@ -394,3 +395,45 @@ Hızlı sıralama günümüzde çok yaygın olarak kullanılan bir sıralama alg
   * [Quick Sort (Hızlı Sıralama) Nedir?](https://medium.com/@turgay2317/quick-sort-h%C4%B1zl%C4%B1-s%C4%B1ralama-nedir-2d6555e5f7e2)
   * [Algoritma Dersleri – Quick Sort](https://www.mobilhanem.com/algoritma-dersleri-quick-sort/)
   * [Hızlı Sıralama Algoritması (Quick Sort Algorithm)](https://bilgisayarkavramlari.com/2008/08/09/hizli-siralama-algoritmasi-quick-sort-algorithm/)
+
+<hr>
+
+## 5. Searching (Arama) Algoritmaları
+
+### A. Searching Nedir?
+
+Günümüzde veriler gitgide artan bir hal alıyor. Her insanın bir bilgisayarı ve telefonu olduğunu düşünürsek, terabaytlarca veri ediyor. Arama algoritmaları ise istediğim özellikteki verinin elimdeki veri setlerinde aranıp, bulunup getirilmesi demek. Bunun hızlı olmasına önem gösterilir.
+
+- Kaynak Siteler
+  * [Arama Algoritmaları (Search Algorithms)](https://bilgisayarkavramlari.com/2009/11/23/arama-algoritmalari-search-algorithms/)
+  * [Arama Algoritmaları (Search Algorithms) Nedir?](https://enesates03.medium.com/arama-algoritmalar%C4%B1-search-algorithms-nedir-7c8be09d541a)
+
+### B. Linear Search
+
+Linear search, tek tek elemanları dolandıktan sonra istediğim elemanın olup olmadığına bakmaktır. En basit arama algoritmasıdır. Örneğin;
+
+- [20,25,46,48] veri setini ele alalım. Benim aradığım eleman 25. İlk elemana gidiyorum ve değeri 20 sen değilsin diyorum. İkinci elemana gidiyorum ve değeri 25 evet sensin diyorum. Linear search algoritmam burada bitmiş oluyor.
+
+- Big-o ya göre incelediğimizde bizim worst case'imiz neydi? Elemanın dizinin sonunda bulunmasıydı. Bu sebepten ötürü n elemanımız varsa big-o notasyonumuz otomatik olarak n oluyor.
+
+- Kaynak Siteler
+  * [Youtube - Linear Search #25](https://www.youtube.com/watch?v=fPGqKlUKh7c)
+  * [Youtube - Her Yazılımcının Bilmesi Gereken Algoritmalar - Lineer Arama(Linear Search) ve Python ile Kodlaması](https://www.youtube.com/watch?v=hPVJJyXFr-c)
+  * [Doğrusal & İkili Arama Algoritmaları (Linear & Binary Search Algorithms)](https://medium.com/@ozgurmehmetakif/do%C4%9Frusal-i%CC%87kili-arama-algoritmalar%C4%B1-linear-binary-search-algorithms-ed5fefc1f003)
+  * [Doğrusal Arama (Linear Search)](https://bilgisayarkavramlari.com/2008/11/09/dogrusal-arama-linear-search/)
+
+### C. Binary Search
+
+İkili arama algoritması, elimizde bulunan veri dizisini sıralı olduğunu varsayıyor, bu durumu değiştirerek sonuca varmak istiyor.
+
+- İkili arama algoritması, diziyi her seferinde ikiye bölerek ikili arama yapar. Sıralı bir listem var ise benim Big-o logn olarak karşımıza çıkıyor.
+
+- Aradığım sayı **15** ve benim değer kümem ***[10,15,20,16,22,36,23]*** diyelim. Binary Search bu diziyi manipüle ederek şu ifadeye dönüştürüyor. ***[10,15,16,20,22,23,36]***. *36 sayısını en yüksek sayı, 10 sayısını en düşük sayı ilan ediyor.* Benim aradığım sayı ile ortada kalan sayıyı kıyaslıyor eğer benim aradığım sayım küçükse kendinden büyük bütün sayıları siliyor. Ve kendine yeni bir ortanca belirliyor. Böylelikle gereksiz arama yapmaktan kurtarıyor. ![Binary Search](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/binary-search/figures/binary-search.png)
+
+- Kaynak Siteler
+  * [Youtube - Binary Search #26](https://www.youtube.com/watch?v=cvsZCh_0H9A)
+  * [Youtube - 4 dakikada Binary Search](https://www.youtube.com/watch?v=fDKIpRe8GW4)
+  - [Youtube - İkili Arama Algoritması(Binary Search Algorithm)](https://www.youtube.com/watch?v=Bi9zq4bS4Hw)
+  * [Doğrusal & İkili Arama Algoritmaları (Linear & Binary Search Algorithms)](https://medium.com/@ozgurmehmetakif/do%C4%9Frusal-i%CC%87kili-arama-algoritmalar%C4%B1-linear-binary-search-algorithms-ed5fefc1f003)
+  * [İkili Arama Algoritması (Binary Search Algorithm)](https://bilgisayarkavramlari.com/2009/12/21/ikili-arama-algoritmasi-binary-search-algorithm/)
+  * [Big O Notation ve Binary Search](https://medium.com/@alifurkangokce/big-o-notation-ve-binary-search-d6f3d4cf4574)
