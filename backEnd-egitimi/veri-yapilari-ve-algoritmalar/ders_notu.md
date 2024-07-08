@@ -4,8 +4,8 @@
 
 ### A. Algoritma nedir
 
-- Algoritma belirli bir durumdan başlayıp belirli bir sonuçta biten problemlere çözüm getiren adımlar bütünüdür.
-- Bir işi bitirmek için gerçekleştirilmesi gereken adımlar bütünüdür.
+Algoritma belirli bir durumdan başlayıp belirli bir sonuçta biten problemlere çözüm getiren adımlar bütünüdür. ***Veya*** Bir işi bitirmek için gerçekleştirilmesi gereken adımlar bütünüdür.
+
 - Minimaks(en küçük - en büyük) Algoritmaları araştır.
 
 - Kaynak Siteler
@@ -453,3 +453,13 @@ Bir düğüm her iki tarafa da referans verebiliyor. Sağ ve sol olarak. Sağ ta
   * [Youtube - 4 dakikada Binary Search Tree](https://www.youtube.com/watch?v=fDKIpRe8GW4&t=1s)
   * [Veri Yapıları — Binary Search Tree Nedir?](https://tsafaelmali.medium.com/binary-search-tree-nedir-2e6fb0621d9)
   * [Binary Search Tree' yi Anlamak](https://www.buraksenyurt.com/post/Binary-Search-Tree-yi-Anlamak)
+
+<hr>
+
+## 5. Karar Verme Algoritması
+
+### A. Minimax Algoritması
+
+- Kaynak Siteler
+  * [Minimax Algoritması ile TicTacToe Oyunu](https://ahmetatasoglu98.medium.com/minimax-algoritmas%C4%B1-ile-tictactoe-oyunu-82fc58d76b61)
+  * [Minimax Ağaçları (Minimax Tree)](https://bilgisayarkavramlari.com/2009/04/29/minimax-agaclari-minimax-tree/)
