@@ -4,12 +4,12 @@
 
 ### A. Algoritma nedir
 
-Algoritma belirli bir durumdan başlayıp belirli bir sonuçta biten problemlere çözüm getiren adımlar bütünüdür.
+- Algoritma belirli bir durumdan başlayıp belirli bir sonuçta biten problemlere çözüm getiren adımlar bütünüdür.
+- Bir işi bitirmek için gerçekleştirilmesi gereken adımlar bütünüdür.
+- Minimaks(en küçük - en büyük) Algoritmaları araştır.
 
 - Kaynak Siteler
-    * https://tr.wikipedia.org/wiki/Algoritma
-    * https://tr.khanacademy.org/computing/computer-science/algorithms
-    * https://tr.khanacademy.org/computing/computer-science/algorithms/intro-to-algorithms/v/what-are-algorithms
+    * [khanacademy - Algoritma Nedir ve Neden Öğrenmeliyiz?](https://tr.khanacademy.org/computing/computer-science/algorithms/intro-to-algorithms/v/what-are-algorithms)
 
 ### B. Makine Dili (0 ve 1)
 
@@ -217,6 +217,7 @@ Hash Function'da ***farklı iki değerden aynı sayı üretilirse*** bu duruma *
 
 - Kaynak Siteler
     * [Youtube - Algoritma Analizi #16](https://www.youtube.com/watch?v=Pi32FSu1TNg)
+    * [Asimptotik Analiz, Asimptotik karmaşıklık nedir?](https://egemengulpinar.medium.com/tr-algoritma-analizi-ve-asimtotik-karma%C5%9F%C4%B1kl%C4%B1k-84ad6be27b32)
     * [Derinlemesine Algoritma Analizi](https://birhankarahasan.com/algoritma-analizi-nedir-zaman-karmasikligi-big-o-gosterimi)
 
 ### B. Ram Modeli
@@ -236,11 +237,14 @@ Bu hayalî cihaza ***RAM (Random Access Machine)*** diyoruz. Ram, algoritmalar a
 
 ### C. Time Complexity
 
-Algoritmanın verimli olması için belli kurallar vardır. ***Örnek: Raflara kitap yerleştirmek.***
+Algoritmanın verimli olması için belli kurallar vardır. ***Örnek: Raflara kitap yerleştirmek*** gibi.
 
-- Kitapları, gelişigüzel raflara dağıtırsak aradığımız kitabı daha fazla zamanda bulabiliriz. Aslında bu bir ***[worst case](https://bilgisayarkavramlari.com/2008/12/22/en-kotu-durum-analizi-worst-case-analysis/)***'dir. Beklenilen en kötü durum(vereceğimiz inputun algoritmamızı en yavaş/en fazla işlem yapacak şekilde çalıştırdığı durum). Kitapları filtrelememiz gerekir. Kalın olanları bir rafa, ince olanları bir rafa, küçük boyutta olanları bir rafa koyduğumuz zaman aradığımız şeyi daha rahat bulabiliriz. Algoritma, en kötü senaryoya ne kadar hazırsa, bizi o kadar memnun edebilir.
-- Algoritmalar için genellikle sık kullanılan ***average case***'dir. Kısacası genel olarak beklenilen durum. Kitapların bölümüne göre kaç tane olduğunu biliyorsak average case kullanabiliriz. En büyük rafı miktarı fazla olana ayırabiliriz. Input yoksa average zordur!!!!
-- Bir diğer senaryomuz ise ***best case***'dir. Beklediğimiz en iyi durum(vereceğimiz inputun algoritmamızı en hızlı şekilde çalıştırdığı durum). Kitap örneğine devam edecek olursak, bütün kitapların ayrı raflarda olması, alfabeye göre sıralanması best case olarak ifade edilebilir. Çünkü aradığımızı rahatlıkla bulabiliyoruz.
+- Kitapları, gelişigüzel raflara dağıtırsak aradığımız kitabı daha fazla zamanda bulabiliriz. Aslında bu bir ***[worst case(Big O)](https://bilgisayarkavramlari.com/2008/12/22/en-kotu-durum-analizi-worst-case-analysis/)***'dir. Beklenilen en kötü durum(*vereceğimiz inputun algoritmamızı en yavaş/en fazla işlem yapacak şekilde çalıştırdığı durum*).
+Kitapları filtrelememiz gerekir. Kalın olanları bir rafa, ince olanları bir rafa, küçük boyutta olanları bir rafa koyduğumuz zaman aradığımız şeyi daha rahat bulabiliriz. Algoritma, en kötü senaryoya ne kadar hazırsa, bizi o kadar memnun edebilir.
+- Algoritmalar için genellikle sık kullanılan ***average case(Big Theta)***'dir. Genel olarak beklenilen durum(ortalama durum). Kitapların bölümüne göre kaç tane olduğunu biliyorsak average case kullanabiliriz. En büyük rafı miktarı fazla olana ayırabiliriz. Input yoksa average zordur!!!!
+- Bir diğer senaryomuz ise ***best case(Big Omega)***'dir. Beklediğimiz en iyi durum(*vereceğimiz inputun algoritmamızı en hızlı şekilde çalıştırdığı durum*). Kitap örneğine devam edecek olursak, bütün kitapların ayrı raflarda olması, alfabeye göre sıralanması best case olarak ifade edilebilir. Çünkü aradığımızı rahatlıkla bulabiliriz.
+
+**Buradaki seçim bize kalmış.** Hangi aralıkta algoritmamızı değerlendirmek istiyorsak ona göre karmaşıklığı baz alabiliriz. Kullanım ihtiyacına göre bu şekillenecektir. *Ancak genel bir tanı itibariyle en kötüyü bilirsek*, ortalama ve en iyi durumu da tahmin etmek için fikrimiz olabilir. ***Genellikle Big O notasyonu hesaplanıp algoritma karmaşıklığı bulunur.***
 
 - Kaynak Siteler
     * [Youtube - Time Complexity #18](https://www.youtube.com/watch?v=Ie_Ax6KLI80)
