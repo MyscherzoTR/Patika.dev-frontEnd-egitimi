@@ -11,46 +11,89 @@ Algoritma belirli bir durumdan başlayıp belirli bir sonuçta biten problemlere
 
 ### B. Makine Dili (0 ve 1)
 
+Bilgisayarda veriler "dijital" şekilde, yani ikili tabanda gösterilir.
+
 İkili sayılarda bulunan **0 ve 1 rakamları (bit)**, bilgisayarın elektrik iletimi için kullandığı transistörlerin ***(elektrik akımı iletir)*** açık veya kapalı olma durumunu gösterir. Transistörlerde iki tane komut vardır, 0 (kapat, elektrik geçmiyor/yok) ve 1 (aç, elektrik geçiyor/var).
+
+Bu iki durumu tanımlamak için ikili(binary) sistem kullanılır. Her sayıya *"binary digits"* kelimelerinin kısaltılmışı olan ***"bit"*** denir.
 
 - Bytecode => **Java derleyicisinin (Java Compiler)** Java ile yazılmış kodların makine dili yerine kendine has oluşturduğu Binary (0 ve 1) dosyasıdır.
 
 - JVM => Java Bytecode formatına derlenmiş programların çalışmasını sağlayan bir sistemdir.
 
 - Kaynak Siteler
-    * [BİL-110 Bilgisayara Giriş](https://slideplayer.biz.tr/slide/2798593/)
     * [Compiler (Derleyici) ve Interpreter (Yorumlayıcı) Nedir?](https://medium.com/@msenell/derleyi%CC%87ci%CC%87-compiler-ve-yorumlayici-interpreter-%C3%BCzeri%CC%87ne-bi%CC%87r-deneme-d8656619ef6)
     * [Java - Bytecode](https://tr.wikipedia.org/wiki/Java_bytecode)
 
 ### C. Sayı Tabanları (İkilik ve Onluk)
 
-- [Onluk Tabanından İkilik Tabana Çevirme Kod Örneği](https://prog.asmaamir.com/e-tabancevirme)
+İkilik(Binary) ve Onluk(Decimal) tabanlar
 
-### D. Binary Symbols - Araştır?
+- Kaynak Siteler
+  * [Onluk Tabanından İkilik Tabana Çevirme Kod Örneği](https://prog.asmaamir.com/e-tabancevirme)
+
+#### C_1. Onluk (Decimal) Gösterimi
+
+Her basamak için 10 olası değer (0-9) vardır. En sağda ki birler basamağıdır (0-9)
+Sonraki onlar basamağı (10-90)
+Sonraki yüzle basamağı (100-900) şeklinde ilerler.
+
+***Örneğin 506 sayısı;*** 6 birler, 0 onlar, 5 yüzler basamağıdır. *Gösterimi ise;*
+
+- (5 * 10^2) + (0 * 10^1) + (6 * 10^0) = (506)10
+- (6 * 1) + (0 * 10) + (5 * 100) = (506)10
+
+#### C_2. İkili (Binary) Gösterimi
+
+Her basamak için sadece 2 olası değer (0 veya 1) vardır. En sağda ki birler basamağıdır (0 ve 1)
+Sonraki ikiler basamağı (1'den 2'ye)
+Sonraki dörtler basamağı (1'den 4'e) şeklinde ilerler.
+
+***Örneğin 110 sayısı;*** 0 birler, 1 ikiler, 1 dörtler basamağıdır. *Gösterimi ise;*
+
+- (1 * 2^2) + (1 * 2^1) + (0 * 2^0) = (110)2
+- (1* 4) + (1 * 2) + (0 * 1) = (110)2
+
+### D. Binary Symbols(ASCII) - Araştır?
 
 Sayısal olmayan verilerin bir sembol olduğunu ve 0 ve 1'lerdan oluştuğunu hep birlikte öğrendik. Binary olarak gördüğümüz ifade makine kodundan dolayı farklı bir nesneyi işaret edebilir.
 
-### E. Bilgisayarda Verilerin Tutulması
+ASCII Kodlarıyla "Hello." kelimesi.
+![ASCII Kodlarıyla "Hello." kelimesi.](https://player.slideplayer.biz.tr/10/2798593/data/images/img19.jpg)
+
+### E. Bilgisayarda Verilerin Tutulması Byte(Bayt) ve bit Kavramı
 
 Bilgisayar, yapısından dolayı içerisinde tutulabilecek veri miktarı sınırlıdır. Bu verilerin en küçük yapı taşları bitlerdir. *Bilgisayar hafızasında ki bir kutucuğa **1 bit** denir*. Kutucuk arttıkça bit sayısıda artar yani ***2 kutucuk varsa 2 bit*** demektir bu. bitler 0 ve 1'lerden oluşur.
 
-Bu bitleri bir hafıza gibi düşünebiliriz. Ne kadar çok bit dolar ise boyut o kadar artar ve daha az veri depolama alanımız kalır. 8 kutucuk yan yana geldiğinde yani 8 bit olduğunda 1 Byte deniyor. ***8 bit = 1 Byte*** adlandırma ile alakalı bir şey. **Metre, Santimetre gibi düşünülebilir tamamen adlandırma.**
+Bu bitleri bir hafıza gibi düşünebiliriz. Ne kadar çok bit dolar ise boyut o kadar artar ve daha az veri depolama alanımız kalır. 8 kutucuk yan yana geldiğinde yani 8 bit olduğunda 1 Byte(Bayt)'a eşit olur. ***8 bit = 1 Byte*** şeklinde adlandırılır. **Metre, Santimetre gibi düşünülebilir tamamen adlandırma.**
 
-Peki 1 Bayt ne kadar farklı şey ifade edebiliyor. 8 kutucuk olduğu için *2^8'den 256 farklı şey ifade edebiliyor.*
+Veriler Byte(Bayt) ve Byte'ın katları olarak depolanır/hesaplanır(KB, MB, GB gibi). 1024 olduğunda bir üst gösterime geçilir. Örneğin;
+- **1024 Byte = 1 KiloByte(KB)**
+- **1024 KiloByte(KB) = 1 MegaByte(MB)**
+***eşittir.***
 
-Hadi gelin ***bit ve byte kavramlarını*** görsel ile örneklendirelim.
+***Peki 1 Bayt(Byte) ne kadar farklı şey ifade edebiliyor;***
+
+8 kutucuk olduğu için *2^8'den 256 farklı şey ifade edebiliyor.* 256 farklı karakterin gösterimi için 0 ve 1'lerden oluşan yeterli farklı kombinasyonu elde ederiz.
+- Numaralar
+- Büyük, küçük harfler
+- Noktalama işaretleri vb.
+
+![Farklı 1 Byte ile gösterim](https://player.slideplayer.biz.tr/10/2798593/data/images/img5.jpg)
+
+#### Hadi gelin ***bit ve byte kavramlarını*** görsel ile örneklendirelim.
 ![bit ve byte kavramları](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/veri-tutulma/figures/veri-tutulma.png)
 
 - (1 Byte = 8 bit)  demiştik. 8 bit yani 2^8 = **256 farklı şey, sembol ifade eder ve bu işimizi görmeyebilir, yetersiz kalabilir.** Bu durumda 256 sembolden daha fazla bir depolama alanı isteyebiliriz. Peki bu durum da ne yapacağız? Aslında çözüm çok basit Byte'ları yan yana koyarak depolama alanımızı arttıracağız.
 
-Diyelim yan yana 4 Byte koyduk. Yani 4*8'den 32 bit koymuş olduk. Bu da *2^32 farklı şey, sembol ifade eder.*
+Diyelim ki yan yana 4 Byte koyduk. Yani 4*8'den 32 bit koymuş olduk. Bu da *2^32 farklı şey, sembol ifade eder.*
 
 ***Dipnot: 4 Byte yazılımda integer(int) ifade eder.***
 
-Hemmen bir örnek çözelim.
+Hemen bir örnek çözelim.
 ![bigger bit](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/veri-tutulma/figures/veri-tutulma2.png)
 
-- Binary semboller, kullanan kişiye göre farklılık gösterebilir. Örneğin, 00 sembolü Ali'ye göre k karakterini sembolize ederken, Veli'ye göre 1 sayısını sembolize edebilir.
+- Binary semboller, kullanan kişiye göre farklılık gösterebilir. Örneğin, 1010 sembolü Ali'ye göre "1" karakterini sembolize ederken, Veli'ye göre "11" sayısını, Ahmet'e göre ise "a" harfini sembolize edebilir.
 ![Veri Sembolleri](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/veri-tutulma/figures/sembol-veri.png)
 
 - Kaynak Siteler
