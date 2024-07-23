@@ -100,14 +100,173 @@ Hemen bir örnek çözelim.
     * [Bit Nedir](https://tr.wikipedia.org/wiki/Bit_(bili%C5%9Fim))
     * [Byte Nedir](https://tr.wikipedia.org/wiki/Bayt)
 
-### F. Recursion - Araştır?
+### F. Recursion ve Recursive - Özyineleme
+
+"recursion" ve "recursive" aynı kavramla ilgilidir, ancak dilbilgisi açısından farklı kullanımlara sahiptirler;
+
+Recursion: Bir ismidir. Programlamada bir fonksiyonun kendi kendini çağırması durumu anlamına gelir. Örneğin, bir problemin çözümünü, problemin daha küçük bir alt problemini çözerek bulmak. ***Örnek: "Recursion is a common technique in computer science."***
+
+Recursive: Bir sıfattır. Bir şeyin kendini tekrar eden veya içeren yapısı olduğunu tanımlar. Örneğin, bir fonksiyonun kendini çağıran bir yapıda olması. ***Örnek: "A recursive function is a function that calls itself."***
+
+Recursive metotlar *her zaman "return" lü metot* olmak zorundadır. Recurison ile alakalı bir kaç örnek çözelim.
+
+#### *Örnek 1: Bir Mülakat Sorusu : Döngü Kullanmadan Bir Sayı Dizisini Ekrana Yazdırmak*
+
+Başlangıç 1, bitişi ise 20 olan sayı dizisini döngü kullanmadan tek tek ekrana yazdıralım. Kodumuz PHP ile yazılacak.
+
+##### *Kod 1, İki değer arasında recursive*
+
+```php
+function loop($startValue,$endValue){
+    echo $startValue. "\n";
+
+    if ($startValue<$endValue)
+        loop($startValue+1,$endValue);
+}
+
+loop(1,20);
+```
+
+##### *Kod 2, İki değer arasında recursive(Daha iyisi)*
+
+```php
+function loop($startValue,$endValue){
+    if($startValue>$endValue)
+        return;
+
+    echo $startValue. "\n";
+    loop($startValue+1,$endValue);
+}
+
+loop(1,20);
+```
+
+#### *Örnek 2: Döngü Kullanmadan Faktöriyel Hesabı*
+
+5 sayısının faktöriyeli döngü kullanmadan hesaplanacak. Kodumuz yine PHP ile yazılacak.
+
+##### *Kod 1, fatöriyel recursive*
+
+```php
+$result = 1;
+
+function factorial($number){
+    global $result;
+    $result = $result*$number;
+
+    if($number>1)
+        factorial($number-1);
+    else
+        echo $result;
+}
+
+factorial(5);
+```
+
+Kod 1 örneğinde "global" kullanıldı. Peki "global ne işe yarar neden kullanılır" bir bakalım.
+
+***global $result;*** ifadesi, PHP'de bir fonksiyonun içinden global bir değişkeni kullanmanızı sağlar. PHP'de değişkenler varsayılan olarak yereldir(local variable), yani bir fonksiyon içinde tanımlanan değişkenler sadece o fonksiyon içinde kullanılabilir. Eğer bir fonksiyon içinde tanımlanan bir değişkene erişmek istiyorsanız **"global" anahtar kelimesini kullanmanız** gerekir.
+
+"***global result***" ifadesi kullanılmazsa, fonksiyon içindeki "***result***" değişkeni yerel olur ve "***global result***" değişkenine erişilemez(başka yerdeki result erişilemez).
+
+##### *Kod 2, fatöriyel recursive(Daha iyisi)*
+
+```php
+function factorial($number){
+    if($number<=1)
+        return 1;
+
+    return $number * factorial($number-1);
+}
+
+$result = factorial(5);
+echo $result;
+```
+
+#### *Örnek 3: Döngü Kullanmadan Fibonacci Hesabı*
+
+Fibonacci'nin sadece ilk 10 elemanı hesaplanacak.
+
+##### *Kod 1, döngüden yardım alarak*
+
+```php
+function fibonacci($n){
+    if ($n <=0)
+        return 0;
+    
+    elseif($n==1)
+        return 1;
+        
+    else
+        return fibonacci($n-1) + fibonacci($n-2);
+}
+
+for ($i = 1; $i<=10; $i++)
+    echo fibonacci($i). "\n";
+```
+
+##### *Kod 2, yardımcı fonksiyondan yardım alarak*
+
+```php
+function fibonacci($n){
+    if ($n<=0)
+        return 0;
+
+    elseif($n==1)
+        return 1;
+
+    else return fibonacci($n-1) + fibonacci($n-2)
+}
+
+function printFibonacci($current, $count){
+    if($count>10)
+        return;
+
+    echo fibonacci($current) . "\n";
+    printFibonacci($current + 1, $count + 1);
+}
+
+printFibonacci(1,1);
+```
+
+##### f(4) için sözlü bir örnek/açıklama yapalım
+
+Dördüncü(4.) fibonacci elemanı çağrıldığında adımlar aşağıda ki gibidir
+
+```text
+f(4) hesaplama => f(3) + f(2) => 2 + 1 = 3
+            f(3) hesaplama => f(2) + f(1) => 1 + 1 = 2
+                f(2) hesaplama => f(1) + f(0) => 1 + 0 = 1
+                    f(1) hesaplama = 1
+                    f(0) hesaplama = 0
+                f(1) hesaplama = 1
+        
+            f(2) hesaplama => f(1) + f(0) => 1 + 0 = 1
+                f(1) hesaplama = 1
+                f(0) hesaplama = 0
+```
+
+***Bu nedenle, fibonacci(4)'ün sonucu 3'tür. Adım adım açılımı ise şu şekildedir;***
+
+fibonacci(4) hesaplanırken ***fibonacci(3) ve fibonacci(2)*** fonksiyonları çağrılır.
+fibonacci(3) hesaplanırken **fibonacci(2) ve fibonacci(1)** fonksiyonları çağrılır.
+fibonacci(2) hesaplanırken **fibonacci(1) ve fibonacci(0)** fonksiyonları çağrılır.
+fibonacci(1) ve fibonacci(0) temel durumlar olup, **sırasıyla 1 ve 0 değerlerini** dönerler.
+Bu şekilde **özyinelemeli hesaplama** devam eder ve her seferinde ***bir önceki iki Fibonacci sayısının toplamı*** alınarak sonuç döndürülür. Yani her eleman kendisinden önceki iki elemanın toplamıdır;
+
+fibonacci(0) = 0
+fibonacci(1) = 1
+fibonacci(2) = fibonacci(1) + fibonacci(0) = 1 + 0 = 1
+fibonacci(3) = fibonacci(2) + fibonacci(1) = 1 + 1 = 2
+fibonacci(4) = fibonacci(3) + fibonacci(2) = 2 + 1 = 3
 
 - Kaynak Siteler
     * [Youtube - Veri Yapıları Ders 8 Rekürsif Yapılar](https://www.youtube.com/watch?v=PNWOP_QoBGI&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=9)
     * [Youtube - Recursive Fonksiyonlar Nasıl Çalışır ve Örnek Kodlama](https://www.youtube.com/watch?v=cv7CY8UmFL0)
     * [Youtube - Java Dersleri #43 - Recursive (Özyineli) Metotlar](https://www.youtube.com/watch?v=I3_wU5fr3Zo)
     * [Youtube - Öz Yineleme (Recursion) - Veri Yapıları Ders 02](https://www.youtube.com/watch?v=qT-Fh2kxR6s)
-    * [Recursive fonksiyonlar ve Python ile Hanoi Kuleleri çözümü](https://www.youtube.com/watch?v=4GvMYiPLRtU)
+    * [Youtube - Recursive fonksiyonlar ve Python ile Hanoi Kuleleri çözümü](https://www.youtube.com/watch?v=4GvMYiPLRtU)
+    * [Recursion Nedir?](https://www.yucelalkan.com/recursion-nedir)
 
 <hr>
 
