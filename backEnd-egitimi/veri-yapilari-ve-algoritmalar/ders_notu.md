@@ -185,7 +185,7 @@ echo $result;
 
 #### *Örnek 3: Döngü Kullanmadan Fibonacci Hesabı*
 
-Fibonacci'nin sadece ilk 10 elemanı hesaplanacak.
+Fibonacci'nin sadece ilk 10 elemanı hesaplanacak. Kodumuz yine PHP ile yazılacak.
 
 ##### *Kod 1, döngüden yardım alarak*
 
@@ -260,12 +260,39 @@ fibonacci(2) = fibonacci(1) + fibonacci(0) = 1 + 0 = 1
 fibonacci(3) = fibonacci(2) + fibonacci(1) = 1 + 1 = 2
 fibonacci(4) = fibonacci(3) + fibonacci(2) = 2 + 1 = 3
 
+#### *Örnek 4: Hanoi Kuleleri Çözümü*
+
+Hanoi Kuleleri çözümü. Kodumuz Python ile yazılacak. Yazılan kod için count ile adım saydırıldı. Diskler kaç adımda bitiş kısmında sıralanacak sağlaması için; **(2^n)-1** Yani 3 disk varsa 7 adımda bitmesi gerekir işlemin.
+
+```python
+count = 0
+
+def Move(fr,to):
+    global count 
+    count = count+1
+    print("Step " + str(count) + " Move the Disc: " + str(fr) + "-->" + str(to))
+    
+def PlayHanoi(numberOfDisk,start,end,temp):
+    if numberOfDisk == 1:
+        Move(start,end)
+    
+    else:
+        PlayHanoi(numberOfDisk-1,start,temp,end)
+        PlayHanoi(1,start,end,temp)
+        PlayHanoi(numberOfDisk-1,temp,end,start)
+        
+
+
+PlayHanoi(3,"Start","End","Temp")
+```
+
 - Kaynak Siteler
     * [Youtube - Veri Yapıları Ders 8 Rekürsif Yapılar](https://www.youtube.com/watch?v=PNWOP_QoBGI&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=9)
     * [Youtube - Recursive Fonksiyonlar Nasıl Çalışır ve Örnek Kodlama](https://www.youtube.com/watch?v=cv7CY8UmFL0)
     * [Youtube - Java Dersleri #43 - Recursive (Özyineli) Metotlar](https://www.youtube.com/watch?v=I3_wU5fr3Zo)
     * [Youtube - Öz Yineleme (Recursion) - Veri Yapıları Ders 02](https://www.youtube.com/watch?v=qT-Fh2kxR6s)
     * [Youtube - Recursive fonksiyonlar ve Python ile Hanoi Kuleleri çözümü](https://www.youtube.com/watch?v=4GvMYiPLRtU)
+    * [Youtube - Python - 09-1 - Recursive Fonksiyonlar](https://www.youtube.com/watch?v=5b4rfahUiP8)
     * [Recursion Nedir?](https://www.yucelalkan.com/recursion-nedir)
 
 <hr>
