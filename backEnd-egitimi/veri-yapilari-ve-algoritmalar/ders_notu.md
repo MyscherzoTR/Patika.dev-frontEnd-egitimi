@@ -152,12 +152,18 @@ $result = 1;
 
 function factorial($number){
     global $result;
-    $result = $result*$number;
+    
+    if($number!=0)
+        $result = $result*$number;
 
-    if($number>1)
-        factorial($number-1);
-    else
+    if ($number==1 || $number == 0)
         echo $result;
+
+    elseif($number>1)
+        factorial($number-1);
+
+    else
+        echo "Faktoriyel Negatif değer alamaz!";
 }
 
 factorial(5);
@@ -173,17 +179,58 @@ Kod 1 örneğinde "global" kullanıldı. Peki "global ne işe yarar neden kullan
 
 ```php
 function factorial($number){
-    if($number<=1)
+    if($number==1 || $number==0)
         return 1;
+    
+    elseif($number>1)
+        return $number * factorial($number-1);
 
-    return $number * factorial($number-1);
+    return "Faktoriyel Negatif değer alamaz!";
 }
 
 $result = factorial(5);
 echo $result;
 ```
 
-#### *Örnek 3: Döngü Kullanmadan Fibonacci Hesabı*
+#### *Örnek 3: Listedeki Elemanları Toplama*
+
+Kodumuz Python ile yazılacak.
+
+##### *Kod 1, Python liste gezme özelliği ile: my_list[0:]*
+
+İlk elemandan listenin sonuna kadar elemanları döner. Bu yöntemle listeyi sürekli olarak küçültüyoruz, ta ki tek bir eleman kalana kadar.
+
+Fakat performanslı çalışmaz çünkü her çağrılışında geriye kalan elemanlardan alt liste oluşturur bu metot.; ***my_list[0:]***  
+
+```python
+def list_sum(my_list):
+    if len(my_list) == 0:
+        return 0  # Boş liste için 0 döndürüyoruz
+    
+    return my_list[0] + list_sum(my_list[1:])
+
+# Test için liste
+my_list = [5, 4, 3, 2, 1]
+print(list_sum(my_list))
+```
+
+##### *Kod 2, listede ki elemanları manuel gezme: index*
+
+Bu yöntem, performans açısından daha verimli olabilir, çünkü her recursive çağrıda yeni bir liste oluşturulmaz ***my_list[0:]*** 'de olduğu gibi.
+
+```python
+def list_sum(my_list, index=0):
+    if index == len(my_list):  # Liste sonuna geldik
+        return 0
+    
+    return my_list[index] + list_sum(my_list, index + 1)
+
+# Test için liste
+my_list = [5, 4, 3, 2, 1]
+print(list_sum(my_list))
+```
+
+#### *Örnek 4: Döngü Kullanmadan Fibonacci Hesabı*
 
 Fibonacci'nin sadece ilk 10 elemanı hesaplanacak. Kodumuz yine PHP ile yazılacak.
 
@@ -260,26 +307,26 @@ fibonacci(2) = fibonacci(1) + fibonacci(0) = 1 + 0 = 1
 fibonacci(3) = fibonacci(2) + fibonacci(1) = 1 + 1 = 2
 fibonacci(4) = fibonacci(3) + fibonacci(2) = 2 + 1 = 3
 
-#### *Örnek 4: Hanoi Kuleleri Çözümü*
+#### *Örnek 5: Hanoi Kuleleri Çözümü*
 
 Hanoi Kuleleri çözümü. Kodumuz Python ile yazılacak. Yazılan kod için count ile adım saydırıldı. Diskler kaç adımda bitiş kısmında sıralanacak sağlaması için; **(2^n)-1** Yani 3 disk varsa 7 adımda bitmesi gerekir işlemin.
 
 ```python
 count = 0
 
-def Move(fr,to):
+def Move(sourcePeg, destinationPeg):
     global count 
     count = count+1
-    print("Step " + str(count) + " Move the Disc: " + str(fr) + "-->" + str(to))
+    print("Step " + str(count) + " Move the Disc: " + str(sourcePeg) + "-->" + str(destinationPeg))
     
-def PlayHanoi(numberOfDisk,start,end,temp):
+def PlayHanoi(numberOfDisk, sourcePeg, destinationPeg, auxiliaryPeg):
     if numberOfDisk == 1:
-        Move(start,end)
+        Move(sourcePeg,destinationPeg)
     
     else:
-        PlayHanoi(numberOfDisk-1,start,temp,end)
-        PlayHanoi(1,start,end,temp)
-        PlayHanoi(numberOfDisk-1,temp,end,start)
+        PlayHanoi(numberOfDisk-1, sourcePeg, auxiliaryPeg, destinationPeg)
+        PlayHanoi(1, sourcePeg, destinationPeg, auxiliaryPeg)
+        PlayHanoi(numberOfDisk-1, auxiliaryPeg, destinationPeg, sourcePeg)
         
 
 
