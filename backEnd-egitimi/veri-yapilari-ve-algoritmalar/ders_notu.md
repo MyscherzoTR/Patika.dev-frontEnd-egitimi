@@ -102,6 +102,8 @@ Hemen bir örnek çözelim.
 
 ### F. Recursion ve Recursive - Özyineleme
 
+Rekürsif fonksiyon, bir problemi adım adım küçük parçalara ayırarak,temel işleme ulaşıncaya kadar kendi kendini çağıran bir fonksiyon şeklidir. Bu sıralı çağrılardan sonra temel adıma ulaşınca temel adımdaki değeri geriye doğru sararak en üst basamağa taşır ve böylece sonuç bulunur. Aslında özyineleme,döngüler gibi çalışır ve döngülerinde belli bir sınır olduğundan özyinelemede de bir sınır olmalıdır bu sınır temel adım (taban) olmalıdır. Sınır olmazsa işlem sonsuz kez tekrarlanır ve bu durum sistemi çökertebilir.
+
 "recursion" ve "recursive" aynı kavramla ilgilidir, ancak dilbilgisi açısından farklı kullanımlara sahiptirler;
 
 Recursion: Bir ismidir. Programlamada bir fonksiyonun kendi kendini çağırması durumu anlamına gelir. Örneğin, bir problemin çözümünü, problemin daha küçük bir alt problemini çözerek bulmak. ***Örnek: "Recursion is a common technique in computer science."***
@@ -341,6 +343,7 @@ PlayHanoi(3,"Start","End","Temp")
     * [Youtube - Recursive fonksiyonlar ve Python ile Hanoi Kuleleri çözümü](https://www.youtube.com/watch?v=4GvMYiPLRtU)
     * [Youtube - Python - 09-1 - Recursive Fonksiyonlar](https://www.youtube.com/watch?v=5b4rfahUiP8)
     * [Recursion Nedir?](https://www.yucelalkan.com/recursion-nedir)
+    * [Özyineli(Recursive) Fonksiyon Nedir?](https://medium.com/kodcular/%C3%B6zyineli-recursive-fonksiyon-nedir-d98439707a8d)
 
 <hr>
 
