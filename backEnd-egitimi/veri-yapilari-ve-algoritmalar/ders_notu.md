@@ -3,7 +3,7 @@
 Ders ile alakalı başlangıç teorik videolar - ***kesinlikle izlenmeli***;
 
 - [Veri Yapıları Ders 1 Temel Kavramlar](https://youtu.be/AMq0LhzavhU)
-- [Veri yapıları ve Algoritmalar - Data Structures and Algorithms](https://www.youtube.com/watch?v=mKPTA7hAewY&list=PLZYKO7600KN-mFeIahqjCVIzYd55wbJ3y&index=2)
+- [Veri yapıları ve Algoritmalar - Data Structures and Algorithms](https://www.youtube.com/watch?v=mKPTA7hAewY)
 
 ## 1. Temel Kavramlar
 
