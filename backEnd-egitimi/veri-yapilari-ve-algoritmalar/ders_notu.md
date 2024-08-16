@@ -1,5 +1,10 @@
 # Veri Yapıları ve Algoritmalar Ders Notu
 
+Ders ile alakalı başlangıç teorik videolar - ***kesinlikle izlenmeli***;
+
+- [Veri Yapıları Ders 1 Temel Kavramlar](https://youtu.be/AMq0LhzavhU)
+- [Veri yapıları ve Algoritmalar - Data Structures and Algorithms](https://www.youtube.com/watch?v=mKPTA7hAewY&list=PLZYKO7600KN-mFeIahqjCVIzYd55wbJ3y&index=2)
+
 ## 1. Temel Kavramlar
 
 ### A. Algoritma nedir
@@ -352,9 +357,17 @@ PlayHanoi(3,"Start","End","Temp")
 ### A. Array - Araştır?
 
 - Kaynak Siteler
+    * [Youtube - Arrays - Diziler - Veri yapıları ve algoritmalar - Data Structures](https://www.youtube.com/watch?v=Itj319eYDMY)
+    * [Youtube - C Programlama 7 Diziler (Array)](https://www.youtube.com/watch?v=0bjMFwS8TZY)
     * [Array Nedir?](https://medium.com/@denizf.b/array-nedir-d9b7afd44ca2)
+    * [VERİ YAPILARI(DATA STRUCTURES)](https://medium.com/@abdulkadir.kamci10/veri%CC%87-yapilari-data-structures-4f3de459f930)
 
-### B. Linked List - Araştır?
+### B. List Nedir ve Linked List İle Arasında ki Farklar - Araştır?
+
+- Kaynak Siteler
+    * [Youtube - Veri Yapıları Ders 2 Listeler](https://www.youtube.com/watch?v=hnE9_7VBKyI&t=51s)
+
+### C. Linked List - Araştır?
 
 - Linked-List (Bağlı listeler), yan yana zorunluluğu olmadan veri tutmamızı sağlayan yapılardır. Yeni gelen eleman için hafıza'da yeni bir alan açmamız gerekmez. Array'dan farklı olarak elemanlar hafıza içerisinde farklı yerlerde olabilir fakat son gelen eleman kendinden bir önceki elemana ***her zaman adresini bildirmek*** zorundadır.
 ![Linked-List](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/linked-list/figures/linked-list.png)
@@ -363,10 +376,13 @@ Yukarıdaki örnekte gördüğünüz üzere, her bir düğüm bir sonrakinin adr
 
 - Kaynak Siteler
     * [Youtube - Veri Yapıları Ders 2 Listeler](https://www.youtube.com/watch?v=hnE9_7VBKyI&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=3&t=591s)
+    * [Youtube - Linked List - Veri Yapıları - Data Structures](https://www.youtube.com/watch?v=Qs4PNb9Y1ME&list=PLZYKO7600KN-mFeIahqjCVIzYd55wbJ3y&index=6)
     * [Youtube - Veri Yapıları Ders 3 Bağlı Listeler (Tek Yönlü,İki Yönlü,Dairesel)](https://www.youtube.com/watch?v=7vjRwtDP0J4&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=4)
+    * [Youtube - Veri Yapılarına Giriş ve Bağlı Listeler (Linked List) -VY1)](https://www.youtube.com/watch?v=r3uOBb3BM-0)
     * [Linked List Nedir](http://cagataykiziltan.net/veri-yapilari-data-structures/1-linked-list-bagli-listeler/)
+    * [VERİ YAPILARI(DATA STRUCTURES)](https://medium.com/@abdulkadir.kamci10/veri%CC%87-yapilari-data-structures-4f3de459f930)
 
-### C. Linked List vs Array - Farklarını Detaylı Araştır?
+### D. Linked List vs Array - Farklarını Detaylı Araştır?
 
 +Array, **Memory locality *(araştır)* için iyi.**
 +Array, Veriye sabit sürede ulaşmaya ***Random Access*** denir ve Arraylerin böyle özelliği vardır.
@@ -378,7 +394,7 @@ Yukarıdaki örnekte gördüğünüz üzere, her bir düğüm bir sonrakinin adr
     * [Veri Yapılarına Giriş ve Linked List Mantığı](https://ceyhuncozvelioglu.medium.com/kendime-notlar-1-veri-yap%C4%B1lar%C4%B1na-giri%C5%9F-ve-linkedlist-mant%C4%B1%C4%9F%C4%B1-5944bcbb8165)
     * [Dizi (Array) ile Bağlı Liste (Linked List) Arasındaki Farklar](https://www.ysancar.com/veri-yapilari/dizi-ile-bagli-liste-arasindaki-farklar/)
 
-### D. Lindked List Eleman Ekleme/Silme - Detaylı Araştır?
+### E. Lindked List Eleman Ekleme/Silme - Detaylı Araştır?
 
 *pointer* araştır.
 
@@ -395,7 +411,7 @@ Adresi #20 olan 6 numaralı hücreyi çıkarmak/silmek istiyoruz. Linked-List'de
 - Kaynak Siteler
     * [Doğrusal Veri Yapıları 2 - Bağlı Liste (Linked List)](https://medium.com/@tolgahan.cepel/do%C4%9Frusal-veri-yap%C4%B1lar%C4%B1-2-ba%C4%9Fl%C4%B1-liste-linked-list-8e5d3d84c41f)
 
-### E. Stack (LIFO) - Detaylı Araştır!
+### F. Stack (LIFO) - Detaylı Araştır!
 
 Stack, LIFO (Last in First out) (En son giren en önce çıkar) mantığına dayanan, elemanlar topluluğundan oluşan bir yapıdır. Gelin hemen örneğimize geçelim. Taşınırken topladığınız koli kutusu düşünün. İçerisinde kitaplar var ve en, boy olarak koliye tam olarak koyuluyor. Mantıken kolinin altı kapalı ve üst üste koymanız gerekmektedir. Yeni taşındığınız yerde çıkartırken en üstekinden başlarsınız. İşte stack (Yığın) da aynı mantıkta çalışıyor.
 
@@ -411,7 +427,7 @@ Yığınlara eleman eklerken veya çıkartırken bazı methodlar uygulanır. Bun
     * [Youtube - Veri Yapıları Ders 4 Yığıt (Stack) Yapısı]()
     * [stack-kod-örneği](https://www.baskent.edu.tr/~tkaracay/etudio/ders/prg/dataStructures/Collections/ClassStack.pdf)
 
-### F. Queue (FIFO) - Detaylı Araştır?
+### G. Queue (FIFO) - Detaylı Araştır?
 
 Queue (Kuyruk), FIFO (First in First out) (İlk giren ilk çıkar) prensibine dayanan, girişlerde ve çıkışlarda belirli bir kurala göre çalışan yapıdır. Stack de verdiğimiz örneği kuyruğa göre uyarlayalım. Biz örnekte altı kapalı bir koli kutusunu düşünmüştük. Şimdi o koli kutusunun altı yırtılmış. Sonuç olarak ne oluyor? İlk giren ilk çıkmış oluyor.
 
@@ -426,7 +442,7 @@ Queue (Kuyruk)'da eleman eklemesi yaparken enqueue methodunu kullanıyoruz. Elem
     * [Youtube - Veri Yapıları Ders 5 Kuyruk Kavramı](https://www.youtube.com/watch?v=W-wCqjKSpys&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=6)
     * [Doğrusal Veri Yapıları 4 - Kuyruk (Queue) Kodlu Örnek](https://medium.com/@tolgahan.cepel/do%C4%9Frusal-veri-yap%C4%B1lar%C4%B1-4-kuyruk-queue-dcbd07e8ba77)
 
-### G. Hash Function(Karma Fonksiyonu)/ Hash Table(Karma Tablosu) - Detaylı Araştır?
+### H. Hash Function(Karma Fonksiyonu)/ Hash Table(Karma Tablosu) - Detaylı Araştır?
 
 - Indexleme
 Arraylerde 0 bazlı bir indexleme vardır. Bazı programlama dillerin de 1 bazlı indexlemeler olsa da genel olarak 0 bazlı indexleme kullanılır. Yani 0'dan başlar index sayısı.
@@ -449,7 +465,7 @@ Hash Table yerine dizileri kullanabilirdik. Fakat her ürünü ve fiyatını tek
     * [Youtube - Hash Table #13](https://www.youtube.com/watch?v=jhc-KG3htrM)
     * [Youtube - Hash Table (Karım Tablosu, Özet Tablosu) Veri Yapıları 22. Video](https://www.youtube.com/watch?v=_TCkO3DnVs4)
 
-### H. Hash Function(Karma Fonksiyonu)
+### I. Hash Function(Karma Fonksiyonu)
 
 Hash Function (Karma Fonksiyonu), karma fonksiyonu olabilmesi için bazı temel şartlar vardır.Bunlar;
 
@@ -470,7 +486,7 @@ Fakat her zaman tutarlı olmuyor. Bazen **Collision** dediğimiz sorun ortaya ç
     * [Youtube - Veri Yapıları Ders 11 / Hash Fonksiyonları - 3](https://www.youtube.com/watch?v=Vcr3LizkCuo&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=12)
     * [Youtube - Veri Yapıları Ders 12 / Hash Fonksiyonları - 4](https://www.youtube.com/watch?v=5h5mBf4k2do&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=13)
 
-### I. Hash Collision
+### J. Hash Collision
 
 Hash Function'da ***farklı iki değerden aynı sayı üretilirse*** bu duruma ***Collison (çarpışma)*** denir. Bu olay istediğimiz bir durum değildir.
 
@@ -733,7 +749,7 @@ Bir düğüm her iki tarafa da referans verebiliyor. Sağ ve sol olarak. Sağ ta
 
 <hr>
 
-## 5. Karar Verme Algoritması
+## 6. Karar Verme Algoritması
 
 ### A. Minimax Algoritması
 
