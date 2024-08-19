@@ -356,11 +356,37 @@ PlayHanoi(3,"Start","End","Temp")
 
 ### A. Array - Araştır?
 
-- Kaynak Siteler
-    * [Youtube - Arrays - Diziler - Veri yapıları ve algoritmalar - Data Structures](https://www.youtube.com/watch?v=Itj319eYDMY)
-    * [Youtube - C Programlama 7 Diziler (Array)](https://www.youtube.com/watch?v=0bjMFwS8TZY)
-    * [Array Nedir?](https://medium.com/@denizf.b/array-nedir-d9b7afd44ca2)
-    * [VERİ YAPILARI(DATA STRUCTURES)](https://medium.com/@abdulkadir.kamci10/veri%CC%87-yapilari-data-structures-4f3de459f930)
+String veri tipi aslında hafıza da "***char array***" olarak saklanmaktadır.
+
+#### Avantajları
+
+- Rastgele herhangi bir elemana index kullanarak hızlı erişme.
+- Her elemanın değeri kolay silinebilir veya değiştirilebilir.
+- Elemanları kolay bir şekilde sıralayabilir ve gezebilirsiniz.
+- Bilgisayarlarda native olarak implement edilmiş en hızlı veri yapısı.
+- Stacks, Queues, Heaps ve Hash Table gibi veri yapılarının temelini oluşturur.
+
+#### Dezavantajları
+
+- Kapasitesi sabittir. Başlangıçta verilen değer neyse o dur.
+- Başa, ortaya veya sona eleman eklenemez veya silinemez.
+- 10 elemanlı bir boyuta sahip dizi de 4 eleman bile olsa 10 elemanlık yer kaplar hafızada.
+
+* #### Ne Zaman Kullanılabilir?
+
+- Uzunluğu sabit bir liste varsa.
+- Tek değer tipine sahipse elemanlar(type:int gibi).
+- Listede matematiksel işlemler yapılmak istebirse.
+- Index kullanarak hızlı tarama ve değer değiştirme durumunda.
+- Çok boyutlu matematiksel listelere ihtiyaç duyuluyorsa.
+- Hafızayı verimli kullanmak istenildiğinde.
+
+#### Kaynak Siteler
+
+- [Youtube - Arrays - Diziler - Veri yapıları ve algoritmalar - Data Structures](https://www.youtube.com/watch?v=Itj319eYDMY)
+- [Youtube - C Programlama 7 Diziler (Array)](https://www.youtube.com/watch?v=0bjMFwS8TZY)
+- [Array Nedir?](https://medium.com/@denizf.b/array-nedir-d9b7afd44ca2)
+- [VERİ YAPILARI(DATA STRUCTURES)](https://medium.com/@abdulkadir.kamci10/veri%CC%87-yapilari-data-structures-4f3de459f930)
 
 ### B. List Nedir ve Linked List İle Arasında ki Farklar - Araştır?
 
