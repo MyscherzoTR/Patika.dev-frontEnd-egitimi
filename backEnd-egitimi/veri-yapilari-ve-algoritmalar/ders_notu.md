@@ -372,7 +372,7 @@ String veri tipi aslında hafıza da "***char array***" olarak saklanmaktadır.
 - Başa, ortaya veya sona eleman eklenemez veya silinemez.
 - 10 elemanlı bir boyuta sahip dizi de 4 eleman bile olsa 10 elemanlık yer kaplar hafızada.
 
-* #### Ne Zaman Kullanılabilir?
+#### Ne Zaman Kullanılabilir?
 
 - Uzunluğu sabit bir liste varsa.
 - Tek değer tipine sahipse elemanlar(type:int gibi).
@@ -381,12 +381,11 @@ String veri tipi aslında hafıza da "***char array***" olarak saklanmaktadır.
 - Çok boyutlu matematiksel listelere ihtiyaç duyuluyorsa.
 - Hafızayı verimli kullanmak istenildiğinde.
 
-#### Kaynak Siteler
-
-- [Youtube - Arrays - Diziler - Veri yapıları ve algoritmalar - Data Structures](https://www.youtube.com/watch?v=Itj319eYDMY)
-- [Youtube - C Programlama 7 Diziler (Array)](https://www.youtube.com/watch?v=0bjMFwS8TZY)
-- [Array Nedir?](https://medium.com/@denizf.b/array-nedir-d9b7afd44ca2)
-- [VERİ YAPILARI(DATA STRUCTURES)](https://medium.com/@abdulkadir.kamci10/veri%CC%87-yapilari-data-structures-4f3de459f930)
+- Kaynak Siteler
+    * [Youtube - Arrays - Diziler - Veri yapıları ve algoritmalar - Data Structures](https://www.youtube.com/watch?v=Itj319eYDMY)
+    * [Youtube - C Programlama 7 Diziler (Array)](https://www.youtube.com/watch?v=0bjMFwS8TZY)
+    * [Array Nedir?](https://medium.com/@denizf.b/array-nedir-d9b7afd44ca2)
+    * [VERİ YAPILARI(DATA STRUCTURES)](https://medium.com/@abdulkadir.kamci10/veri%CC%87-yapilari-data-structures-4f3de459f930)
 
 ### B. List Nedir ve Linked List İle Arasında ki Farklar - Araştır?
 
