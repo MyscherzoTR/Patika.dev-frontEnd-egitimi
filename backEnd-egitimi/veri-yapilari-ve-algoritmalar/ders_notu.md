@@ -435,6 +435,8 @@ Diyelim ki **dizi 5 elemanlı olsaydı** nasıl olurdu? Bölüm sonucu 2 gelirdi
 
 İşte bu yüzden ***list_length//2*** kullanıyoruz.
 
+<hr>
+
 ##### *Örnek 2: Fibonacci İlk 20 Elemanını Hesaplayan ve Bunu Diziyi Kayıt Eden Kod*
 
 ###### *Kod 1, ilk yöntem*
