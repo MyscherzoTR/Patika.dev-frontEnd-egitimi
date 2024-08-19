@@ -11,8 +11,9 @@ Ders ile alakalı başlangıç teorik videolar - ***kesinlikle izlenmeli***;
 
 Algoritma belirli bir durumdan başlayıp belirli bir sonuçta biten problemlere çözüm getiren adımlar bütünüdür. ***Veya*** Bir işi bitirmek için gerçekleştirilmesi gereken adımlar bütünüdür.
 
-- Kaynak Siteler
-    * [khanacademy - Algoritma Nedir ve Neden Öğrenmeliyiz?](https://tr.khanacademy.org/computing/computer-science/algorithms/intro-to-algorithms/v/what-are-algorithms)
+> #### A_1. Kaynak Siteler
+
+- [khanacademy - Algoritma Nedir ve Neden Öğrenmeliyiz?](https://tr.khanacademy.org/computing/computer-science/algorithms/intro-to-algorithms/v/what-are-algorithms)
 
 ### B. Makine Dili (0 ve 1)
 
@@ -26,16 +27,14 @@ Bu iki durumu tanımlamak için ikili(binary) sistem kullanılır. Her sayıya *
 
 - JVM => Java Bytecode formatına derlenmiş programların çalışmasını sağlayan bir sistemdir.
 
-- Kaynak Siteler
-    * [Compiler (Derleyici) ve Interpreter (Yorumlayıcı) Nedir?](https://medium.com/@msenell/derleyi%CC%87ci%CC%87-compiler-ve-yorumlayici-interpreter-%C3%BCzeri%CC%87ne-bi%CC%87r-deneme-d8656619ef6)
-    * [Java - Bytecode](https://tr.wikipedia.org/wiki/Java_bytecode)
+> #### B_1. Kaynak Siteler
+
+- [Compiler (Derleyici) ve Interpreter (Yorumlayıcı) Nedir?](https://medium.com/@msenell/derleyi%CC%87ci%CC%87-compiler-ve-yorumlayici-interpreter-%C3%BCzeri%CC%87ne-bi%CC%87r-deneme-d8656619ef6)
+- [Java - Bytecode](https://tr.wikipedia.org/wiki/Java_bytecode)
 
 ### C. Sayı Tabanları (İkilik ve Onluk)
 
 İkilik(Binary) ve Onluk(Decimal) tabanlar
-
-- Kaynak Siteler
-  * [Onluk Tabanından İkilik Tabana Çevirme Kod Örneği](https://prog.asmaamir.com/e-tabancevirme)
 
 #### C_1. Onluk (Decimal) Gösterimi
 
@@ -59,6 +58,10 @@ Sonraki dörtler basamağı (1'den 4'e) şeklinde ilerler.
 - (1 * 2^2) + (1 * 2^1) + (0 * 2^0) = (110)2
 - (1* 4) + (1 * 2) + (0 * 1) = (110)2
 
+> #### C_3. Kaynak Siteler
+
+- [Onluk Tabanından İkilik Tabana Çevirme Kod Örneği](https://prog.asmaamir.com/e-tabancevirme)
+
 ### D. Binary Symbols(ASCII) - Araştır?
 
 Sayısal olmayan verilerin bir sembol olduğunu ve 0 ve 1'lerdan oluştuğunu hep birlikte öğrendik. Binary olarak gördüğümüz ifade makine kodundan dolayı farklı bir nesneyi işaret edebilir.
@@ -73,6 +76,7 @@ Bilgisayar, yapısından dolayı içerisinde tutulabilecek veri miktarı sınır
 Bu bitleri bir hafıza gibi düşünebiliriz. Ne kadar çok bit dolar ise boyut o kadar artar ve daha az veri depolama alanımız kalır. 8 kutucuk yan yana geldiğinde yani 8 bit olduğunda 1 Byte(Bayt)'a eşit olur. ***8 bit = 1 Byte*** şeklinde adlandırılır. **Metre, Santimetre gibi düşünülebilir tamamen adlandırma.**
 
 Veriler Byte(Bayt) ve Byte'ın katları olarak depolanır/hesaplanır(KB, MB, GB gibi). 1024 olduğunda bir üst gösterime geçilir. Örneğin;
+
 - **1024 Byte = 1 KiloByte(KB)**
 - **1024 KiloByte(KB) = 1 MegaByte(MB)**
 ***eşittir.***
@@ -80,6 +84,7 @@ Veriler Byte(Bayt) ve Byte'ın katları olarak depolanır/hesaplanır(KB, MB, GB
 ***Peki 1 Bayt(Byte) ne kadar farklı şey ifade edebiliyor;***
 
 8 kutucuk olduğu için *2^8'den 256 farklı şey ifade edebiliyor.* 256 farklı karakterin gösterimi için 0 ve 1'lerden oluşan yeterli farklı kombinasyonu elde ederiz.
+
 - Numaralar
 - Büyük, küçük harfler
 - Noktalama işaretleri vb.
@@ -101,9 +106,10 @@ Hemen bir örnek çözelim.
 - Binary semboller, kullanan kişiye göre farklılık gösterebilir. Örneğin, 1010 sembolü Ali'ye göre "1" karakterini sembolize ederken, Veli'ye göre "11" sayısını, Ahmet'e göre ise "a" harfini sembolize edebilir.
 ![Veri Sembolleri](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/veri-tutulma/figures/sembol-veri.png)
 
-- Kaynak Siteler
-    * [Bit Nedir](https://tr.wikipedia.org/wiki/Bit_(bili%C5%9Fim))
-    * [Byte Nedir](https://tr.wikipedia.org/wiki/Bayt)
+> #### E_1. Kaynak Siteler
+
+- [Bit Nedir](https://tr.wikipedia.org/wiki/Bit_(bili%C5%9Fim))
+- [Byte Nedir](https://tr.wikipedia.org/wiki/Bayt)
 
 ### F. Recursion ve Recursive - Özyineleme
 
@@ -117,11 +123,13 @@ Recursive: Bir sıfattır. Bir şeyin kendini tekrar eden veya içeren yapısı 
 
 Recursive metotlar *her zaman "return" lü metot* olmak zorundadır. Recurison ile alakalı bir kaç örnek çözelim.
 
-#### *Örnek 1: Bir Mülakat Sorusu : Döngü Kullanmadan Bir Sayı Dizisini Ekrana Yazdırmak*
+> #### F_1. Kod Örnekleri
+
+##### *Örnek 1: Bir Mülakat Sorusu : Döngü Kullanmadan Bir Sayı Dizisini Ekrana Yazdırmak*
 
 Başlangıç 1, bitişi ise 20 olan sayı dizisini döngü kullanmadan tek tek ekrana yazdıralım. Kodumuz PHP ile yazılacak.
 
-##### *Kod 1, İki değer arasında recursive*
+###### *Kod 1, İki değer arasında recursive*
 
 ```php
 function loop($startValue,$endValue){
@@ -134,7 +142,7 @@ function loop($startValue,$endValue){
 loop(1,20);
 ```
 
-##### *Kod 2, İki değer arasında recursive(Daha iyisi)*
+###### *Kod 2, İki değer arasında recursive(Daha iyisi)*
 
 ```php
 function loop($startValue,$endValue){
@@ -148,11 +156,13 @@ function loop($startValue,$endValue){
 loop(1,20);
 ```
 
-#### *Örnek 2: Döngü Kullanmadan Faktöriyel Hesabı*
+<hr>
+
+##### *Örnek 2: Döngü Kullanmadan Faktöriyel Hesabı*
 
 5 sayısının faktöriyeli döngü kullanmadan hesaplanacak. Kodumuz yine PHP ile yazılacak.
 
-##### *Kod 1, fatöriyel recursive*
+###### *Kod 1, fatöriyel recursive*
 
 ```php
 $result = 1;
@@ -182,7 +192,7 @@ Kod 1 örneğinde "global" kullanıldı. Peki "global ne işe yarar neden kullan
 
 "***global result***" ifadesi kullanılmazsa, fonksiyon içindeki "***result***" değişkeni yerel olur ve "***global result***" değişkenine erişilemez(başka yerdeki result erişilemez).
 
-##### *Kod 2, fatöriyel recursive(Daha iyisi)*
+###### *Kod 2, fatöriyel recursive(Daha iyisi)*
 
 ```php
 function factorial($number){
@@ -199,11 +209,13 @@ $result = factorial(5);
 echo $result;
 ```
 
-#### *Örnek 3: Listedeki Elemanları Toplama*
+<hr>
+
+##### *Örnek 3: Listedeki Elemanları Toplama*
 
 Kodumuz Python ile yazılacak.
 
-##### *Kod 1, Python liste gezme özelliği ile: my_list[0:]*
+###### *Kod 1, Python liste gezme özelliği ile: my_list[0:]*
 
 İlk elemandan listenin sonuna kadar elemanları döner. Bu yöntemle listeyi sürekli olarak küçültüyoruz, ta ki tek bir eleman kalana kadar.
 
@@ -221,7 +233,7 @@ my_list = [5, 4, 3, 2, 1]
 print(list_sum(my_list))
 ```
 
-##### *Kod 2, listede ki elemanları manuel gezme: index*
+###### *Kod 2, listede ki elemanları manuel gezme: index*
 
 Bu yöntem, performans açısından daha verimli olabilir, çünkü her recursive çağrıda yeni bir liste oluşturulmaz ***my_list[0:]*** 'de olduğu gibi.
 
@@ -237,11 +249,13 @@ my_list = [5, 4, 3, 2, 1]
 print(list_sum(my_list))
 ```
 
-#### *Örnek 4: Döngü Kullanmadan Fibonacci Hesabı*
+<hr>
+
+##### *Örnek 4: Döngü Kullanmadan Fibonacci Hesabı*
 
 Fibonacci'nin sadece ilk 10 elemanı hesaplanacak. Kodumuz yine PHP ile yazılacak.
 
-##### *Kod 1, döngüden yardım alarak*
+###### *Kod 1, döngüden yardım alarak*
 
 ```php
 function fibonacci($n){
@@ -259,7 +273,7 @@ for ($i = 1; $i<=10; $i++)
     echo fibonacci($i). "\n";
 ```
 
-##### *Kod 2, yardımcı fonksiyondan yardım alarak*
+###### *Kod 2, yardımcı fonksiyondan yardım alarak*
 
 ```php
 function fibonacci($n){
@@ -283,7 +297,7 @@ function printFibonacci($current, $count){
 printFibonacci(1,1);
 ```
 
-##### f(4) için sözlü bir örnek/açıklama yapalım
+###### f(4) için sözlü bir örnek/açıklama yapalım
 
 Dördüncü(4.) fibonacci elemanı çağrıldığında adımlar aşağıda ki gibidir
 
@@ -314,7 +328,9 @@ fibonacci(2) = fibonacci(1) + fibonacci(0) = 1 + 0 = 1
 fibonacci(3) = fibonacci(2) + fibonacci(1) = 1 + 1 = 2
 fibonacci(4) = fibonacci(3) + fibonacci(2) = 2 + 1 = 3
 
-#### *Örnek 5: Hanoi Kuleleri Çözümü*
+<hr>
+
+##### *Örnek 5: Hanoi Kuleleri Çözümü*
 
 Hanoi Kuleleri çözümü. Kodumuz Python ile yazılacak. Yazılan kod için count ile adım saydırıldı. Diskler kaç adımda bitiş kısmında sıralanacak sağlaması için; **(2^n)-1** Yani 3 disk varsa 7 adımda bitmesi gerekir işlemin.
 
@@ -334,21 +350,20 @@ def PlayHanoi(numberOfDisk, sourcePeg, destinationPeg, auxiliaryPeg):
         PlayHanoi(numberOfDisk-1, sourcePeg, auxiliaryPeg, destinationPeg)
         PlayHanoi(1, sourcePeg, destinationPeg, auxiliaryPeg)
         PlayHanoi(numberOfDisk-1, auxiliaryPeg, destinationPeg, sourcePeg)
-        
-
 
 PlayHanoi(3,"Start","End","Temp")
 ```
 
-- Kaynak Siteler
-    * [Youtube - Veri Yapıları Ders 8 Rekürsif Yapılar](https://www.youtube.com/watch?v=PNWOP_QoBGI&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=9)
-    * [Youtube - Recursive Fonksiyonlar Nasıl Çalışır ve Örnek Kodlama](https://www.youtube.com/watch?v=cv7CY8UmFL0)
-    * [Youtube - Java Dersleri #43 - Recursive (Özyineli) Metotlar](https://www.youtube.com/watch?v=I3_wU5fr3Zo)
-    * [Youtube - Öz Yineleme (Recursion) - Veri Yapıları Ders 02](https://www.youtube.com/watch?v=qT-Fh2kxR6s)
-    * [Youtube - Recursive fonksiyonlar ve Python ile Hanoi Kuleleri çözümü](https://www.youtube.com/watch?v=4GvMYiPLRtU)
-    * [Youtube - Python - 09-1 - Recursive Fonksiyonlar](https://www.youtube.com/watch?v=5b4rfahUiP8)
-    * [Recursion Nedir?](https://www.yucelalkan.com/recursion-nedir)
-    * [Özyineli(Recursive) Fonksiyon Nedir?](https://medium.com/kodcular/%C3%B6zyineli-recursive-fonksiyon-nedir-d98439707a8d)
+> #### Kaynak Siteler
+
+- [Youtube - Veri Yapıları Ders 8 Rekürsif Yapılar](https://www.youtube.com/watch?v=PNWOP_QoBGI&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=9)
+- [Youtube - Recursive Fonksiyonlar Nasıl Çalışır ve Örnek Kodlama](https://www.youtube.com/watch?v=cv7CY8UmFL0)
+- [Youtube - Java Dersleri #43 - Recursive (Özyineli) Metotlar](https://www.youtube.com/watch?v=I3_wU5fr3Zo)
+- [Youtube - Öz Yineleme (Recursion) - Veri Yapıları Ders 02](https://www.youtube.com/watch?v=qT-Fh2kxR6s)
+- [Youtube - Recursive fonksiyonlar ve Python ile Hanoi Kuleleri çözümü](https://www.youtube.com/watch?v=4GvMYiPLRtU)
+- [Youtube - Python - 09-1 - Recursive Fonksiyonlar](https://www.youtube.com/watch?v=5b4rfahUiP8)
+- [Recursion Nedir?](https://www.yucelalkan.com/recursion-nedir)
+- [Özyineli(Recursive) Fonksiyon Nedir?](https://medium.com/kodcular/%C3%B6zyineli-recursive-fonksiyon-nedir-d98439707a8d)
 
 <hr>
 
@@ -500,8 +515,9 @@ Gördüğünüz gibi çok kafa karıştırıcı.
 
 ### B. List Nedir ve Linked List İle Arasında ki Farklar - Araştır?
 
-- Kaynak Siteler
-    * [Youtube - Veri Yapıları Ders 2 Listeler](https://www.youtube.com/watch?v=hnE9_7VBKyI&t=51s)
+> #### B._1 Kaynak Siteler
+
+- [Youtube - Veri Yapıları Ders 2 Listeler](https://www.youtube.com/watch?v=hnE9_7VBKyI&t=51s)
 
 ### C. Linked List - Araştır?
 
@@ -510,13 +526,14 @@ Gördüğünüz gibi çok kafa karıştırıcı.
 
 Yukarıdaki örnekte gördüğünüz üzere, her bir düğüm bir sonrakinin adresini tutar. Her bir önceki eleman bir sonraki eleman ile bağlıdır.
 
-- Kaynak Siteler
-    * [Youtube - Veri Yapıları Ders 2 Listeler](https://www.youtube.com/watch?v=hnE9_7VBKyI&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=3&t=591s)
-    * [Youtube - Linked List - Veri Yapıları - Data Structures](https://www.youtube.com/watch?v=Qs4PNb9Y1ME&list=PLZYKO7600KN-mFeIahqjCVIzYd55wbJ3y&index=6)
-    * [Youtube - Veri Yapıları Ders 3 Bağlı Listeler (Tek Yönlü,İki Yönlü,Dairesel)](https://www.youtube.com/watch?v=7vjRwtDP0J4&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=4)
-    * [Youtube - Veri Yapılarına Giriş ve Bağlı Listeler (Linked List) -VY1)](https://www.youtube.com/watch?v=r3uOBb3BM-0)
-    * [Linked List Nedir](http://cagataykiziltan.net/veri-yapilari-data-structures/1-linked-list-bagli-listeler/)
-    * [VERİ YAPILARI(DATA STRUCTURES)](https://medium.com/@abdulkadir.kamci10/veri%CC%87-yapilari-data-structures-4f3de459f930)
+> #### C_1. Kaynak Siteler
+
+- [Youtube - Veri Yapıları Ders 2 Listeler](https://www.youtube.com/watch?v=hnE9_7VBKyI&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=3&t=591s)
+- [Youtube - Linked List - Veri Yapıları - Data Structures](https://www.youtube.com/watch?v=Qs4PNb9Y1ME&list=PLZYKO7600KN-mFeIahqjCVIzYd55wbJ3y&index=6)
+- [Youtube - Veri Yapıları Ders 3 Bağlı Listeler (Tek Yönlü,İki Yönlü,Dairesel)](https://www.youtube.com/watch?v=7vjRwtDP0J4&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=4)
+- [Youtube - Veri Yapılarına Giriş ve Bağlı Listeler (Linked List) -VY1)](https://www.youtube.com/watch?v=r3uOBb3BM-0)
+- [Linked List Nedir](http://cagataykiziltan.net/veri-yapilari-data-structures/1-linked-list-bagli-listeler/)
+- [VERİ YAPILARI(DATA STRUCTURES)](https://medium.com/@abdulkadir.kamci10/veri%CC%87-yapilari-data-structures-4f3de459f930)
 
 ### D. Linked List vs Array - Farklarını Detaylı Araştır?
 
@@ -526,9 +543,10 @@ Yukarıdaki örnekte gördüğünüz üzere, her bir düğüm bir sonrakinin adr
 +Linked Listlerde ilgili elemanı bulmak için tek tek sırasıyla elemanları kontrol etmek gerekir.
 - ![LinkedList-vs-Array](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/linked-list-array/figures/array-vs-linkedlist-diff.png)
 
-- Kaynak Siteler
-    * [Veri Yapılarına Giriş ve Linked List Mantığı](https://ceyhuncozvelioglu.medium.com/kendime-notlar-1-veri-yap%C4%B1lar%C4%B1na-giri%C5%9F-ve-linkedlist-mant%C4%B1%C4%9F%C4%B1-5944bcbb8165)
-    * [Dizi (Array) ile Bağlı Liste (Linked List) Arasındaki Farklar](https://www.ysancar.com/veri-yapilari/dizi-ile-bagli-liste-arasindaki-farklar/)
+> #### D_1. Kaynak Siteler
+
+- [Veri Yapılarına Giriş ve Linked List Mantığı](https://ceyhuncozvelioglu.medium.com/kendime-notlar-1-veri-yap%C4%B1lar%C4%B1na-giri%C5%9F-ve-linkedlist-mant%C4%B1%C4%9F%C4%B1-5944bcbb8165)
+- [Dizi (Array) ile Bağlı Liste (Linked List) Arasındaki Farklar](https://www.ysancar.com/veri-yapilari/dizi-ile-bagli-liste-arasindaki-farklar/)
 
 ### E. Lindked List Eleman Ekleme/Silme - Detaylı Araştır?
 
@@ -544,8 +562,9 @@ Adresi #20 olan 6 numaralı hücreyi çıkarmak/silmek istiyoruz. Linked-List'de
 22 numaralı hücrenin adresini temp bir değişkende vb. tutuyoruz. 6 numaralı hücreyi siliyoruz sonrasında 7 numaralı hücreye 22 nin adresini yazıyoruz.
 ![eleman Çıkarma](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/linked-list-add-delete/figures/eleman-%C3%A7%C4%B1karma.png)
 
-- Kaynak Siteler
-    * [Doğrusal Veri Yapıları 2 - Bağlı Liste (Linked List)](https://medium.com/@tolgahan.cepel/do%C4%9Frusal-veri-yap%C4%B1lar%C4%B1-2-ba%C4%9Fl%C4%B1-liste-linked-list-8e5d3d84c41f)
+> #### E_1. Kaynak Siteler
+
+- [Doğrusal Veri Yapıları 2 - Bağlı Liste (Linked List)](https://medium.com/@tolgahan.cepel/do%C4%9Frusal-veri-yap%C4%B1lar%C4%B1-2-ba%C4%9Fl%C4%B1-liste-linked-list-8e5d3d84c41f)
 
 ### F. Stack (LIFO) - Detaylı Araştır!
 
@@ -559,9 +578,10 @@ Yığınlara eleman eklerken veya çıkartırken bazı methodlar uygulanır. Bun
     * Push: Stack'e eleman eklemek (yığının üstüne tabak koymak). Her seferinde koyulan tabak en üstteki yani son tabak olur.
     * Pop: Stack'ten eleman almak. Yığının en üstünden tabak almak. En son tabak en üstteki olduğu için yığından tabak aldığımızda üstten alırız.
 
-- Kaynak Siteler
-    * [Youtube - Veri Yapıları Ders 4 Yığıt (Stack) Yapısı]()
-    * [stack-kod-örneği](https://www.baskent.edu.tr/~tkaracay/etudio/ders/prg/dataStructures/Collections/ClassStack.pdf)
+> #### F_1. Kaynak Siteler
+
+- [Youtube - Veri Yapıları Ders 4 Yığıt (Stack) Yapısı](https://www.youtube.com/watch?v=nPl1A6036uk&t)
+- [stack-kod-örneği](https://www.baskent.edu.tr/~tkaracay/etudio/ders/prg/dataStructures/Collections/ClassStack.pdf)
 
 ### G. Queue (FIFO) - Detaylı Araştır?
 
@@ -574,9 +594,11 @@ Queue (Kuyruk)'da eleman eklemesi yaparken enqueue methodunu kullanıyoruz. Elem
 
     * Enqueue: Yeni elemanın Kuyruğa eklenmesi (yeni birinin sıraya girmesi)
     * Dequeue: Elemanın Kuyruktan çıkarılması (sırası gelenin sıradan çıkması/işi bitenin sıradan ayrılması)
-- Kaynak Siteler
-    * [Youtube - Veri Yapıları Ders 5 Kuyruk Kavramı](https://www.youtube.com/watch?v=W-wCqjKSpys&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=6)
-    * [Doğrusal Veri Yapıları 4 - Kuyruk (Queue) Kodlu Örnek](https://medium.com/@tolgahan.cepel/do%C4%9Frusal-veri-yap%C4%B1lar%C4%B1-4-kuyruk-queue-dcbd07e8ba77)
+
+> #### G_1. Kaynak Siteler
+
+- [Youtube - Veri Yapıları Ders 5 Kuyruk Kavramı](https://www.youtube.com/watch?v=W-wCqjKSpys&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=6)
+- [Doğrusal Veri Yapıları 4 - Kuyruk (Queue) Kodlu Örnek](https://medium.com/@tolgahan.cepel/do%C4%9Frusal-veri-yap%C4%B1lar%C4%B1-4-kuyruk-queue-dcbd07e8ba77)
 
 ### H. Hash Function(Karma Fonksiyonu)/ Hash Table(Karma Tablosu) - Detaylı Araştır?
 
@@ -584,7 +606,7 @@ Queue (Kuyruk)'da eleman eklemesi yaparken enqueue methodunu kullanıyoruz. Elem
 Arraylerde 0 bazlı bir indexleme vardır. Bazı programlama dillerin de 1 bazlı indexlemeler olsa da genel olarak 0 bazlı indexleme kullanılır. Yani 0'dan başlar index sayısı.
 ![Indexleme](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/hash-table/figures/Indexleme.png)
 - Hash Function(Karma Fonksiyonu)/ Hash Table(Karma Tablosu)
-Hash Table(Karma Tablosu), key value prensibine dayanan bir array kümesidir. Key olarak çağırdığınız elemanın değerini (value) yansıtır. 
+Hash Table(Karma Tablosu), key value prensibine dayanan bir array kümesidir. Key olarak çağırdığınız elemanın değerini (value) yansıtır.
 Hash Table yerine dizileri kullanabilirdik. Fakat her ürünü ve fiyatını tek tek aramak istemediğimiz için hash table kullanıyoruz. Peki bu süreç nasıl işliyor? Hemen bir örnek yapalım. Örneğimiz bir kuru yemiş dükkanından gelecek.
 ![yok](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/hash-table/figures/%C3%B6rnek-ilk-k%C4%B1s%C4%B1m.png)
     
@@ -597,9 +619,10 @@ Hash Table yerine dizileri kullanabilirdik. Fakat her ürünü ve fiyatını tek
 
 Özetle, elimizde var olan verileri bir fonksiyondan geçirip indexliyoruz. Bu fonksiyona hash function(karma fonksiyonu), bu fonksiyon ile birleştiğimiz dizi yapısına ise Hash Table(Karma Tablosu) diyoruz.
 
-- Kaynak Siteler
-    * [Youtube - Hash Table #13](https://www.youtube.com/watch?v=jhc-KG3htrM)
-    * [Youtube - Hash Table (Karım Tablosu, Özet Tablosu) Veri Yapıları 22. Video](https://www.youtube.com/watch?v=_TCkO3DnVs4)
+> #### H_1. Kaynak Siteler
+
+- [Youtube - Hash Table #13](https://www.youtube.com/watch?v=jhc-KG3htrM)
+- [Youtube - Hash Table (Karım Tablosu, Özet Tablosu) Veri Yapıları 22. Video](https://www.youtube.com/watch?v=_TCkO3DnVs4)
 
 ### I. Hash Function(Karma Fonksiyonu)
 
@@ -615,12 +638,13 @@ Hash Function (Karma Fonksiyonu), karma fonksiyonu olabilmesi için bazı temel 
 Fakat her zaman tutarlı olmuyor. Bazen **Collision** dediğimiz sorun ortaya çıkıyor.
 - Farklı girdiye farklı sonuç veremiyor. Farklı çıktılar aynı sonuçlar doğurabiliyor.
 
-- Kaynak Siteler
-    * [Youtube - Hash Function #14](https://www.youtube.com/watch?v=ZX-1qPSYC_k)
-    * [Youtube - Veri Yapıları Ders 9 / Hash Fonksiyonları 1](https://www.youtube.com/watch?v=OYiNo0BTVxQ&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=10)
-    * [Youtube - Veri Yapıları Ders 10 / Hash Fonksiyonları - 2](https://www.youtube.com/watch?v=jxwcjv12TG8&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=11)
-    * [Youtube - Veri Yapıları Ders 11 / Hash Fonksiyonları - 3](https://www.youtube.com/watch?v=Vcr3LizkCuo&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=12)
-    * [Youtube - Veri Yapıları Ders 12 / Hash Fonksiyonları - 4](https://www.youtube.com/watch?v=5h5mBf4k2do&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=13)
+> #### I_1. Kaynak Siteler
+
+- [Youtube - Hash Function #14](https://www.youtube.com/watch?v=ZX-1qPSYC_k)
+- [Youtube - Veri Yapıları Ders 9 / Hash Fonksiyonları 1](https://www.youtube.com/watch?v=OYiNo0BTVxQ&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=10)
+- [Youtube - Veri Yapıları Ders 10 / Hash Fonksiyonları - 2](https://www.youtube.com/watch?v=jxwcjv12TG8&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=11)
+- [Youtube - Veri Yapıları Ders 11 / Hash Fonksiyonları - 3](https://www.youtube.com/watch?v=Vcr3LizkCuo&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=12)
+- [Youtube - Veri Yapıları Ders 12 / Hash Fonksiyonları - 4](https://www.youtube.com/watch?v=5h5mBf4k2do&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=13)
 
 ### J. Hash Collision
 
@@ -631,8 +655,9 @@ Hash Function'da ***farklı iki değerden aynı sayı üretilirse*** bu duruma *
 - Collision sorunuyla az karşılaşabilmek için kaliteli bir hash function olmalı. Bu sayede verimli bir Hash Table elde etmiş oluyoruz.
 - Çarpışma sayısı arttıkça aradığımız şeyi bulma hızı azalır.
 
-- Kaynak Siteler
-    * [Youtube - Hash Collision #15](https://www.youtube.com/watch?v=FD7nKLnrguE)
+> #### J_1. Kaynak Siteler
+
+- [Youtube - Hash Collision #15](https://www.youtube.com/watch?v=FD7nKLnrguE)
 
 <hr>
 
