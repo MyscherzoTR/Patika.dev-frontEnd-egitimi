@@ -354,9 +354,9 @@ PlayHanoi(3,"Start","End","Temp")
 
 ## 2. Veri Yapıları
 
-### A. Array - Araştır?
+### A. Array
 
-String veri tipi aslında hafıza da "***char array***" olarak saklanmaktadır.
+String veri tipi aslında hafıza da "***char array***" olarak saklanmaktadır. Sadece tek boyutlu diziler yoktur. 2 Boyutlu, Çok bouytlu dizilerde vardır. Örneğin; matrisler. Matrisleri tablo gibi düşünebilirsiniz. Her satırda bir kayıt vardır fakat bu kayıtların birden fazla niteliği vardır. Ad-Soyad, Yaş gibi.
 
 > #### A_1. Avantajları
 
@@ -372,7 +372,7 @@ String veri tipi aslında hafıza da "***char array***" olarak saklanmaktadır.
 - Başa, ortaya veya sona eleman eklenemez veya silinemez.
 - 10 elemanlı bir boyuta sahip dizi de 4 eleman bile olsa 10 elemanlık yer kaplar hafızada.
 
-> #### Ne Zaman Kullanılabilir?
+> #### A_3. Ne Zaman Kullanılabilir?
 
 - Uzunluğu sabit bir liste varsa.
 - Tek değer tipine sahipse elemanlar(type:int gibi).
@@ -381,7 +381,115 @@ String veri tipi aslında hafıza da "***char array***" olarak saklanmaktadır.
 - Çok boyutlu matematiksel listelere ihtiyaç duyuluyorsa.
 - Hafızayı verimli kullanmak istenildiğinde.
 
-> #### Kaynak Siteler
+> #### A_4. Kod Örnekleri
+
+##### *Örnek 1: X Elemanlı Bir Diziyi Tersten Çeviren Kodu Yazın (swapping işlemi)*
+
+###### *Kod 1, kısa ama 2 diziye ihtiyaç duyan yöntem*
+
+```python
+array_list = [3, 8, 7, 2, 6, 5]
+print("Ana Liste: ", array_list)
+
+reversed_list = []
+
+for i in range(len(array_list) - 1, -1, -1):
+    reversed_list.append(array_list[i])
+
+print("Ters Çevrilmiş Liste: ", reversed_list)
+```
+
+**range'e verilen 3 parametrenin anlamı;**
+
+- İlk değer başlangıç değeri, bizim durumumuzda ***5***
+- İkinci değer bitiş değeri, -1 olunca dur demek yani en son ***0 çalışacak.***
+- Eksiltme değeri, sayıyı birer birer azalt demek. ***i++, i-- gibi.***
+
+kısacası 5 ten başlayıp 0'a kadar sayıyı eksilten bir döngü. 5 kez çalışıyor.
+
+###### *Kod 2, uzun ama tek diziye ihtiyaç duyan yöntem*
+
+```python
+array_list = [3, 8, 7, 2, 6, 5]
+print("Ana Liste: ", array_list)
+
+list_length = len(array_list)
+
+temp_value = 0
+
+for i in range(list_length // 2):
+    temp_value = array_list[i]  
+    array_list[i] = array_list[list_length-i-1]  
+    array_list[list_length-i-1] = temp_value 
+
+print("Ters Çevrilmiş Liste: ", array_list)
+```
+
+**list_length//2** => tamsayı bölme işlemi için kullanılır. Ondalıklı sayı hesaba katılmaz. Bölüm sonucu 2.4 ise 2 olarak döndürür.
+
+Bu komutu döngü kaç kez çalışacak bunu belirlemek için kullandık çünkü dizinin boyutu değişebilir ve haliyle döngününde çalışma tekrarı değişmeli.
+
+Şuan dizimiz 6 elemanlı buradan sonuç 3 gelir. Elaman sayısı çift uzunluğa sahip olduğunda sorun yok. 6 eleman varsa baktığınızda ***baştaki 3 ile sondaki 3 eleman yer değiştirmeli***. Yani döngü 3 kez çalışmalı.
+
+Diyelim ki **dizi 5 elemanlı olsaydı** nasıl olurdu? Bölüm sonucu 2 gelirdi. Döngü 2 kez çalışırdı. ***baştaki 2 ile sondaki 2 eleman yer değiştirirdi*** Yani 4 değer yer değiştirirdi. Geriye ise en ortadaki değer tek başına kalırdı.Zaten en ortada olduğundan yeri değişmez. Tek sayılarda yöntem bu şekilde.
+
+İşte bu yüzden ***list_length//2*** kullanıyoruz.
+
+##### *Örnek 2: Fibonacci İlk 20 Elemanını Hesaplayan ve Bunu Diziyi Kayıt Eden Kod*
+
+###### *Kod 1, ilk yöntem*
+
+```python
+array_list = [0]*20 # 0 değerine sahip 20 elemanlı dizi. Python da direkt dizi boyutunu belirleme yok başlangıçta.
+
+for i in range(20): 
+    if i == 0 or i == 1:
+        array_list[i] = 1
+        
+    else:
+        array_list[i] = array_list[i-1] + array_list[i-2]
+    
+print(array_list)
+```
+
+###### *Kod 2, ikinci yöntem*
+
+```python
+array_list = [0]*20 # 0 değerine sahip 20 elemanlı dizi. Python da direkt dizi boyutunu belirleme yok başlangıçta.
+
+array_list[0] = 1
+array_list[1] = 1
+
+for i in range(2,20):
+    array_list[i] = array_list[i-1] + array_list[i-2]
+    
+print(array_list)
+```
+
+###### *Kod 3, Eğer dizi kullanmasaydık işimiz nasıl zor olurdu bir görelim*
+
+```python
+fibonacci_first_element = 1
+fibonacci_second_element = 1
+
+fibonacci_element = 21
+
+for i in range(1,fibonacci_element):
+    
+    if i == 1 or i == 2:
+        sum = fibonacci_first_element
+    
+    else:
+         fibonacci_first_element = fibonacci_second_element
+         fibonacci_second_element = sum
+         sum = fibonacci_first_element + fibonacci_second_element
+    
+    print(sum)
+```
+
+Gördüğünüz gibi çok kafa karıştırıcı.
+
+> #### A_5. Kaynak Siteler
 
 - [Youtube - Arrays - Diziler - Veri yapıları ve algoritmalar - Data Structures](https://www.youtube.com/watch?v=Itj319eYDMY)
 - [Youtube - C Programlama 7 Diziler (Array)](https://www.youtube.com/watch?v=0bjMFwS8TZY)
