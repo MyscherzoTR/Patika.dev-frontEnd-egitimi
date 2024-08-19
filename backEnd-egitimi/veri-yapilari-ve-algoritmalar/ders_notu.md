@@ -358,7 +358,7 @@ PlayHanoi(3,"Start","End","Temp")
 
 String veri tipi aslında hafıza da "***char array***" olarak saklanmaktadır.
 
-#### Avantajları
+> #### A_1. Avantajları
 
 - Rastgele herhangi bir elemana index kullanarak hızlı erişme.
 - Her elemanın değeri kolay silinebilir veya değiştirilebilir.
@@ -366,13 +366,13 @@ String veri tipi aslında hafıza da "***char array***" olarak saklanmaktadır.
 - Bilgisayarlarda native olarak implement edilmiş en hızlı veri yapısı.
 - Stacks, Queues, Heaps ve Hash Table gibi veri yapılarının temelini oluşturur.
 
-#### Dezavantajları
+> #### A_2. Dezavantajları
 
 - Kapasitesi sabittir. Başlangıçta verilen değer neyse o dur.
 - Başa, ortaya veya sona eleman eklenemez veya silinemez.
 - 10 elemanlı bir boyuta sahip dizi de 4 eleman bile olsa 10 elemanlık yer kaplar hafızada.
 
-#### Ne Zaman Kullanılabilir?
+> #### Ne Zaman Kullanılabilir?
 
 - Uzunluğu sabit bir liste varsa.
 - Tek değer tipine sahipse elemanlar(type:int gibi).
@@ -381,7 +381,7 @@ String veri tipi aslında hafıza da "***char array***" olarak saklanmaktadır.
 - Çok boyutlu matematiksel listelere ihtiyaç duyuluyorsa.
 - Hafızayı verimli kullanmak istenildiğinde.
 
-#### Kaynak Siteler
+> #### Kaynak Siteler
 
 - [Youtube - Arrays - Diziler - Veri yapıları ve algoritmalar - Data Structures](https://www.youtube.com/watch?v=Itj319eYDMY)
 - [Youtube - C Programlama 7 Diziler (Array)](https://www.youtube.com/watch?v=0bjMFwS8TZY)
