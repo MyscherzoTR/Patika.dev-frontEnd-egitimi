@@ -381,11 +381,12 @@ String veri tipi aslında hafıza da "***char array***" olarak saklanmaktadır.
 - Çok boyutlu matematiksel listelere ihtiyaç duyuluyorsa.
 - Hafızayı verimli kullanmak istenildiğinde.
 
-- Kaynak Siteler
-    * [Youtube - Arrays - Diziler - Veri yapıları ve algoritmalar - Data Structures](https://www.youtube.com/watch?v=Itj319eYDMY)
-    * [Youtube - C Programlama 7 Diziler (Array)](https://www.youtube.com/watch?v=0bjMFwS8TZY)
-    * [Array Nedir?](https://medium.com/@denizf.b/array-nedir-d9b7afd44ca2)
-    * [VERİ YAPILARI(DATA STRUCTURES)](https://medium.com/@abdulkadir.kamci10/veri%CC%87-yapilari-data-structures-4f3de459f930)
+#### Kaynak Siteler
+
+- [Youtube - Arrays - Diziler - Veri yapıları ve algoritmalar - Data Structures](https://www.youtube.com/watch?v=Itj319eYDMY)
+- [Youtube - C Programlama 7 Diziler (Array)](https://www.youtube.com/watch?v=0bjMFwS8TZY)
+- [Array Nedir?](https://medium.com/@denizf.b/array-nedir-d9b7afd44ca2)
+- [VERİ YAPILARI(DATA STRUCTURES)](https://medium.com/@abdulkadir.kamci10/veri%CC%87-yapilari-data-structures-4f3de459f930)
 
 ### B. List Nedir ve Linked List İle Arasında ki Farklar - Araştır?
 
