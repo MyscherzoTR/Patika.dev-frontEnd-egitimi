@@ -19,6 +19,7 @@ Algoritma belirli bir durumdan başlayıp belirli bir sonuçta biten problemlere
 > #### A_1. Kaynak Siteler
 
 - [khanacademy - Algoritma Nedir ve Neden Öğrenmeliyiz?](https://tr.khanacademy.org/computing/computer-science/algorithms/intro-to-algorithms/v/what-are-algorithms)
+- [khanacademy - Tahmin Oyunu](https://tr.khanacademy.org/computing/computer-science/algorithms/intro-to-algorithms/a/a-guessing-game)
 
 ### B. Makine Dili (0 ve 1)
 
@@ -371,6 +372,8 @@ PlayHanoi(3,"Start","End","Temp")
 - [Youtube - Python - 09-1 - Recursive Fonksiyonlar](https://www.youtube.com/watch?v=5b4rfahUiP8&list=PLzIWkToFwqHRZWCI_helg4PeN184yTbYS)
 - [Recursion Nedir?](https://www.yucelalkan.com/recursion-nedir)
 - [Özyineli(Recursive) Fonksiyon Nedir?](https://medium.com/kodcular/%C3%B6zyineli-recursive-fonksiyon-nedir-d98439707a8d)
+- [khanacademy - Ders 5: Özyinelemeli Algoritmalar](https://tr.khanacademy.org/computing/computer-science/algorithms/recursive-algorithms/a/the-factorial-function)
+- [khanacademy - Zor Görev: Hanoi'yi özyinelemeli olarak çözmek](https://tr.khanacademy.org/computing/computer-science/algorithms/towers-of-hanoi/pc/challenge-solve-hanoi-recursively)
 
 <hr>
 
@@ -523,7 +526,6 @@ Gördüğünüz gibi çok kafa karıştırıcı ve uzun bir yöntem.
 
 > #### A_5. Kaynak Siteler
 
-- [Youtube - C Diziler Uygulama - Veri Yapıları Ders 02](https://www.youtube.com/watch?v=Z5ACNB1XAw4&list=PLIM5iw4GHbNX8O53Z7Dqi1ZIUxZzpFhR8)
 - [Youtube - C Programlama 7 Diziler (Array)](https://www.youtube.com/watch?v=0bjMFwS8TZY&list=PLh9ECzBB8tJNzJqD64MAS0SK5IeNCKCzY)
 - [Youtube - Java Arrays - Diziler - Veri yapıları ve algoritmalar - Data Structures](https://www.youtube.com/watch?v=Itj319eYDMY&list=PLZYKO7600KN-mFeIahqjCVIzYd55wbJ3y)
 - [Youtube - Java 12 - Diziler (Arrays)](https://www.youtube.com/watch?v=Xtc50eGgm08&list=PLh9ECzBB8tJNWhY-uH1RrvAFI88vC-Snh)
