@@ -2,8 +2,13 @@
 
 Ders ile alakalı başlangıç teorik videolar - ***kesinlikle izlenmeli***;
 
-- [Veri Yapıları Ders 1 Temel Kavramlar](https://youtu.be/AMq0LhzavhU)
-- [Veri yapıları ve Algoritmalar - Data Structures and Algorithms](https://www.youtube.com/watch?v=mKPTA7hAewY)
+- [Youtube - Algoritma Nasıl Öğrenilir?](https://www.youtube.com/watch?v=mw8GkVWDFok)
+- [Youtube - Veri Yapıları Ders 1 Temel Kavramlar](https://www.youtube.com/watch?v=AMq0LhzavhU&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU)
+- [Youtube - Veri yapıları ve Algoritmalar - Data Structures and Algorithms](https://www.youtube.com/watch?v=mKPTA7hAewY&list=PLZYKO7600KN-mFeIahqjCVIzYd55wbJ3y)
+
+***Son olarak aşağıdaki izleme listesi izlenmeli!***
+
+- [Youtube - Algoritmaya ve Programcılığa giriş(Playlist)](https://www.youtube.com/playlist?list=PLzIWkToFwqHRQHEefJEZsUGTdpyo4NVtb)
 
 ## 1. Temel Kavramlar
 
@@ -356,12 +361,14 @@ PlayHanoi(3,"Start","End","Temp")
 
 > #### Kaynak Siteler
 
-- [Youtube - Veri Yapıları Ders 8 Rekürsif Yapılar](https://www.youtube.com/watch?v=PNWOP_QoBGI&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=9)
-- [Youtube - Recursive Fonksiyonlar Nasıl Çalışır ve Örnek Kodlama](https://www.youtube.com/watch?v=cv7CY8UmFL0)
-- [Youtube - Java Dersleri #43 - Recursive (Özyineli) Metotlar](https://www.youtube.com/watch?v=I3_wU5fr3Zo)
-- [Youtube - Öz Yineleme (Recursion) - Veri Yapıları Ders 02](https://www.youtube.com/watch?v=qT-Fh2kxR6s)
+- [Youtube - C Öz Yineleme (Recursion) - Veri Yapıları Ders 02](https://www.youtube.com/watch?v=qT-Fh2kxR6s&list=PLIM5iw4GHbNX8O53Z7Dqi1ZIUxZzpFhR8)
+- [Youtube - C# Veri Yapıları Ders 8 Rekürsif Yapılar](https://www.youtube.com/watch?v=PNWOP_QoBGI&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU)
+- [Youtube - Java 24 - Rekürsif (Özyineli, Recursive) Fonksiyonlar](https://www.youtube.com/watch?v=nbZqkz_jsOQ&list=PLh9ECzBB8tJNWhY-uH1RrvAFI88vC-Snh)
+- [Youtube - Java 25 - Recursive (Özyineli) Örnek Çözümü](https://www.youtube.com/watch?v=EgXL4BSe6Zg&list=PLh9ECzBB8tJNWhY-uH1RrvAFI88vC-Snh)
+- [Youtube - Java - Recursive Fonksiyonlar Nasıl Çalışır ve Örnek Kodlama](https://www.youtube.com/watch?v=cv7CY8UmFL0&list=PLh9ECzBB8tJNzJqD64MAS0SK5IeNCKCzY)
+- [Youtube - Java Dersleri #43 - Recursive (Özyineli) Metotlar](https://www.youtube.com/watch?v=I3_wU5fr3Zo&list=PLEcJSEQK_cD5KHgg9sXumeg659hAr2j4W)
 - [Youtube - Recursive fonksiyonlar ve Python ile Hanoi Kuleleri çözümü](https://www.youtube.com/watch?v=4GvMYiPLRtU)
-- [Youtube - Python - 09-1 - Recursive Fonksiyonlar](https://www.youtube.com/watch?v=5b4rfahUiP8)
+- [Youtube - Python - 09-1 - Recursive Fonksiyonlar](https://www.youtube.com/watch?v=5b4rfahUiP8&list=PLzIWkToFwqHRZWCI_helg4PeN184yTbYS)
 - [Recursion Nedir?](https://www.yucelalkan.com/recursion-nedir)
 - [Özyineli(Recursive) Fonksiyon Nedir?](https://medium.com/kodcular/%C3%B6zyineli-recursive-fonksiyon-nedir-d98439707a8d)
 
@@ -369,7 +376,7 @@ PlayHanoi(3,"Start","End","Temp")
 
 ## 2. Veri Yapıları
 
-### A. Array
+### A. Array (Dizi)
 
 String veri tipi aslında hafıza da "***char array***" olarak saklanmaktadır. Sadece tek boyutlu diziler yoktur. 2 Boyutlu, Çok bouytlu dizilerde vardır. Örneğin; matrisler. Matrisleri tablo gibi düşünebilirsiniz. Her satırda bir kayıt vardır fakat bu kayıtların birden fazla niteliği vardır. Ad-Soyad, Yaş gibi.
 
@@ -399,6 +406,8 @@ String veri tipi aslında hafıza da "***char array***" olarak saklanmaktadır. 
 > #### A_4. Kod Örnekleri
 
 ##### *Örnek 1: X Elemanlı Bir Diziyi Tersten Çeviren Kodu Yazın (swapping işlemi)*
+
+Kodumuz Python ile yazılacak.
 
 ###### *Kod 1, kısa ama 2 diziye ihtiyaç duyan yöntem*
 
@@ -454,10 +463,14 @@ Diyelim ki **dizi 5 elemanlı olsaydı** nasıl olurdu? Bölüm sonucu 2 gelirdi
 
 ##### *Örnek 2: Fibonacci İlk 20 Elemanını Hesaplayan ve Bunu Diziyi Kayıt Eden Kod*
 
+Kodumuz Python ile yazılacak.
+
 ###### *Kod 1, ilk yöntem*
 
 ```python
-array_list = [0]*20 # 0 değerine sahip 20 elemanlı dizi. Python da direkt dizi boyutunu belirleme yok başlangıçta.
+array_list = [0]*20 
+# 0 değerine sahip 20 elemanlı dizi. 
+# Python da direkt dizi boyutunu belirleme yok başlangıçta.
 
 for i in range(20): 
     if i == 0 or i == 1:
@@ -472,7 +485,9 @@ print(array_list)
 ###### *Kod 2, ikinci yöntem*
 
 ```python
-array_list = [0]*20 # 0 değerine sahip 20 elemanlı dizi. Python da direkt dizi boyutunu belirleme yok başlangıçta.
+array_list = [0]*20 
+# 0 değerine sahip 20 elemanlı dizi. 
+# Python da direkt dizi boyutunu belirleme yok başlangıçta.
 
 array_list[0] = 1
 array_list[1] = 1
@@ -504,12 +519,20 @@ for i in range(1,fibonacci_element):
     print(sum)
 ```
 
-Gördüğünüz gibi çok kafa karıştırıcı.
+Gördüğünüz gibi çok kafa karıştırıcı ve uzun bir yöntem.
 
 > #### A_5. Kaynak Siteler
 
-- [Youtube - Arrays - Diziler - Veri yapıları ve algoritmalar - Data Structures](https://www.youtube.com/watch?v=Itj319eYDMY)
-- [Youtube - C Programlama 7 Diziler (Array)](https://www.youtube.com/watch?v=0bjMFwS8TZY)
+- [Youtube - C Diziler Uygulama - Veri Yapıları Ders 02](https://www.youtube.com/watch?v=Z5ACNB1XAw4&list=PLIM5iw4GHbNX8O53Z7Dqi1ZIUxZzpFhR8)
+- [Youtube - C Programlama 7 Diziler (Array)](https://www.youtube.com/watch?v=0bjMFwS8TZY&list=PLh9ECzBB8tJNzJqD64MAS0SK5IeNCKCzY)
+- [Youtube - Java Arrays - Diziler - Veri yapıları ve algoritmalar - Data Structures](https://www.youtube.com/watch?v=Itj319eYDMY&list=PLZYKO7600KN-mFeIahqjCVIzYd55wbJ3y)
+- [Youtube - Java 12 - Diziler (Arrays)](https://www.youtube.com/watch?v=Xtc50eGgm08&list=PLh9ECzBB8tJNWhY-uH1RrvAFI88vC-Snh)
+- [Youtube - Java 23 - Diziler Örnek Çözüm](https://www.youtube.com/watch?v=C9wJKUtuPZ0&list=PLh9ECzBB8tJNWhY-uH1RrvAFI88vC-Snh)
+- [Youtube - Java Dersleri #49 - Diziler (Arrays)](https://www.youtube.com/watch?v=Nwyn_Od6HY0&list=PLEcJSEQK_cD5KHgg9sXumeg659hAr2j4W)
+- [Youtube - Java Dersleri #50 - Çok Boyutlu Diziler (Multidimensional Array)](https://www.youtube.com/watch?v=JvPx7eZZsvw&list=PLEcJSEQK_cD5KHgg9sXumeg659hAr2j4W)
+- [Youtube - Java Dersleri #54 - Proje : Dizideki Elemanların Ortalaması](https://www.youtube.com/watch?v=MvESSBcCx7A&list=PLEcJSEQK_cD5KHgg9sXumeg659hAr2j4W)
+- [Youtube - Python - 05 - Diziler temel işlemler](https://www.youtube.com/watch?v=o2JyXPL9SeA&list=PLzIWkToFwqHRZWCI_helg4PeN184yTbYS)
+- [Youtube - Python - 06 - Çok boyutlu diziler, matrisler](https://www.youtube.com/watch?v=UeYhBv6hTYE&list=PLzIWkToFwqHRZWCI_helg4PeN184yTbYS)
 - [Array Nedir?](https://medium.com/@denizf.b/array-nedir-d9b7afd44ca2)
 - [VERİ YAPILARI(DATA STRUCTURES)](https://medium.com/@abdulkadir.kamci10/veri%CC%87-yapilari-data-structures-4f3de459f930)
 
@@ -517,7 +540,8 @@ Gördüğünüz gibi çok kafa karıştırıcı.
 
 > #### B._1 Kaynak Siteler
 
-- [Youtube - Veri Yapıları Ders 2 Listeler](https://www.youtube.com/watch?v=hnE9_7VBKyI&t=51s)
+- [Youtube - Veri Yapıları Ders 2 Listeler](https://www.youtube.com/watch?v=hnE9_7VBKyI&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU)
+- [Youtube - Sıfırdan Python Dersleri Ders 3: Listeler (Lists)](https://www.youtube.com/watch?v=pBMuc4cc_Ck&list=PL3kMAPso9YQ1Ls-5uTTIWWMkJoF_vyj5J)
 
 ### C. Linked List - Araştır?
 
@@ -528,9 +552,12 @@ Yukarıdaki örnekte gördüğünüz üzere, her bir düğüm bir sonrakinin adr
 
 > #### C_1. Kaynak Siteler
 
+- [Youtube - Bagli Listeler (Linked Lists) - Veri Yapıları Ders 03](https://www.youtube.com/watch?v=SLz8J56hvj0&list=PLIM5iw4GHbNX8O53Z7Dqi1ZIUxZzpFhR8)
+- [Youtube - Bağlı Liste Sınıfının Tasarımı - Veri Yapıları - Ders 03](https://www.youtube.com/watch?v=e3ZMNXROg9o&list=PLIM5iw4GHbNX8O53Z7Dqi1ZIUxZzpFhR8)
+- [Youtube - Bagli Liste İlk Uygulama - Veri Yapıları Ders 03](https://www.youtube.com/watch?v=PzgV6nn53dk&list=PLIM5iw4GHbNX8O53Z7Dqi1ZIUxZzpFhR8)
 - [Youtube - Veri Yapıları Ders 2 Listeler](https://www.youtube.com/watch?v=hnE9_7VBKyI&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=3&t=591s)
-- [Youtube - Linked List - Veri Yapıları - Data Structures](https://www.youtube.com/watch?v=Qs4PNb9Y1ME&list=PLZYKO7600KN-mFeIahqjCVIzYd55wbJ3y&index=6)
-- [Youtube - Veri Yapıları Ders 3 Bağlı Listeler (Tek Yönlü,İki Yönlü,Dairesel)](https://www.youtube.com/watch?v=7vjRwtDP0J4&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=4)
+- [Youtube - Linked List - Veri Yapıları - Data Structures](https://www.youtube.com/watch?v=Qs4PNb9Y1ME&list=PLZYKO7600KN-mFeIahqjCVIzYd55wbJ3y)
+- [Youtube - Veri Yapıları Ders 3 Bağlı Listeler (Tek Yönlü,İki Yönlü,Dairesel)](https://www.youtube.com/watch?v=7vjRwtDP0J4&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU)
 - [Youtube - Veri Yapılarına Giriş ve Bağlı Listeler (Linked List) -VY1)](https://www.youtube.com/watch?v=r3uOBb3BM-0)
 - [Linked List Nedir](http://cagataykiziltan.net/veri-yapilari-data-structures/1-linked-list-bagli-listeler/)
 - [VERİ YAPILARI(DATA STRUCTURES)](https://medium.com/@abdulkadir.kamci10/veri%CC%87-yapilari-data-structures-4f3de459f930)
