@@ -119,7 +119,7 @@ Hemen bir örnek çözelim.
 
 ### F. Recursion ve Recursive - Özyineleme
 
-Rekürsif fonksiyon, bir problemi adım adım küçük parçalara ayırarak,temel işleme ulaşıncaya kadar kendi kendini çağıran bir fonksiyon şeklidir. Bu sıralı çağrılardan sonra temel adıma ulaşınca temel adımdaki değeri geriye doğru sararak en üst basamağa taşır ve böylece sonuç bulunur. Aslında özyineleme,döngüler gibi çalışır ve döngülerinde belli bir sınır olduğundan özyinelemede de bir sınır olmalıdır bu sınır temel adım (taban) olmalıdır. Sınır olmazsa işlem sonsuz kez tekrarlanır ve bu durum sistemi çökertebilir.
+***Rekürsif fonksiyonda(özyinelemeli) temel fikir şudur;*** bir problemi adım adım küçük parçalara ayırarak, temel işleme ulaşıncaya kadar kendi kendini çağıran bir fonksiyon şeklidir. Bu sıralı çağrılardan sonra temel adıma ulaşınca temel adımdaki değeri geriye doğru sararak en üst basamağa taşır ve böylece sonuç bulunur. Aslında özyineleme, döngüler gibi çalışır ve döngülerinde belli bir sınır olduğundan özyinelemede de bir sınır olmalıdır bu sınır temel adım (taban) olmalıdır. Sınır olmazsa işlem sonsuz kez tekrarlanır ve bu durum sistemi çökertebilir.
 
 "recursion" ve "recursive" aynı kavramla ilgilidir, ancak dilbilgisi açısından farklı kullanımlara sahiptirler;
 
@@ -372,8 +372,8 @@ PlayHanoi(3,"Start","End","Temp")
 - [Youtube - Python - 09-1 - Recursive Fonksiyonlar](https://www.youtube.com/watch?v=5b4rfahUiP8&list=PLzIWkToFwqHRZWCI_helg4PeN184yTbYS)
 - [Recursion Nedir?](https://www.yucelalkan.com/recursion-nedir)
 - [Özyineli(Recursive) Fonksiyon Nedir?](https://medium.com/kodcular/%C3%B6zyineli-recursive-fonksiyon-nedir-d98439707a8d)
-- [khanacademy - Ders 5: Özyinelemeli Algoritmalar](https://tr.khanacademy.org/computing/computer-science/algorithms/recursive-algorithms/a/the-factorial-function)
-- [khanacademy - Zor Görev: Hanoi'yi özyinelemeli olarak çözmek](https://tr.khanacademy.org/computing/computer-science/algorithms/towers-of-hanoi/pc/challenge-solve-hanoi-recursively)
+- [khanacademy - Ders 5: Özyinelemeli Algoritmalar (İlk 5 konu tamamlanmalı)](https://tr.khanacademy.org/computing/computer-science/algorithms/recursive-algorithms/a/the-factorial-function)
+- [khanacademy - Zor Görev: Hanoi'yi özyinelemeli olarak çözmek (Bunu yapmayabilirsiniz)](https://tr.khanacademy.org/computing/computer-science/algorithms/towers-of-hanoi/pc/challenge-solve-hanoi-recursively)
 
 <hr>
 
