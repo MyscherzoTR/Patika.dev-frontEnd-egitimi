@@ -87,7 +87,9 @@ S. Branchleri merge etmek => Bir kaç farklı yöntem mevcut.
 
 T. git rm --cached index.html: Staged ortamına eklenmiş bir dosyanın takibinin bırakılması yani untracked (izlenmeyen) hale getirilmesi sağlayan komuttur.
 
-- dosyayı dizinden/klasörden silmek "git rm <dosya veya klasor_name>"
+- dosyayı dizinden/klasörden silmek;
+  - "git rm <dosya_name>"
+  - "git rm <klasor_name>"
 
 U. Diğer git komutları makale: [patika.dev - GIT Bash ile GIT Temel Komutları](https://app.patika.dev/courses/git/git-bash-ile-git-temel-komutlari)
 
