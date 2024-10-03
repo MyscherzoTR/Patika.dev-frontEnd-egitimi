@@ -1,29 +1,40 @@
 # git ve Terminal Kullanımı Ders Notu
 
+git ve Terminal Kullanımı ders notunu hazırlarken bir çok kaynaktan faydalandım. Elimden geldiğince basit ama işe yarar bir not hazırlamaya gayret gösterdim. Her konunun sonunda o konuyla alakalı faydalandığım kaynakları belirttim. Belirttiğim kaynaklardaki herşeyi bu nota eklemedim. Her konuyu okuduktan sonra mutlaka kaynaklarda içeriklere de göz atmalısınız. Faydalandığım kaynaklardan bazıları;
+
+- Çeşitli Youtube kanalları
+- Udemy, BTK Akademi tarzı eğitim siteleri
+- patika.dev, coderspace, techcareer.net tarzı oluşumlar
+- Medium sitesinde ki makaleler
+
+Ders ile alakalı başlangıç teorik video ve makaleler - kesinlikle göz atılmalı;
+
 - [Versiyon Kontrol Sistemi Nedir?](https://furkanalaybeg.medium.com/versiyon-kontrol-sistemi-nedir-2f47bb830064)
 - [techcareer.net - Git Nedir?](https://www.techcareer.net/courses/git-github-egitimi/25f77b02-2a95-4cbb-a697-ab18b531c43e)
 
-Git'in temel kavramlarını daha anlaşılır şekilde açıklayalım:
+## 1. Git'in temel kavramları
+
+***Git'in temel kavramlarını daha anlaşılır şekilde açıklayalım;***
 
 - Çalışma Klasörü (Working Directory): Bu, projenin üzerinde çalıştığın alandır, yani dosyalarının fiziksel olarak bulunduğu klasördür. Git, bu klasördeki dosyaları izler. Dosyalarında yaptığın değişiklikler burada gerçekleşir.
 - Index (Staging Area): Değişiklik yaptığın dosyaları commit etmeden önce, "sahneye" çıkardığın alandır. Yani commit'e dahil olacak dosyaları burada toplarsın. Bu aşamada, hangi dosyaların commit'e dahil olacağını belirleyip, son halini gözden geçirirsin.
 - Local repository (Yerel Depo): Bu alan, yaptığın commit'lerin depolandığı yerdir. Yani projenin geçmişteki sürümlerinin tutulduğu yerdir. Commit'leri yapınca bu yerel repoda saklanır, henüz uzak sunucuya (GitHub, GitLab gibi) gönderilmemiştir.
 
-Özetle:
+### A. Özetle
 
 - Çalışma klasöründe değişiklikler/düzenleme/geliştirme yaparsın.
 - Commit'lemek istediğin dosyaları Staging Area'ya (Index) eklersin. Eklediğin dosyalar burada commit atılmasını bekler.
 - Commit'le bu değişiklikleri Local Repository'ye kaydedersin. Commit geçmişinin localde tutulduğu yerdir.
 
-## 1. git Kurulumu
+## 2. git Kurulumu
 
 [git kurulum](https://www.techcareer.net/courses/git-github-egitimi/4767eadf-4a02-45e4-8f7d-9f594d761223) videosunu izleyip git'i kurabilirsiniz. Kurulum tamamlandıktan sonra git'in terminali olan "Git Bash" yüklenecektir.
 
->### 1_1 Kaynak Siteler
+>### 2_1 Kaynak Siteler
 
 - [git sitesi - git kullanım](https://git-scm.com/book/tr/v2)
 
-## 2. Terminal Kullanımı ve Komutları
+## 3. Terminal Kullanımı ve Komutları
 
 ***dipnot 1:*** Terminalde klasör, dosya isimlerinde büyük-küçük harf hassasiyeti yoktur. Yani "desktop" klasörüne "cd DESKTOP" ile giriş yapabiliriz.
 
@@ -81,7 +92,7 @@ clear komutu terminal de yazılanları temizler.
 
 - [techcareer.net - Terminal Kullanımı](https://www.techcareer.net/courses/git-github-egitimi/d396eb35-184a-4277-9710-c61b0edfeb7e)
 
-## 3. Terimler
+## 4. Terimler
 
 A. untracked (izlenmeyen): GIT tarafından henüz takip edilmeyen, yani yeni oluşturulmuş dosyaları ifade eder.
 
@@ -91,7 +102,7 @@ C. staged (hazırlanmış): Commit’lenmeye hazır olan dosyaları ifade eder.
 
 D. deleted (silinmiş): Projeden silinmiş ama GIT üzerinden kaldırılmamış dosyaları ifade eder.
 
-## 4. git Komutları
+## 5. git Komutları
 
 ### A. git status komutu
 
