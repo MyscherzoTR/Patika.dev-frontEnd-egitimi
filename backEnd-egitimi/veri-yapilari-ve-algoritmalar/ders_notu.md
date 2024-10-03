@@ -383,6 +383,8 @@ PlayHanoi(3,"Start","End","Temp")
 
 String veri tipi aslında hafıza da "***char array***" olarak saklanmaktadır. Sadece tek boyutlu diziler yoktur. 2 Boyutlu, Çok bouytlu dizilerde vardır. Örneğin; matrisler. Matrisleri tablo gibi düşünebilirsiniz. Her satırda bir kayıt vardır fakat bu kayıtların birden fazla niteliği vardır. Ad-Soyad, Yaş gibi.
 
+Dizilerde indis numarası vardır ve ***0*** rakamından başlar. 3 elemanlı bir dizi hayal edelim. Bu elemanların indis numarası sırasıyla: ***0, 1, 2*** olacaktır.
+
 > #### A_1. Avantajları
 
 - Rastgele herhangi bir elemana index kullanarak hızlı erişme.
@@ -406,7 +408,107 @@ String veri tipi aslında hafıza da "***char array***" olarak saklanmaktadır. 
 - Çok boyutlu matematiksel listelere ihtiyaç duyuluyorsa.
 - Hafızayı verimli kullanmak istenildiğinde.
 
-> #### A_4. Kod Örnekleri
+> #### A_4 Python da Array Kullanımı
+
+**Pythonda dizilerin birçok özelliği vardır.** Birden farklı şekilde dizi oluşturabilirsiniz. Dizideki bir elemanın değerini değiştirebilirsiniz. Dizide ki elemanları ekrana yazdırabilirsiniz veya dizideki spesifik bir elemanı. Diziye eleman ekleyebilirsiniz. Örneğin;
+
+```Python
+# int türünde dizi
+int_array = [5, 10, 2, 27, 34, 1, 5] # int türünden oluşan dizi
+
+int_array[0] = 5 # Dizinin ilk elemanının değerini 5 yaptık. İndisler 0 dan başlar!
+
+print(int_array[0]) # İlk elemanı ekrana yazdırdık.
+
+print(int_array) # Diziyi ekrana yazdırdık. Normalde for gibi döngülere ihtiyaç duyarız ekrana yazdırmak için.
+# Fakat Python da buna ihtiyaç yoktur print ile yazdırabiliriz.
+
+print(int_array[1:4]) # 1.indisden 4.indise kadar olan elemanları ekrana yazdırdık, 1.indis dahil 4 dahil değil.
+# Python'ın bir özelliği, dizileri istediğiniz yerden bölebiliyoruz aralık verebiliyoruz.
+
+print(int_array[:3]) # Başlangıç boş bıraktık. Varsayılan olarak 0'dır. Python özelliği.
+
+print(int_array[2:]) # Son değeri boş bıraktık. Varsayılan olarak dizinin sonuncu elemanıdır. Python özelliği.
+
+print(int_array[-1]) # Dizinin sonuncu elemanını yazdırır. Diziyi tersten okur. Python özelliği.
+
+print(int_array[-2]) # Dizinin sondan ikinci elemanını yazdırır. Diziyi tersten okur. Python özelliği.
+
+print(len(int_array)) # Dizinin uzunluğunu, elaman sayısını verir. İndis ile karıştırılmamalı.
+# 10 elemanlı bir dizinin sonuncu elemanının indis değeri 9'dur.
+
+int_array.sort()  # Diziyi küçükten büyüğe sıralar.
+
+int_array.reverse() # Yukarıda diziyi sıraladıktan sonra. reverse ile diziyi ters çeviriyoruz. 
+# Bu durumda büyükten küçüğe saralamış oluruz.
+
+int_array.count(5) # Verilen elaman dizide kaç kez tekrar etmiş hesaplar. Bizim dizimizde 5 değeri 2 kez var.
+
+int_array.clear() # Diziyi sıfırlar, temizler, içini boşaltır.
+
+int_array.index(5) # Belirli bir elemanın ilk bulunduğu indeksi döndürür.
+
+-----------------------------------------------------------------------------------------------------
+
+# string türünde dizi
+string_array = ["elma", "armut", "portakal", "muz"] # string türünden oluşan dizi
+
+# Diziye eleman ekleme
+string_array.append("Üzüm") # Dizinin sonuna "Üzüm" elemanını ekler.
+
+string_array.insert(3,"Nektari") # 3. indise Nektari ekler.
+
+# Diziye toplu eleman ekleme - Python özelliği yine
+string_array += ["şeftali", "ananas", "erik"] # Artı ifadesi ile 2 diziyi toplamakta mümkün.
+
+# Diziden eleman silme
+del string_array[1] # İndis numarası ile birinci silme yöntemi.
+
+string_array.pop(1) # İndis numarası ile ikinci silme yöntemi.
+
+string_array.remove("portakal") # Değeri bilinen elemanı silme.
+
+# Çarpma Özelliği - Karzezyan Çarpım Yapıyor
+string_array *= 2 # Sıralı bir şekilde diziyi 2 katına çıkardı. 
+print(string_array) # Görüldüğü gibi dizinin elemanları 2 katına çıktı sıralı;
+# ["elma", "armut", "portakal", "muz", "elma", "armut", "portakal", "muz"]
+
+-----------------------------------------------------------------------------------------------------
+
+# 2 boyutlu dizi örneği;
+
+array1 = [
+    [2, 0, 3],
+    [4, 5, 2],
+    [7, 0, 1],
+]
+
+array2 = [
+    [0, 1, 4],
+    [0, 1, 2],
+    [0, 1, 1],
+]
+
+# Python da çok boyutlu dizileri yazdırmak çok basit. 
+# İstenilen satır yazdırılmak istenildiğinde print(array1[0]) ile ilk satır yazdırılır. 
+# Dizinin tamamı yazdırılmak istenirse for döngüsü yazıp print(array1[i]).
+# 3-3 bir matris olduğu için direkt range(3) dedik. Hem satır sütun eşit hemde boyutu biliniyor.
+for i in range(3):
+    print(array1[i])
+
+# 2 adet 2 boyutlu diziyi toplama
+array3 = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
+]
+
+for i in range(3):
+    for j in range(3):
+        array3[i][j] = array1[i][j] + array[i][j] 
+```
+
+> #### A_5. Kod Örnekleri
 
 ##### *Örnek 1: X Elemanlı Bir Diziyi Tersten Çeviren Kodu Yazın (swapping işlemi)*
 
@@ -524,7 +626,7 @@ for i in range(1,fibonacci_element):
 
 Gördüğünüz gibi çok kafa karıştırıcı ve uzun bir yöntem.
 
-> #### A_5. Kaynak Siteler
+> #### A_6. Kaynak Siteler
 
 - [Youtube - C Programlama 7 Diziler (Array)](https://www.youtube.com/watch?v=0bjMFwS8TZY&list=PLh9ECzBB8tJNzJqD64MAS0SK5IeNCKCzY)
 - [Youtube - Java Arrays - Diziler - Veri yapıları ve algoritmalar - Data Structures](https://www.youtube.com/watch?v=Itj319eYDMY&list=PLZYKO7600KN-mFeIahqjCVIzYd55wbJ3y)
@@ -532,7 +634,6 @@ Gördüğünüz gibi çok kafa karıştırıcı ve uzun bir yöntem.
 - [Youtube - Java 23 - Diziler Örnek Çözüm](https://www.youtube.com/watch?v=C9wJKUtuPZ0&list=PLh9ECzBB8tJNWhY-uH1RrvAFI88vC-Snh)
 - [Youtube - Java Dersleri #49 - Diziler (Arrays)](https://www.youtube.com/watch?v=Nwyn_Od6HY0&list=PLEcJSEQK_cD5KHgg9sXumeg659hAr2j4W)
 - [Youtube - Java Dersleri #50 - Çok Boyutlu Diziler (Multidimensional Array)](https://www.youtube.com/watch?v=JvPx7eZZsvw&list=PLEcJSEQK_cD5KHgg9sXumeg659hAr2j4W)
-- [Youtube - Java Dersleri #54 - Proje : Dizideki Elemanların Ortalaması](https://www.youtube.com/watch?v=MvESSBcCx7A&list=PLEcJSEQK_cD5KHgg9sXumeg659hAr2j4W)
 - [Youtube - Python - 05 - Diziler temel işlemler](https://www.youtube.com/watch?v=o2JyXPL9SeA&list=PLzIWkToFwqHRZWCI_helg4PeN184yTbYS)
 - [Youtube - Python - 06 - Çok boyutlu diziler, matrisler](https://www.youtube.com/watch?v=UeYhBv6hTYE&list=PLzIWkToFwqHRZWCI_helg4PeN184yTbYS)
 - [Array Nedir?](https://medium.com/@denizf.b/array-nedir-d9b7afd44ca2)
