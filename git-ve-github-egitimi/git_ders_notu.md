@@ -14,7 +14,7 @@ D. deleted (silinmiş): Projeden silinmiş ama GIT üzerinden kaldırılmamış 
 
 ## 2. git Komutları
 
-A. git init => Git ilk defa ilgili proje içinde başlatılacaksa. Henüz versiyon kontrolü altında olmayan bir projenin dizininde, boş bir git deposu oluşturmak için kullanılır. local olarak git projesini oluşturuyoruz. Proje içine ".git" gizli şekilde ekliyor, oluşturuyor. 
+A. git init => Git ilk defa ilgili proje içinde başlatılacaksa. Henüz versiyon kontrolü altında olmayan bir projenin dizininde, boş bir git deposu oluşturmak için kullanılır. local olarak git projesini oluşturuyoruz. Proje içine ".git" gizli şekilde ekliyor, oluşturuyor.
 Bilgilendirme yazısı; "Initialized empty Git repository in proje_path/.git/"
 
 B. git status => Üzerinde çalışılan projenin o anki durumu hakkında bilgi verir. Yapılan değişiklikler, eklenen ve silinen dosyalar gibi bilgiler listelenir. Detaylı araştır!
@@ -28,7 +28,7 @@ E. git add Kullanımı => Bu komut ile değişiklik yapılan ve git tarafından 
 - "git add .", "git add *" veya "git add -A ." => Projede takip edilmeyen tüm dosyaları takip eder.
 - git add index.html => Belirli dosyayı takip eder.
 
-F. git commit: Commit, staged ortamına alınan dosyaların Local Repository’e gönderilmesidir. En iyi uygulama yöntemi her kayıt sırasında yapılan değişiklikleri açıklayıcı bir mesaj eklemektir. Ayrıca her commit benzersiz bir kimliğe (unique ID) sahip olur. Bu sayede eski bir commit'e geri dönebilirsiniz ve herhangi bir kayıp yaşama ihtimaliniz kalmaz. 
+F. git commit: Commit, staged ortamına alınan dosyaların Local Repository’e gönderilmesidir. En iyi uygulama yöntemi her kayıt sırasında yapılan değişiklikleri açıklayıcı bir mesaj eklemektir. Ayrıca her commit benzersiz bir kimliğe (unique ID) sahip olur. Bu sayede eski bir commit'e geri dönebilirsiniz ve herhangi bir kayıp yaşama ihtimaliniz kalmaz.
 
 G. git commit -m "git_ders_notu.md güncellendi" => Mesajlı commit atmak. -m yazdıktan sonra mesajı "" bunların arasına yazıyoruz.
 
