@@ -1,8 +1,87 @@
 # git ve Terminal Kullanımı Ders Notu
 
 - [Versiyon Kontrol Sistemi Nedir?](https://furkanalaybeg.medium.com/versiyon-kontrol-sistemi-nedir-2f47bb830064)
+- [techcareer.net - Git Nedir?](https://www.techcareer.net/courses/git-github-egitimi/25f77b02-2a95-4cbb-a697-ab18b531c43e)
 
-## 1. Terimler
+Git'in temel kavramlarını daha anlaşılır şekilde açıklayalım:
+
+- Çalışma Klasörü (Working Directory): Bu, projenin üzerinde çalıştığın alandır, yani dosyalarının fiziksel olarak bulunduğu klasördür. Git, bu klasördeki dosyaları izler. Dosyalarında yaptığın değişiklikler burada gerçekleşir.
+- Index (Staging Area): Değişiklik yaptığın dosyaları commit etmeden önce, "sahneye" çıkardığın alandır. Yani commit'e dahil olacak dosyaları burada toplarsın. Bu aşamada, hangi dosyaların commit'e dahil olacağını belirleyip, son halini gözden geçirirsin.
+- Local repository (Yerel Depo): Bu alan, yaptığın commit'lerin depolandığı yerdir. Yani projenin geçmişteki sürümlerinin tutulduğu yerdir. Commit'leri yapınca bu yerel repoda saklanır, henüz uzak sunucuya (GitHub, GitLab gibi) gönderilmemiştir.
+
+Özetle:
+
+- Çalışma klasöründe değişiklikler/düzenleme/geliştirme yaparsın.
+- Commit'lemek istediğin dosyaları Staging Area'ya (Index) eklersin. Eklediğin dosyalar burada commit atılmasını bekler.
+- Commit'le bu değişiklikleri Local Repository'ye kaydedersin. Commit geçmişinin localde tutulduğu yerdir.
+
+## 1. git Kurulumu
+
+[git kurulum](https://www.techcareer.net/courses/git-github-egitimi/4767eadf-4a02-45e4-8f7d-9f594d761223) videosunu izleyip git'i kurabilirsiniz. Kurulum tamamlandıktan sonra git'in terminali olan "Git Bash" yüklenecektir.
+
+>### 1_1 Kaynak Siteler
+
+- [git sitesi - git kullanım](https://git-scm.com/book/tr/v2)
+
+## 2. Terminal Kullanımı ve Komutları
+
+***dipnot 1:*** Terminalde klasör, dosya isimlerinde büyük-küçük harf hassasiyeti yoktur. Yani "desktop" klasörüne "cd DESKTOP" ile giriş yapabiliriz.
+
+***dipnot 2:*** bir dosya veya klasör adının tamamını terminale yazmaya gerek yok. Örneğin "temel_seviye" adında bir klasör olsun. Bu klasörünün içine girmek istiyoruz.
+
+"cd tem" yazdıktan sonra klavyeden **tab** tuşuna basarsak otomatik ismi tamamlayacaktır. Eğer birden fazla "tem" ile başlayan dosya varsa size tüm dosyaları gösterecektir. Otomatik tamamlamayacaktır.
+
+### A. pwd  komutu
+
+pwd komutu bulunduğumuz dizini/pathi söyler. Terminalde verilecek örnek çıktı; "**/c/Users/aydin**"
+
+### B. ls komutu
+
+ls komutu bulunduğumuz klasör/dizin içindekileri listeler.
+
+> #### B_1 ls Kullanımı
+
+- ls => Tüm dosyaları ve dizinleri listeler.
+- ls -la =>  Tüm dosyaları ve dizinleri ayrıntılı bir şekilde listelerken, gizli dosyaları da gösterir. Windows için aşağıdakiler de kullanılabilir.
+  - Get-ChildItem -Force
+  - ls -Force
+
+### C. cd komutu
+
+cd komutu ile ilgili klasörlere girilir.
+
+> #### C_1 cd Kullanımı
+
+- cd .git/ => .git klasörüne girer.
+- cd .. => bir önceki klasöre gider. Bir adım geri gittik.
+
+### D. mkdir komutu
+
+Bu komut ile klasör oluştururuz.
+
+> #### D_1 mkdir Kullanımı
+
+- mkdir technovadi => technovadi adında klasör oluşturur.
+
+### E. touch komutu
+
+Bu komut ile dosya oluştururuz. Birden farklı kullanımı da vardır.
+
+> #### E_1 touch Kullanımı
+
+- touch deneme.txt => deneme.txt adında dosya oluşturur.
+- New-Item deneme.txt => => deneme.txt adında dosya oluşturur.
+- New-Item example.txt -ItemType File => İsimlendirmeden ziyada dosya tipini de File olarak belirttik.
+
+### F. clear komutu
+
+clear komutu terminal de yazılanları temizler.
+
+### G. Kaynak Siteler
+
+- [techcareer.net - Terminal Kullanımı](https://www.techcareer.net/courses/git-github-egitimi/d396eb35-184a-4277-9710-c61b0edfeb7e)
+
+## 3. Terimler
 
 A. untracked (izlenmeyen): GIT tarafından henüz takip edilmeyen, yani yeni oluşturulmuş dosyaları ifade eder.
 
@@ -12,31 +91,104 @@ C. staged (hazırlanmış): Commit’lenmeye hazır olan dosyaları ifade eder.
 
 D. deleted (silinmiş): Projeden silinmiş ama GIT üzerinden kaldırılmamış dosyaları ifade eder.
 
-## 2. git Komutları
+## 4. git Komutları
 
-A. git init => Git ilk defa ilgili proje içinde başlatılacaksa. Henüz versiyon kontrolü altında olmayan bir projenin dizininde, boş bir git deposu oluşturmak için kullanılır. local olarak git projesini oluşturuyoruz. Proje içine ".git" gizli şekilde ekliyor, oluşturuyor.
+### A. git status komutu
+
+Üzerinde çalışılan projenin o anki durumu hakkında bilgi verir. İlgili dizinde git olup olmadığı kontrol edilir. Eğer git varsa yapılan değişiklikler, izlenen/izlenmeyen dosyalar, eklenen ve silinen dosyalar gibi bilgiler listelenir. Kısacası tüm yapılan değişimleri söyler. Detaylı araştır!
+
+***Dipnot:*** İlk defa bir projede çalışıyorsak bu komut ile kesinlikle git olup olmadığını kontrol etmeliyiz. Eğer git varsa tekrar eklememeliyiz.
+
+> #### A_1. Kaynak Siteler
+
+- [techcareer.net - Git Init, Status, User](https://www.techcareer.net/courses/git-github-egitimi/d171b704-6dbe-4a8c-a497-e2b7ad8c4c40)
+
+### B. git init komutu
+
+Git ilk defa ilgili proje içinde başlatılacaksa. Henüz versiyon kontrolü altında olmayan bir projenin dizininde, boş bir git deposu oluşturmak için kullanılır. local olarak git projesini oluşturuyoruz. Proje içine ".git" gizli şekilde ekliyor, oluşturuyor.
+
 Bilgilendirme yazısı; "Initialized empty Git repository in proje_path/.git/"
 
-B. git status => Üzerinde çalışılan projenin o anki durumu hakkında bilgi verir. Yapılan değişiklikler, eklenen ve silinen dosyalar gibi bilgiler listelenir. Detaylı araştır!
+> #### B_1. Kaynak Siteler
 
-C. git pull =>
+- [techcareer.net - Git Init, Status, User](https://www.techcareer.net/courses/git-github-egitimi/d171b704-6dbe-4a8c-a497-e2b7ad8c4c40)
 
-D. git fetch =>
+### C. git config komutu
 
-E. git add Kullanımı => Bu komut ile değişiklik yapılan ve git tarafından izlenmeyen/takip edilmeyen dosyaları izle, takip et diyoruz. Yeni eklenen, silinen veya üzerinde değişiklik yapılan dosyaları staged ortamına göndermek için kullanılır. Bazı terminallerde "$ git add" başına dolar işareti eklemek gerekebilir.
+Yapılandırma ayarlarının içerisinde barındırıldığı bir komut. Örnek kullanım;
 
-- "git add .", "git add *" veya "git add -A ." => Projede takip edilmeyen tüm dosyaları takip eder.
-- git add index.html => Belirli dosyayı takip eder.
+> #### C_1. git config user.name "user_name" kullanımı
 
-F. git commit: Commit, staged ortamına alınan dosyaların Local Repository’e gönderilmesidir. En iyi uygulama yöntemi her kayıt sırasında yapılan değişiklikleri açıklayıcı bir mesaj eklemektir. Ayrıca her commit benzersiz bir kimliğe (unique ID) sahip olur. Bu sayede eski bir commit'e geri dönebilirsiniz ve herhangi bir kayıp yaşama ihtimaliniz kalmaz.
+Genel olarak tüm terminallerde geçerlidir bu kural. Sadece şuan içerisinde bulunduğumuz dizinde/klasörde/proje dosyasında geçerli olur bu kullanıcı adı.
 
-G. git commit -m "git_ders_notu.md güncellendi" => Mesajlı commit atmak. -m yazdıktan sonra mesajı "" bunların arasına yazıyoruz.
+- git config user.name "Aydın BEKOĞLU"
 
-H. git log => Projedeki commit geçmişini görüntülememizi sağlar. Bütün commit'ler, id'si, yazarı, tarihi ve mesajı ile beraber listelenir.
+> #### C_2. git config --global user.email "user_email" kullanımı
+
+Global olarak tanımlanır kullanıcı. Yani ilgili bilgisayar/serverda ki tüm git projelerinde bu kullanıcı adı/kullanıcı maili kullanılır.
+
+- git config --global user.email "user_email" => Github, GitLab hangi hizmet kullanılıyorsa onda ki mail adresi yazılmalı.
+- git config --global --get user.email => git de tanımlı olan kullanıcı mailini gösterir.
+
+> #### C_3. Kaynak Siteler
+
+- [techcareer.net - Git Init, Status, User](https://www.techcareer.net/courses/git-github-egitimi/d171b704-6dbe-4a8c-a497-e2b7ad8c4c40)
+
+### D. git add komutu
+
+Bu komut ile değişiklik yapılan ve git tarafından izlenmeyen/takip edilmeyen dosyaları izle/takip et diyoruz. Yeni eklenen, silinen veya üzerinde değişiklik yapılan dosyaları staged ortamına göndermek için kullanılır.
+
+Yani çalışma klasöründe kileri index(stage) ortamına taşıyor bu komut.
+
+Bazı terminallerde "$ git add" başına dolar işareti eklemek gerekebilir.
+
+> #### D_1. Tüm dosyaları izleme
+
+Projede takip edilmeyen tüm dosyaları staged(index) ortamına alır. Örnek kullanımlar;
+
+- git add .
+- git add *
+- git add -A .
+
+> #### D_2. Belirli dosyaları izleme
+
+Belirli dosyayı staged(index) ortamına alır.
+
+- git add index.html
+
+> #### D_3. Kaynak Siteler
+
+- [techcareer.net - Git Add, Commit](https://www.techcareer.net/courses/git-github-egitimi/ab60bef6-6d8a-4c09-9cf0-bf91e69c713d)
+
+### F. git commit komutu
+
+Commit, staged(index) ortamına alınan dosyaların Local Repository’e gönderilmesidir. Bu işlem git'in gönderilen dosyaları takip etmesini sağlar.
+
+En iyi uygulama yöntemi her biten işlem sonrasında yapılan değişikliklere kısa ve açıklayıcı bir mesaj eklemektir. Ayrıca her commit benzersiz bir kimliğe (unique ID) sahip olur. Bu sayede eski bir commit'e geri dönebilirsiniz ve herhangi bir kayıp yaşama ihtimaliniz kalmaz.
+
+> #### F_1. git commit -m "message" kullanımı
+
+Mesajlı commit atmak. -m yazdıktan sonra mesajı "" bunların arasına yazıyoruz.
+
+- git commit -m "git_ders_notu.md güncellendi"
+
+> #### F_2. Kaynak Siteler
+
+- [techcareer.net - Git Add, Commit](https://www.techcareer.net/courses/git-github-egitimi/ab60bef6-6d8a-4c09-9cf0-bf91e69c713d)
+
+### G. git log komutu
+
+Projedeki commit geçmişini görüntülememizi sağlar. Bütün commit'ler => hangi branch üzerinde değişiklik yapılmış, commit id'si, yazarı, tarihi ve mesajı ile beraber listelenir.
+
+> #### G_1 git log Kullanımı
 
 - git log => Tümünü getir.
 - git log -n 1 => 1 tane getir. İlk sıradakini getirir.
 - git log -n 2 => 2 tane getir. İlk 2'yi getirir. "-n" bu işe yarar kaç tane getirmek isteniyor. Sıralama en son eklenen commit yani en üstteki committen başlar.
+
+> #### G_2. Kaynak Siteler
+
+[techcareer.net - Git Log Eğitimi](https://www.techcareer.net/courses/git-github-egitimi/58a72889-0f6e-4afb-8a7e-05b9af67ff24)
 
 I. Commit düzenleme, geri alma vb. Yanlış commit atıldı (commit mesajı, düzenlenen dosya/dosyalar, commit atmadan önce eksik dosya eklendi vb.) bu durumlarda yapılması gereken. Örnek; bir dosya eksik eklendi veya commit atılan dosyaya yeni bir şey eklendi bu durumda yapılması gereken.
 
@@ -58,6 +210,10 @@ M. git diff => en son yapılan commit'teki tüm değişiklikleri gösterir/söyl
 N. git diff eski_commit_hashdID..yeni_commit_hashdID index.md => 2 commiti karşılaştırır farklılıkları gösterir. Burada index.md dosyasında ki farklılıkları kıyasladık.
 
 - index.md yazılmaz ise tüm değişiklikleri/farklılıkları gösterir. Dosya dosya gösterir bunları.
+
+C. git pull =>
+
+D. git fetch =>
 
 O. git branch => Branch ile alakalı git komutları
 
@@ -91,22 +247,7 @@ T. git rm --cached index.html: Staged ortamına eklenmiş bir dosyanın takibini
   - "git rm <dosya_name>"
   - "git rm <klasor_name>"
 
-U. Diğer git komutları makale: [patika.dev - GIT Bash ile GIT Temel Komutları](https://app.patika.dev/courses/git/git-bash-ile-git-temel-komutlari)
+> ## Kaynak Siteler
 
-V. Temel Git terimleri ve komutları => [Medium - Temel Git terimleri ve komutları](https://medium.com/@alianilkocak/temel-git-terimleri-ve-komutlar%C4%B1-6bc62b802baf)
-
-## 3. Terminal Komutları
-
-A. ls => klasör/dizin içindekileri listeler.
-
-B. ls -la =>  Tüm dosyaları ve dizinleri ayrıntılı bir şekilde listelerken, gizli dosyaları da gösterir. Fakat Linux sistemlerde çalışır. Windows için aşağıdakiler kullanılabilir.
-
-- Get-ChildItem -Force
-- ls -Force
-
-C. cd .git/ => .git klasörüne girer.
-
-D. touch deneme.txt => Dosya oluşturur. Fakat Linux sistemlerde çalışır.
-
-- New-Item deneme.txt
-- New-Item example.txt -ItemType File => Dosya tipi File belirttik.
+- [patika.dev - GIT Bash ile GIT Temel Komutları](https://app.patika.dev/courses/git/git-bash-ile-git-temel-komutlari)
+- [Medium - Temel Git terimleri ve komutları](https://medium.com/@alianilkocak/temel-git-terimleri-ve-komutlar%C4%B1-6bc62b802baf)
