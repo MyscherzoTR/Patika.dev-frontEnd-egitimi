@@ -1,6 +1,6 @@
 # Veri Yapıları ve Algoritmalar Ders Notu
 
-Veri Yapıları ve Algoritmalar ders notunu hazırlarken bir çok kaynaktan faydalandım. Elimden geldiğince basit ama işe yarar bir not hazırlamaya gayret gösterdim. Her konunun sonunda o konuyla alakalı faydalandığım kaynakları belirttim. Faydalandığım kaynaklardan bazıları;
+Veri Yapıları ve Algoritmalar ders notunu hazırlarken bir çok kaynaktan faydalandım. Elimden geldiğince basit ama işe yarar bir not hazırlamaya gayret gösterdim. ***Her konunun sonunda o konuyla alakalı faydalandığım kaynakları belirttim. Belirttiğim kaynaklardaki herşeyi bu nota eklemedim. Her konuyu okuduktan sonra mutlaka kaynaklarda içeriklere de göz atmalısınız.*** Faydalandığım kaynaklardan bazıları;
 
 * Çeşitli Youtube kanalları
 * Udemy, BTK Akademi tarzı eğitim siteleri
