@@ -4,7 +4,7 @@ Veri Yapıları ve Algoritmalar ders notunu hazırlarken bir çok kaynaktan fayd
 
 * Çeşitli Youtube kanalları
 * Udemy, BTK Akademi tarzı eğitim siteleri
-* patika.dev, coderspace tarzı oluşumlar
+* patika.dev, coderspace, techcareer.net tarzı oluşumlar
 * khanacademy oluşumu
 * Medium sitesinde ki makaleler
 
