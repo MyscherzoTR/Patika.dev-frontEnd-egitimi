@@ -201,6 +201,32 @@ Projedeki commit geçmişini görüntülememizi sağlar. Bütün commit'ler => h
 
 [techcareer.net - Git Log Eğitimi](https://www.techcareer.net/courses/git-github-egitimi/58a72889-0f6e-4afb-8a7e-05b9af67ff24)
 
+### H. .gitignore
+
+.gitignore dosyasına yazılan uzantıları takip etmez, gözardı eder git. Bunlar için git ignore kullanılır;
+
+- Büyük boyutlu dosyalar
+- Kütüphane/Library eklemeleri
+- Başkalarının görmesini istemediğiniz dosyalar(şifre, api key vb.)
+- Takip edilmesine gerek duyulmayan gereksiz dosyalar
+
+> #### .gitignore dosyası oluşturma
+
+Bunun için bir çok sayfa, site mevzut. Çoğu zaman GitHub'ın kendi sitesinde ki şablonlar iş görüyor fakat nadirde olsa siteye ihtiyaç duyulabilir. Arama motoruna "gitignore generator" veya "gitignore PHP generator" yazarak birçok siteye ulaşabilirsiniz. Benim kullandığım site;
+
+- [Toptal - gitignore generator](https://www.toptal.com/developers/gitignore)
+
+### I. Branch ile alakalı git komutları
+
+![git branch](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4IkgIwsGWN52UBrCWimoeCqeQ4fo2F91_mg&s)
+
+- git branch => Repository de var olan branchleri listeler. Aktif branchi de belirtir.
+- git branch dev_18 => dev_18 adında yeni bir branch açar.
+- git branch -D dev_18 => Belirtilen branchi siler.
+- git switch dev_18 => Belirtilen branch'e geçiş yapar.
+- git checkout dev_18 => Belirtilen branch'e geçiş yapar.
+- git checkout -b dev_1 => dev_1 adında yeni bir branch oluşturur ve yeni branche geçiş yapar.
+
 I. Commit düzenleme, geri alma vb. Yanlış commit atıldı (commit mesajı, düzenlenen dosya/dosyalar, commit atmadan önce eksik dosya eklendi vb.) bu durumlarda yapılması gereken. Örnek; bir dosya eksik eklendi veya commit atılan dosyaya yeni bir şey eklendi bu durumda yapılması gereken.
 
 - Tüm değişiklikler "git add ." ile eklenir.
@@ -225,17 +251,6 @@ N. git diff eski_commit_hashdID..yeni_commit_hashdID index.md => 2 commiti karş
 C. git pull =>
 
 D. git fetch =>
-
-O. git branch => Branch ile alakalı git komutları
-
-- git branch => Repository de var olan branchleri listeler. Aktif branchi de belirtir.
-- git branch dev_18 => dev_18 adında yeni bir branch açar.
-- git branch -D dev_18 => Belirtilen branchi siler.
-
-P. git checkout => Branch ile alakalı git komutları
-
-- git checkout dev_18 => Belirtilen branch'e geçiş yapar.
-- git checkout -b dev_1 => dev_1 adında yeni bir branch oluşturur ve yeni branche geçiş yapar.
 
 R. git stash => stash komutları
 
