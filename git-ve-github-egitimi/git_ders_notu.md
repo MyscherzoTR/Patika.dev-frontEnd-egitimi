@@ -199,7 +199,7 @@ Projedeki commit geçmişini görüntülememizi sağlar. Bütün commit'ler => h
 
 > #### G_2. Kaynak Siteler
 
-[techcareer.net - Git Log Eğitimi](https://www.techcareer.net/courses/git-github-egitimi/58a72889-0f6e-4afb-8a7e-05b9af67ff24)
+- [techcareer.net - Git Log Eğitimi](https://www.techcareer.net/courses/git-github-egitimi/58a72889-0f6e-4afb-8a7e-05b9af67ff24)
 
 ### H. .gitignore
 
@@ -216,6 +216,10 @@ Bunun için bir çok sayfa, site mevzut. Çoğu zaman GitHub'ın kendi sitesinde
 
 - [Toptal - gitignore generator](https://www.toptal.com/developers/gitignore)
 
+> #### H_2. Kaynak Siteler
+
+- [techcareer.net - Git Ignore](https://www.techcareer.net/courses/git-github-egitimi/fa58e056-cbe8-46d4-b12e-d06611460f23)
+
 ### I. Branch ile alakalı git komutları
 
 ![git branch](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4IkgIwsGWN52UBrCWimoeCqeQ4fo2F91_mg&s)
@@ -226,6 +230,46 @@ Bunun için bir çok sayfa, site mevzut. Çoğu zaman GitHub'ın kendi sitesinde
 - git switch dev_18 => Belirtilen branch'e geçiş yapar.
 - git checkout dev_18 => Belirtilen branch'e geçiş yapar.
 - git checkout -b dev_1 => dev_1 adında yeni bir branch oluşturur ve yeni branche geçiş yapar.
+
+> #### I_2. Kaynak Siteler
+
+- [techcareer.net - Git Branch](https://www.techcareer.net/courses/git-github-egitimi/f62e862d-b535-4a88-a3c4-3227b6abcead)
+
+### J. Git Merge
+
+Branchleri merge etmek için bir kaç farklı yöntem mevcut.
+
+![git merge](https://media.geeksforgeeks.org/wp-content/uploads/20230516192737/git-three-way-merging.png)
+
+> #### J_1 git merge header
+
+Diyelim header branch'inde bir geliştirme yaptık. Sonra **git switch main** ile main branchine geçiş yaptık. Sonrasında **git merge header** dediğimizde header branchinde yapılan değişiklikler aktif olan branch (main) ile birleşir.
+
+> #### J_2 git merge --squash header
+
+Bunda da aynı birleştirme sağlanıyor tek farkı birleşme sonrasında commit atmak gerekiyor. Örnek commit mesajı; "***Footer, Aktif branch ile birleştirildi***" şeklinde olabilir.
+
+Fakat bunu yaptığınızda header branchinde daha öncesinde atılan commitler birleştirilen branchde görülmez. Sadece son yazılan commit görünür.
+
+*dipnot:* Şahsen ben bunu önermiyorum normal "merge" çok daha mantıklı geliyor bana. Çünkü header branchinde attığınız commitler gözükmez bu yöntemde.
+
+> #### J_3 git merge --abort
+
+Merge işleminde bir sorun çıktı. Örneğin "conflict" gibi bir sorun ve merge işlemini geri almak, iptal etmek istiyorsunuz.
+
+> #### J_4. Kaynak Siteler
+
+- [techcareer.net - Git Merge Eğitimi](https://www.techcareer.net/courses/git-github-egitimi/c2fb823c-b809-400f-8096-1833fd91ac44)
+
+H. - git rebase => Detaylı araştır.
+
+R. git stash => stash komutları
+
+- git stash => Son committen itibaren yapılan tüm değişiklikler "stash" de saklanır.
+- git stash list => stash alınanların listesini gösterir.
+- git stash clear => Tüm stash leri siler.
+- git stash pop => En üstteki, en son kaydı getirir ve o stash siler. Stash atılan değişiklikleri geri gelir.
+- git stash apply stash@{0} => Belirtilen stash geri getirilir. Belirtilen stash silinmez "git stash pop" aksine.
 
 I. Commit düzenleme, geri alma vb. Yanlış commit atıldı (commit mesajı, düzenlenen dosya/dosyalar, commit atmadan önce eksik dosya eklendi vb.) bu durumlarda yapılması gereken. Örnek; bir dosya eksik eklendi veya commit atılan dosyaya yeni bir şey eklendi bu durumda yapılması gereken.
 
@@ -251,21 +295,6 @@ N. git diff eski_commit_hashdID..yeni_commit_hashdID index.md => 2 commiti karş
 C. git pull =>
 
 D. git fetch =>
-
-R. git stash => stash komutları
-
-- git stash => Son committen itibaren yapılan tüm değişiklikler "stash" de saklanır.
-- git stash list => stash alınanların listesini gösterir.
-- git stash clear => Tüm stash leri siler.
-- git stash pop => En üstteki, en son kaydı getirir ve o stash siler. Stash atılan değişiklikleri geri gelir.
-- git stash apply stash@{0} => Belirtilen stash geri getirilir. Belirtilen stash silinmez "git stash pop" aksine.
-
-S. Branchleri merge etmek => Bir kaç farklı yöntem mevcut.
-
-- git merge header => header branchini aktif olan, seçili branch ile birleştirir. Yani header branchinde yapılan değişiklikler aktif olan branche eklenir.
-- git merge --squash footer => Bunda da aynı birleştirme sağlanıyor tek farkı birleşme sonrasında commit atmanız gerekir. Attığınız commit; "Footer, Aktif branch ile Birleştirildi" bu şekilde olabilir. Fakat bunu yaptığınızda Footer branchinde atılan commitler aktif branche görülmez sizin commit mesajında yazdığınız commit görünür. Şahsen ben bunu önermiyorum normal "merge" çok daha mantıklı geliyor bana.
-- git rebase => Detaylı araştır.
-- git merge --abort => Merge işleminde bir sorun çıktı "conflict" gibi ve merge işlemini geri almak, iptal etmek istiyorsunuz.
 
 T. git rm --cached index.html: Staged ortamına eklenmiş bir dosyanın takibinin bırakılması yani untracked (izlenmeyen) hale getirilmesi sağlayan komuttur.
 
