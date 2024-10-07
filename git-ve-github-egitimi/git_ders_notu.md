@@ -261,15 +261,34 @@ Merge işleminde bir sorun çıktı. Örneğin "conflict" gibi bir sorun ve merg
 
 - [techcareer.net - Git Merge Eğitimi](https://www.techcareer.net/courses/git-github-egitimi/c2fb823c-b809-400f-8096-1833fd91ac44)
 
-H. - git rebase => Detaylı araştır.
+### K. git stash Komutları
 
-R. git stash => stash komutları
+![git stash Komutları](https://media.geeksforgeeks.org/wp-content/uploads/20230504190403/Screenshot-(51).png)
 
 - git stash => Son committen itibaren yapılan tüm değişiklikler "stash" de saklanır.
+- git stash pop => En üstteki, en son stash kaydını getirir. Stash'e atılan değişiklikler geri gelir ve o stash'i siler.
+- git stash apply => En üstteki, en son stash kaydını getirir. Stash'e atılan değişiklikler geri gelir. Belirtilen stash silinmez "git stash pop" aksine.
 - git stash list => stash alınanların listesini gösterir.
-- git stash clear => Tüm stash leri siler.
-- git stash pop => En üstteki, en son kaydı getirir ve o stash siler. Stash atılan değişiklikleri geri gelir.
-- git stash apply stash@{0} => Belirtilen stash geri getirilir. Belirtilen stash silinmez "git stash pop" aksine.
+- git stash apply stash@{0} => Index'i belirtilen stash geri getirilir. Belirtilen stash silinmez "git stash pop" aksine.
+- git stash clear => Tüm stash'leri siler.
+
+> #### K_1. Kaynak Siteler
+
+- [Git Stash, Pop, List, Apply, Clear](https://www.techcareer.net/courses/git-github-egitimi/a9e523f2-3efd-4c2b-8135-ad332dc0245e)
+
+### L. Git Restore, Checkout
+
+> #### L_1. git restore file_name
+
+Bu komut ile son yapılan değişiklikleri geri alırız. Yani bir adım geriye dönebiliriz.
+
+> #### git checkout commit_hashdID
+
+Yazılan commit'e geçiş yapar. Seçili commite geçiş yaptıktan sonra yeni boş bir branch açıp "git switch new_branch" ile o branche geçiş yapabiliriz. Böylece geçmişte yaptığımız commit üzerinden branch açıp eski geliştirmeleri o branche taşımış oluruz.
+
+> #### L_1 Kaynak Siteler
+
+- [Git Restore, Checkout](https://www.techcareer.net/courses/git-github-egitimi/6d22ed0f-4326-4058-9b50-031beeb2c6ed)
 
 I. Commit düzenleme, geri alma vb. Yanlış commit atıldı (commit mesajı, düzenlenen dosya/dosyalar, commit atmadan önce eksik dosya eklendi vb.) bu durumlarda yapılması gereken. Örnek; bir dosya eksik eklendi veya commit atılan dosyaya yeni bir şey eklendi bu durumda yapılması gereken.
 
@@ -295,6 +314,8 @@ N. git diff eski_commit_hashdID..yeni_commit_hashdID index.md => 2 commiti karş
 C. git pull =>
 
 D. git fetch =>
+
+H. - git rebase => Detaylı araştır.
 
 T. git rm --cached index.html: Staged ortamına eklenmiş bir dosyanın takibinin bırakılması yani untracked (izlenmeyen) hale getirilmesi sağlayan komuttur.
 
