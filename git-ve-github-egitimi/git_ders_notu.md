@@ -314,20 +314,44 @@ Commit mesajı ve mesaja ait geliştirmeler log da (git log) durmaya devam eder,
 
 - [techcareer.net - Git Reset, Revert](https://www.techcareer.net/courses/git-github-egitimi/97d0c71f-0a17-46ec-8e25-d2dc1dcc4815)
 
+### N. git diff
+
+Sadece kayıt edilen alanlardaki farklılıkları değil aynı zamanda;
+
+***Commitler, Branchler, ilgili dosyalar*** arasındaki farkları da gösterir.
+
+> #### N_1. git diff
+
+En son yapılan değişiklikleri son commit ile kıyaslar ve farklılıkları gösterir.
+
+> #### N_2 git diff HEAD
+
+Son commit öncesinde yapılan işlemleri gösterir.
+
+> #### N_3 git diff main demo
+
+Belirtilen branchler arasında ki farklılıkları gösterir.
+
+> #### N_4. git diff index.html
+
+Verilen dosyadaki değişiklikleri gösterir.
+
+> #### N_5. git diff eski_commit_hashdID..yeni_commit_hashdID
+
+Belirtilen commitler arasında ki farklılıkları gösterir. Eğer dosya ismi verilmezse, tüm projedeki değişiklikleri/farklılıkları gösterir. Dosya dosya gösterir bunları.
+
+- git diff eski_commit_hashdID..yeni_commit_hashdID index.md => Burada index.md dosyasında ki farklılıkları kıyasladık.
+
+> #### N_6. Kaynak Siteler
+
+- [Git Diff Eğitimi](https://www.techcareer.net/courses/git-github-egitimi/15aede67-50ab-4c79-9634-aa79ab1f8cf3)
+
 I. Commit düzenleme, geri alma vb. Yanlış commit atıldı (commit mesajı, düzenlenen dosya/dosyalar, commit atmadan önce eksik dosya eklendi vb.) bu durumlarda yapılması gereken. Örnek; bir dosya eksik eklendi veya commit atılan dosyaya yeni bir şey eklendi bu durumda yapılması gereken.
 
 - Tüm değişiklikler "git add ." ile eklenir.
 - git commit --amend => Bu komut en son eklenen commiti getirir. "git add ." ile eklenen son güncellemeleri ekler ve commit mesajını düzenleme kısmını açar. İsterseniz commiti düzenlemeyin, ":q" basıp çıkabilirsiniz.
 
 J. git commit --amend -m "commit mesajı değiştirme" => Son commitin açıklaması/mesajı değişir.
-
-M. git diff => en son yapılan commit'teki tüm değişiklikleri gösterir/söyler.
-
-- git diff index.html: verilen dosyadaki değişiklikleri gösterir.
-
-N. git diff eski_commit_hashdID..yeni_commit_hashdID index.md => 2 commiti karşılaştırır farklılıkları gösterir. Burada index.md dosyasında ki farklılıkları kıyasladık.
-
-- index.md yazılmaz ise tüm değişiklikleri/farklılıkları gösterir. Dosya dosya gösterir bunları.
 
 C. git pull =>
 
