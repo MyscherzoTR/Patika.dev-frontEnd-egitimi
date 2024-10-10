@@ -282,13 +282,37 @@ Merge işleminde bir sorun çıktı. Örneğin "conflict" gibi bir sorun ve merg
 
 Bu komut ile son yapılan değişiklikleri geri alırız. Yani bir adım geriye dönebiliriz.
 
-> #### git checkout commit_hashdID
+> #### L_2. git checkout commit_hashdID
 
 Yazılan commit'e geçiş yapar. Seçili commite geçiş yaptıktan sonra yeni boş bir branch açıp "git switch new_branch" ile o branche geçiş yapabiliriz. Böylece geçmişte yaptığımız commit üzerinden branch açıp eski geliştirmeleri o branche taşımış oluruz.
 
-> #### L_1 Kaynak Siteler
+> #### L_3. Kaynak Siteler
 
 - [Git Restore, Checkout](https://www.techcareer.net/courses/git-github-egitimi/6d22ed0f-4326-4058-9b50-031beeb2c6ed)
+
+### M. Git Reset, Revert
+
+> #### M_1. git reset commit_hashdID
+
+Seçili commite gider ve o commit en son commit olur. Ondan sonra atılan yeni/son commitler tamamen silinir. Yapılan dosya değişiklikleri/geliştirmeler kalır sadece commitler silinir. *Örneğin;*
+
+3 adet commit mesajımız olsun (first_commit_hashdID, second_commit_hashdID, third_commit_hashdID). Hepsinde farklı geliştirmeler mevcut. ***git reset first_commit_hashdID*** ile ilk commite gittik. Diğer commit mesajlarımız silindi yok edildi fakat geliştirmeleri durmaya devam eder.
+
+> #### M_2. git reset --hard commit_hashdID
+
+Seçili commite gider ve o commit en son commit olur. Ondan sonra atılan yeni/son commitler tamamen silinir. Yapılan dosya değişiklikleri/geliştirmeler kalmaz commitlerle birlikte onlarda silinir. **Bu tehlikeli bir işlemdir geri alınamaz!**
+
+> #### M_3. git revert commit_hashdID
+
+Seçili committe yapılan değişikliklerini geri alır. Revert işleminden sonra yeni bir commit atılır ve değişiklikler geri alınmış olur. Yeni atılan committe, revert işlemi olduğunu git otomatik belirtir.
+
+Commit mesajı ve mesaja ait geliştirmeler log da (git log) durmaya devam eder, resette olduğu gibi silinmez. Bu yüzden yeni oluşan commiti de geri almak mümkündür. Yine git revert yapılır ve geri alınan değişiklikler geri gelir.
+
+**dipnot;** hashdID'nin tamamını almaya gerek yok. İlk 7-8 karakter yetiyor.
+
+> #### M_4. Kaynak Siteler
+
+- [techcareer.net - Git Reset, Revert](https://www.techcareer.net/courses/git-github-egitimi/97d0c71f-0a17-46ec-8e25-d2dc1dcc4815)
 
 I. Commit düzenleme, geri alma vb. Yanlış commit atıldı (commit mesajı, düzenlenen dosya/dosyalar, commit atmadan önce eksik dosya eklendi vb.) bu durumlarda yapılması gereken. Örnek; bir dosya eksik eklendi veya commit atılan dosyaya yeni bir şey eklendi bu durumda yapılması gereken.
 
@@ -296,12 +320,6 @@ I. Commit düzenleme, geri alma vb. Yanlış commit atıldı (commit mesajı, d�
 - git commit --amend => Bu komut en son eklenen commiti getirir. "git add ." ile eklenen son güncellemeleri ekler ve commit mesajını düzenleme kısmını açar. İsterseniz commiti düzenlemeyin, ":q" basıp çıkabilirsiniz.
 
 J. git commit --amend -m "commit mesajı değiştirme" => Son commitin açıklaması/mesajı değişir.
-
-K. git revert commit_hashdID => Seçili commit değişikliklerini geri alır. Hash ID için tamamını almaya gerek yok. İlk 7-8 karakter yetiyor.
-
-- revert işleminden sonra yeni bir commit atılır ve değişiklikler geri alınmış olur. Bu yeni oluşan commiti de geri almak mümkündür. Yine git revert yapılır ve geri alınan değişiklikler geri gelir.
-
-L. git reset --hard commit_hashdID => Seçili commit en son commit olur ve ondan sonra atılan commitler(daha yeni commitler) tamamen silinir. Bu tehlikeli bir işlemdir geri alınamaz.
 
 M. git diff => en son yapılan commit'teki tüm değişiklikleri gösterir/söyler.
 
