@@ -31,6 +31,8 @@ Versiyon Kontrol Sistemi yerine Kaynak Kod Yönetim Sistemi ifadesini de duymuş
 - Takımların aynı projede beraber çalışmasına imkan verir. Kim neyi düzenledi? Ne ekledi? Ne çıkarttı? Son değişiklik ne zaman yapıldı? gibi bilgilere erişebilirsiniz. Bu sayede topluluk ile proje geliştirme süreçlerini kolaylaştırabilirisiniz.
 - Projede verisyonlanmasını istemediğiniz dosyaları belirtebilirsiniz. (node_modules, .mp4, .log, .env gibi)
 
+***dipnot:*** Git'i öğrenirken, düzenli pratik yapmak ve gerçek projeler üzerinde çalışmak çok önemlidir. Ayrıca, Git'in sadece bir versiyon kontrol sistemi değil, aynı zamanda ekip çalışmasını ve proje yönetimini kolaylaştıran güçlü bir araç olduğunu unutmayın. 
+
 ***Bu makaleyi okumanızda fayda var. =>*** [Medium - Versiyon Kontrol Sistemi Nedir ?](https://furkanalaybeg.medium.com/versiyon-kontrol-sistemi-nedir-2f47bb830064)
 
 ## 2. GIT'in temel kavramları
@@ -53,8 +55,6 @@ Aşağıda ki videoları izleyip git'i kurabilirsiniz. Kurulum tamamlandıktan s
 
 - [techcareer.net - git kurulum](https://www.techcareer.net/courses/git-github-egitimi/4767eadf-4a02-45e4-8f7d-9f594d761223)
 - [patika.dev - Visual Studio Code ve Git SCM Kurulumu #1](https://academy.patika.dev/tr/courses/git/git-kurulumu)
-
-git'in kendi sitesinde bulunan Türkçe kaynak eğitim. [git sitesi - git kullanım](https://git-scm.com/book/tr/v2)
 
 ## 4. Terminal Kullanımı ve Komutları
 
@@ -412,8 +412,11 @@ Commitler arası geçiş yapmak için: (Eski bir versiyona dönmek istediğimiz 
 > #### L_3. Kaynak Siteler
 
 - [techcareer.net - Git Restore, Checkout](https://www.techcareer.net/courses/git-github-egitimi/6d22ed0f-4326-4058-9b50-031beeb2c6ed)
+- [Medium - Git — Commit Geri Alma Seçenekleri](https://muratbaseren.medium.com/git-ile-commit-geri-alma-secenekleri-7bf352cf7fed)
 
 ### M. Git Reset, Revert
+
+Git'te yaptığınız bir commit'i geri almanın birkaç yolu vardır. İhtiyacınıza göre aşağıdaki yöntemlerden birini kullanabilirsiniz.
 
 > #### M_1. git reset commit_hashdID
 
@@ -421,11 +424,27 @@ Seçili commite gider ve o commit en son commit olur. Ondan sonra atılan yeni/s
 
 3 adet commit mesajımız olsun (first_commit_hashdID, second_commit_hashdID, third_commit_hashdID). Hepsinde farklı geliştirmeler mevcut. ***git reset first_commit_hashdID*** ile ilk commite gittik. Diğer commit mesajlarımız silindi yok edildi fakat geliştirmeleri durmaya devam eder.
 
-> #### M_2. git reset --hard commit_hashdID
+- **Commit geçmişi:** Belirtilen commit'e geri dönersin ve o commit'ten sonraki commit'ler silinir.
+- **Staging area:** Staging area'daki (index'teki) değişiklikler silinir. Yani git add ile eklenen dosyalar.
+- **Çalışma klasörü:** Çalışma klasöründeki değişiklikler silinmez. Yani, dosyalarındaki değişiklikler korunur ama commit ve staging area temizlenir. Değişiklikler hala çalışma klasöründe gözükür.
+
+> #### M_2 git reset --soft commit_hashdID
+
+"git reset commit_hashdID" tek farkı staging area'daki değişikliklerde kalır/silinmez.
+
+- **Commit geçmişi:** Belirtilen commit'e geri dönersin ve o commit'ten sonraki commit'ler silinir.
+- **Staging area:** Değişiklikler staging area'da (index) kalır.
+- **Çalışma klasörü:** Çalışma klasöründeki değişiklikler silinmez. Yani, dosyalarındaki değişiklikler korunur
+
+> #### M_3. git reset --hard commit_hashdID
 
 Seçili commite gider ve o commit en son commit olur. Ondan sonra atılan yeni/son commitler tamamen silinir. Yapılan dosya değişiklikleri/geliştirmeler kalmaz commitlerle birlikte onlarda silinir. **Bu tehlikeli bir işlemdir geri alınamaz!**
 
-> #### M_3. git revert commit_hashdID
+- **Commit geçmişi:** Belirtilen commit'e geri dönersin ve o commit'ten sonraki commit'ler silinir.
+- **Staging area:** Staging area'daki (index'teki) değişiklikler silinir. Yani git add ile eklenen dosyalar.
+- **Çalışma klasörü:** Çalışma klasöründeki dosyalardaki tüm değişiklikler kaybolur. Dosyalar, commit_hashID'e karşılık gelen commit'in içeriğine döner.
+
+> #### M_4. git revert commit_hashdID
 
 Seçili committe yapılan değişikliklerini geri alır. Revert işleminden sonra yeni bir commit atılır ve değişiklikler geri alınmış olur. Yeni atılan committe, revert işlemi olduğunu git otomatik belirtir.
 
@@ -433,9 +452,10 @@ Commit mesajı ve mesaja ait geliştirmeler log da (git log) durmaya devam eder,
 
 **dipnot;** hashdID'nin tamamını almaya gerek yok. İlk 7-8 karakter yetiyor.
 
-> #### M_4. Kaynak Siteler
+> #### M_5. Kaynak Siteler
 
 - [techcareer.net - Git Reset, Revert](https://www.techcareer.net/courses/git-github-egitimi/97d0c71f-0a17-46ec-8e25-d2dc1dcc4815)
+- [Medium - Git — Commit Geri Alma Seçenekleri](https://muratbaseren.medium.com/git-ile-commit-geri-alma-secenekleri-7bf352cf7fed)
 
 ### N. git diff
 
@@ -560,8 +580,10 @@ H. - git rebase => Detaylı araştır.
 
 > ## 7. Genel Kaynak Siteler
 
-- [patika.dev - GIT Bash ile GIT Temel Komutları](https://app.patika.dev/courses/git/git-bash-ile-git-temel-komutlari)
+- [git sitesi - git kullanım](https://git-scm.com/book/tr/v2) => git'in kendi sitesinde bulunan Türkçe kaynak eğitim.
+- [patika.dev - GIT Kursu](https://academy.patika.dev/tr/courses/git)
 - [techcareer.net - Git ve GitHub Eğitimi](https://www.techcareer.net/courses/git-github-egitimi)
 - [Medium - Temel Git terimleri ve komutları](https://medium.com/@alianilkocak/temel-git-terimleri-ve-komutlar%C4%B1-6bc62b802baf)
 - [Medium - GIT CLI ile Komut Komut Versiyonlama!](https://medium.com/fedeveloper/git-bash-ile-komut-komut-versiyonlama-a354efd3063f)
 - [Medium - Temel Git terimleri ve komutları](https://medium.com/@alianilkocak/temel-git-terimleri-ve-komutlar%C4%B1-6bc62b802baf)
+- [Bilgi Üniversitesi - Türkçe Git 101](https://stk.bilgi.edu.tr/media/uploads/2015/01/12/git101.pdf)
