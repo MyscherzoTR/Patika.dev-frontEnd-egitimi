@@ -570,13 +570,24 @@ Fetch işlemi aksine merge işlemini otomatik yapar. Uzak depodan en son değiş
 - [techcareer.net - Fetch and Pull](https://www.techcareer.net/courses/git-github-egitimi/8c994fdd-4563-422e-a259-9781c8088070)
 - [Git Fetch ve Git Pull'u Anlamak](https://www.tempmail.us.com/tr/git/git-fetch-ve-git-pull-u-anlamak)
 
-D. git clone
+### T. git clone
 
-Mevcut bir Remote Repository'de bulunan dosyaların bilgisayarımızda bir kopyasının oluşturulmasını sağlar.
+Mevcut bir Remote Repository'de bulunan dosyaların bir kopyasını local repository olarak bilgisayarımızda oluşturur. Bu işlem sonrasında varsa commit geçmişi, branchler vb. her şey local repository olarak oluşmuş olur.
 
-- git clone <remote_URL>
+Bilgisayarda herhangi bir klasör içinde bu işlem yapılabilir. İlgili klasörün içine girdikten sonra terminalden çalıştırlaması gereken komut;
 
-H. - git rebase => Detaylı araştır.
+- git clone <repository_url>
+
+### U. git rebase
+
+"Rebase" komutu, bir dal üzerinde yaptığınız değişiklikleri başka bir dalın üzerine uygulamanıza olanak tanır. Diyelim ki “XYZ” adlı bir dalda bazı değişiklikler yaptınız ve bu değişiklikleri “main” dalına dahil etmek istiyorsunuz. Git rebase kullanarak değişikliklerinizi “main” dalının üzerine yeniden uygulayabilirsiniz. Aşağıdaki adımları izleyerek yeniden tabanlama işlemini gerçekleştirebilirsiniz;
+
+- git checkout xyz
+- git rebase main
+
+Yeniden tabanlama işlemi, “XYZ” dalındaki değişikliklerinizi “main” dalının en son hali üzerine ekler ve yeni bir commit oluşturur. Bu sayede, değişiklikleriniz “main” dalının son haline uyumlu hale gelir.
+
+Yeniden tabanlama, projenizdeki dallar arasında düzgün bir iş akışı sağlamak ve geçmişi temizlemek için kullanışlı bir yöntemdir.
 
 > ## 7. Genel Kaynak Siteler
 
