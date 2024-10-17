@@ -120,7 +120,7 @@ Başlıca bilmemiz gereken bazı terimler;
 
 - **untracked (izlenmeyen):** GIT tarafından henüz takip edilmeyen, yani yeni oluşturulmuş dosyaları ifade eder.
 - **unstaged (hazırlanmamış):** Güncellenmiş ancak commit'lenmek için hazırlanmamış dosyaları ifade eder.
-- **staged (hazırlanmış):** Commit'lenmeye hazır olan dosyaları ifade eder.
+- **staged (hazırlanmış):** Commit edilmeyi bekleyen dosyaları ifade eder.
 - **deleted (silinmiş):** Projeden silinmiş ama GIT üzerinden kaldırılmamış dosyaları ifade eder.
 
 ## 6. GIT, .gitignore Dosyası
@@ -173,7 +173,31 @@ Dosyanın her satırına takip edilmesini istemediğimiz dosyaları veya dizinle
 
 Konuyu bitirdikten sonra pekiştirmek için göz atabilirsiniz; [patika.dev - GIT Bash ile GIT Temel Komutları](https://academy.patika.dev/tr/courses/git/git-bash-ile-git-temel-komutlari)
 
-### A. git status komutu
+### A. git Komutlarında ki flag(kısaltmalar) ne anlama geliyor?
+
+Kısaltmalar (flag) Ne Anlama Geliyor?
+
+> #### A_1. -u (veya --update)
+
+Bu flag, git push komutu ile kullanılır ve uzak sunucuya yerel branch'teki değişiklikleri gönderirken aynı adı taşıyan bir branch olup olmadığını kontrol eder. Eğer aynı adı taşıyan bir başka branch bulunursa, yerel branch ile onu ilişkilendirir (tracking) ve sonraki push işlemlerinde hedef branch olarak otomatik olarak bu uzak branch'i kullanır.
+
+> #### A_2. -m (veya --message)
+
+Bu flag, git commit komutu ile kullanılır ve bir commit mesajı eklemek için kullanılır. Mesajı komut satırında belirterek, direkt olarak commit işlemi gerçekleştirilir. Örneğin: **git commit -m "Değişiklikler eklendi"**.
+
+> #### A_3. -b (veya --branch)
+
+Bu flag, git checkout veya git branch komutları ile kullanılır ve bir branch oluştururken veya bir branch'a geçerken kullanılır. Örneğin: **git checkout -b yeni-branch**, hem yeni bir branch oluşturur hem de o branch'e geçiş yapar.
+
+> #### A_4. -d (veya --delete)
+
+Bu flag, git branch komutu ile kullanılır ve bir branch'i siler. Örneğin: **git branch -d silinecek-branch**, silincek-branch adındaki branch'i siler.
+
+> #### A_5. f (veya --force)
+
+Bu flag, git push komutu ile kullanılır ve uzak sunucuya yerel branch'teki değişiklikleri zorla (force) gönderir. Özellikle, geçmişte yapılmış bir push işleminin tersine çevrilmesi gerektiğinde veya zorla güncelleme yapılması gerektiğinde kullanılır. Ancak dikkatli kullanılmalıdır, çünkü uzak sunucuda yapılan değişikliklerin üzerine yazılabilir ve veri kaybına neden olabilir.
+
+### B. git status komutu
 
 ![git status komutu](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/git/git-bash-ile-git-temel-komutlari/figures/5-git-status-1.png)
 
@@ -181,11 +205,11 @@ Konuyu bitirdikten sonra pekiştirmek için göz atabilirsiniz; [patika.dev - GI
 
 ***Dipnot:*** İlk defa bir projede çalışıyorsak bu komut ile kesinlikle git olup olmadığını kontrol etmeliyiz. Eğer git varsa tekrar eklememeliyiz.
 
-> #### A_1. Kaynak Siteler
+> #### B_1. Kaynak Siteler
 
 - [techcareer.net - Git Init, Status, User](https://www.techcareer.net/courses/git-github-egitimi/d171b704-6dbe-4a8c-a497-e2b7ad8c4c40)
 
-### B. git init komutu
+### C. git init komutu
 
 Git ilk defa ilgili proje içinde başlatılacaksa. Henüz versiyon kontrolü altında olmayan bir projenin dizininde, boş bir git deposu oluşturmak için kullanılır. local olarak git projesini oluşturuyoruz. Proje içine ".git" gizli şekilde ekliyor, oluşturuyor.
 
@@ -193,41 +217,41 @@ Bilgilendirme yazısı; "Initialized empty Git repository in proje_path/.git/"
 
 ![git init komutu](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/git/git-bash-ile-git-temel-komutlari/figures/4-git-init.png)
 
-> #### B_1. Kaynak Siteler
+> #### C_1. Kaynak Siteler
 
 - [techcareer.net - Git Init, Status, User](https://www.techcareer.net/courses/git-github-egitimi/d171b704-6dbe-4a8c-a497-e2b7ad8c4c40)
 
-### C. git config komutu
+### D. git config komutu
 
 Yapılandırma ayarlarının içerisinde barındırıldığı bir komut. GIT’in bir çok konfigürasyon ve ayarı vardır, bunlardan ikisi user.name ve user.email olanıdır. Bu ayarları yapılandırmak için aşağıdaki komutları kullanırız. GIT'i ilk kurduğumuzda genellikle aldığımız ilk hata bu configurasyon ayarlarını yapmadığımız için gelir. Burada yazdığınız isim ve email ileride GitHub benzeri bir platforma commit attığınızda da görüneceği için bunu bilerek isimlendirme yapmak yararlı olur.
 
 Ayarların tamamını görüntülemek için; ***git config --list***
 Sistem genelinde bu ayarların geçerli olması isteniliyorsa **--global** kullanılmalı.
 
-> #### C_1. git config user.name "user_name"
+> #### D_1. git config user.name "user_name"
 
 Sadece şuan içerisinde bulunduğumuz dizinde/klasörde/proje dosyasında geçerli olur.
 
 - git config user.name "Aydın BEKOĞLU"
 - git config user.email "aydinbek97@gmail.com"
 
-> #### C_2. git config --global user.email "user_email"
+> #### D_2. git config --global user.email "user_email"
 
 Global olarak tanımlanır kullanıcı. Yani ilgili bilgisayar/serverda ki tüm git projelerinde bu kullanıcı adı/kullanıcı maili kullanılır.
 
 - git config --global user.name "Aydın BEKOĞLU" => Github, GitLab hangi hizmet kullanılıyorsa onda ki mail adresi yazılmalı.
 - git config --global user.email "aydinbek97@gmail.com" => Github, GitLab hangi hizmet kullanılıyorsa onda ki mail adresi yazılmalı.
 
-> #### C_3. git config --global --get user.email
+> #### D_3. git config --global --get user.email
 
 - git config --global --get user.name => git de tanımlı olan kullanıcı ismini gösterir.
 - git config --global --get user.email => git de tanımlı olan kullanıcı mailini gösterir.
 
-> #### C_4. Kaynak Siteler
+> #### D_4. Kaynak Siteler
 
 - [techcareer.net - Git Init, Status, User](https://www.techcareer.net/courses/git-github-egitimi/d171b704-6dbe-4a8c-a497-e2b7ad8c4c40)
 
-### D. git add komutu
+### E. git add komutu
 
 Bu komut ile değişiklik yapılan ve git tarafından izlenmeyen/takip edilmeyen dosyaları izle/takip et diyoruz. Yeni eklenen, silinen veya üzerinde değişiklik yapılan dosyaları staged ortamına göndermek için kullanılır.
 
@@ -235,7 +259,7 @@ Yani çalışma klasöründeki seçili veya bütün dosyaları index(stage) orta
 
 ***dipnot;*** Bazı terminallerde "$ git add" başına dolar işareti eklemek gerekebilir.
 
-> #### D_1. Tüm dosyaları izleme
+> #### E_1. Tüm dosyaları izleme
 
 Projede takip edilmeyen tüm dosyaları staged(index) ortamına alır. Örnek kullanımlar;
 
@@ -245,13 +269,13 @@ Projede takip edilmeyen tüm dosyaları staged(index) ortamına alır. Örnek ku
 
 ***dipnot;*** "-A" all, tümü anlamına gelir. "." ise tüm dosya uzantılarını ifade eder.
 
-> #### D_2. Belirli dosyaları izleme
+> #### E_2. Belirli dosyaları izleme
 
 Belirli dosyayı staged(index) ortamına alır.
 
 - git add index.html
 
-> #### D_3. Kaynak Siteler
+> #### E_3. Kaynak Siteler
 
 - [Youtube - GIT | Proje İçindeki Birden Fazla Dosyanın Versiyon Kontrol Sistemine Eklenebilmesi #7](https://www.youtube.com/watch?v=TP2K4cx3Asw)
 - [techcareer.net - Git Add, Commit](https://www.techcareer.net/courses/git-github-egitimi/ab60bef6-6d8a-4c09-9cf0-bf91e69c713d)
@@ -326,7 +350,8 @@ Local veya remote repository üzerinde yeni bir branch (dal) eklemek, silmek, da
 - git branch -d dev_18 => Belirtilen branchi siler.
 - git switch dev_18 => Mevcutta var olan belirtilen branch'e geçiş yapar.
 - git checkout dev_18 => Mevcutta var olan belirtilen branch'e geçiş yapar.
-- git checkout -b dev_1 => dev_1 adında yeni bir branch oluşturur ve yeni branche geçiş yapar.
+- git checkout -b dev_1 => dev_1 adında branch yoksa yeni bir branch oluşturur ve yeni branche geçiş yapar. Bu komut, o anda bulunan branch'in(aktif/çalışılan branch) son halini baz alarak yeni bir dal oluşturur ve bu dala geçiş yapar.
+  - git checkout -b dev_2 dev_1 => Bu komut, var olan dev_1 dalını baz alarak dev_2 adında yeni bir dal oluşturur. Hangi branch'in aktif olduğunun bir önemi yok. dev_1 branchinde olmasanız bile dev_1 üzerinden dev_2 oluşturur ve dev_2'ye geçiş yapar.
 
 > #### I_1. Kaynak Siteler
 
@@ -468,24 +493,30 @@ Henüz remote repository bağlantınız yoksa bu komut ile local deponuzu uzak s
 
 > #### P_2. git push origin main
 
-Burada bahsi geçen origin remote repository'nin kök dizinini belirtir ve sabit bir isimdir. main ise sizin çalıştığınız branch (dal)'ı belirtir.
+Bu komut ile komutu ile repomuza dosyalarımızı gönderelim. Burada bahsi geçen origin remote repository'nin kök dizinini belirtir ve sabit bir isimdir. main ise sizin çalıştığınız branch (dal)'ı belirtir.
 
 > #### P_3. git push -u origin main
 
-Son aşama olarak git push -u origin main komutu ile repomuza dosyalarımızı gönderelim.
+Bu komut ile komutu ile repomuza dosyalarımızı gönderelim. Burada bahsi geçen origin remote repository'nin kök dizinini belirtir ve sabit bir isimdir. main ise sizin çalıştığınız branch (dal)'ı belirtir.
+
+***-u(veya --update):*** Bu flag, git push komutu ile kullanılır ve uzak sunucuya yerel branch'teki değişiklikleri gönderirken aynı adı taşıyan bir branch olup olmadığını kontrol eder. Eğer aynı adı taşıyan bir başka branch bulunursa, yerel branch ile onu ilişkilendirir (tracking) ve sonraki push işlemlerinde hedef branch olarak otomatik olarak bu uzak branch'i kullanır.
 
 > #### P_4. Kaynak Siteler
 
 - [techcareer.net - Git Push Eğitimi](https://www.techcareer.net/courses/git-github-egitimi/9b8be52a-2493-404f-ad65-ab59f94bcc89)
 - [patika.dev - GitHub'a Projemizin Eklenmesi ve Diğer Repo Hosting Web Platformları](https://academy.patika.dev/tr/courses/git/githuba-projemizin-eklenmesi-ve-diger-repo-hosting-web-platformlari)
 
-### R. git pull
+### R. GIT Pull Request
+
+Kısaca, Pull request (kısaca PR - TR: çekme isteği), yazılım geliştirme sürecinde ekip içi işbirliğini sağlayan ve kod incelemelerini kolaylaştıran önemli bir araçtır. Sadece ekip içi değil, açık kaynaklı projelerde ekip dışından katkı sağlamak isteyen geliştiricilerin de kullandığı bir araçtır.
+
+Genellikle Git gibi versiyon kontrol sistemlerinde kullanılan Pull Request, yeni bir kod değişikliğinin incelenmesi ve onaylanması sürecini yönetir. Bu şekilde projeye katkı sağlamak isteyen ekip üyelerinin ya da geliştiricilerin, projenin sahibine değişiklikleri önerir ve projenin sahibi bu değişiklikleri projeye dahil etmek veya reddetmek için karar verir.
 
 > #### R_1. Kaynak Siteler
 
-
-
+- [Youtube - Pull Request Nasıl Yapılır? Contribution | GitHub](https://www.youtube.com/watch?v=N_qEmSRsFlI)
 - [techcareer.net - Git Pull Request](https://www.techcareer.net/courses/git-github-egitimi/00a12a9d-c54d-4653-b521-cda4664f22ec)
+- [Git'te Pull Request Nasıl Yapılır: Adım Adım PR](https://mustafabaser.net/git-pull-request-nedir)
 
 D. git fetch =>
 
