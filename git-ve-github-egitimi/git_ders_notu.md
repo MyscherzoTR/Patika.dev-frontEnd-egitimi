@@ -589,7 +589,7 @@ Yeniden tabanlama işlemi, “XYZ” dalındaki değişikliklerinizi “main” 
 
 Yeniden tabanlama, projenizdeki dallar arasında düzgün bir iş akışı sağlamak ve geçmişi temizlemek için kullanışlı bir yöntemdir.
 
-> ## 7. Genel Kaynak Siteler
+## 7. Genel Kaynak Siteler
 
 - [git sitesi - git kullanım](https://git-scm.com/book/tr/v2) => git'in kendi sitesinde bulunan Türkçe kaynak eğitim.
 - [patika.dev - GIT Kursu](https://academy.patika.dev/tr/courses/git)
