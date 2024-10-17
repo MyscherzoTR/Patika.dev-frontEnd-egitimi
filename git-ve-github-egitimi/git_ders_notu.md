@@ -344,7 +344,8 @@ Local veya remote repository üzerinde yeni bir branch (dal) eklemek, silmek, da
 ![git branch](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4IkgIwsGWN52UBrCWimoeCqeQ4fo2F91_mg&s)
 
 - git branch => Repository de var olan branchleri listeler. Aktif branchi de belirtir.
-- git branch -a => Tüm uzak ve yerel branch'lari listelemek için;
+- git branch -a => Tüm uzak(remote) ve yerel(local) branchleri listelemek için;
+- git branch -r => uzak(remote) ki branchleri listeteler.
 - git branch dev_18 => dev_18 adında yeni bir branch açar.
 - git branch -M main => "-M" ile main/ana branch oluşturur.
 - git branch -d dev_18 => Belirtilen branchi siler.
@@ -474,7 +475,7 @@ Belirtilen commitler arasında ki farklılıkları gösterir. Eğer dosya ismi v
 
 ### O. git remote add origin repository_url
 
-Henüz remote repository bağlantınız aşağıdaki bu komut ile local deponuzu uzak sunucudaki depoya bağlayabilirsiniz.
+Henüz remote repository bağlantınız aşağıdaki bu komut ile yerel(local) deponuzu uzak(remote) sunucudaki depoya bağlayabilirsiniz.
 
 - git remote add origin http://uzak_deponun_adresi.git
 
@@ -489,7 +490,7 @@ Projemizde aldığımız commit'leri, remote repository'e gönderir. Commit’le
 
 > #### P_1 git remote add origin repository_url
 
-Henüz remote repository bağlantınız yoksa bu komut ile local deponuzu uzak sunucudaki depoya bağlayabilirsiniz.
+Henüz remote repository bağlantınız aşağıdaki bu komut ile yerel(local) deponuzu uzak(remote) sunucudaki depoya bağlayabilirsiniz.
 
 > #### P_2. git push origin main
 
@@ -518,7 +519,36 @@ Genellikle Git gibi versiyon kontrol sistemlerinde kullanılan Pull Request, yen
 - [techcareer.net - Git Pull Request](https://www.techcareer.net/courses/git-github-egitimi/00a12a9d-c54d-4653-b521-cda4664f22ec)
 - [Git'te Pull Request Nasıl Yapılır: Adım Adım PR](https://mustafabaser.net/git-pull-request-nedir)
 
-D. git fetch =>
+### S. git fetch & git pull
+
+Her iki komut da bir havuzun yerel kopyalarını güncellemek için kullanılsa da, çok farklı şekillerde çalışırlar.
+
+**'Git fetch'** => keşif gibidir; yerel deponuzu uzak bir depodaki değişikliklerle günceller ancak bu değişiklikleri mevcut çalışma branchle birleştirmez. Mevcut çalışmanızı etkilemeden nelerin değiştiğini görmenizi sağlar.
+
+**'git pull'** => ise biraz daha fazlasını yapar; yalnızca uzak depodan güncellemeleri almakla kalmaz, aynı zamanda bunları otomatik olarak mevcut dalla birleştirir. Bu ayrım, başkalarıyla işbirliği yaparken temiz ve işlevsel bir kod tabanını korumayı amaçlayan geliştiriciler için çok önemlidir.
+
+***dipnot 1:*** Eğer bir 'git pull' işlemini geri almanız gerekiyorsa, yerel branchi önceki durumuna döndürmek için 'git reset, git revert' gibi komutları kullanabilirsiniz.
+
+***dipnot 2:*** git fetch ve git pull işlemlerinde illa remote branch name yazmaya gerek yoktur. Localde hangi branch aktif ise o branchnin remote'u kontrol edilir. Örneğin; ***git pull*** yazmak yeterli.
+
+> #### S_1. git fetch Kullanımı
+
+Herhangi bir değişikliği birleştirmeden remote depodan en son meta veri bilgilerini alır. Bilgileri almak ve değişiklikleri local repository taşımak için adımlar;
+
+- git fetch origin branch_name
+- git status
+- git merge origin/branch_name
+
+> #### S_2 . git pull Kullanımı
+
+Fetch işlemi aksine merge işlemini otomatik yapar. Uzak depodan en son değişiklikleri getirir ve bunları local branch ile birleştirir.
+
+- git pull origin branch_name
+
+> #### S_3. Kaynak Siteler
+
+- [techcareer.net - Fetch and Pull](https://www.techcareer.net/courses/git-github-egitimi/8c994fdd-4563-422e-a259-9781c8088070)
+- [Git Fetch ve Git Pull'u Anlamak](https://www.tempmail.us.com/tr/git/git-fetch-ve-git-pull-u-anlamak)
 
 D. git clone
 
