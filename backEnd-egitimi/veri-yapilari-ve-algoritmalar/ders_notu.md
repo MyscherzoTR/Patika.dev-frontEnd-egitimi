@@ -655,14 +655,41 @@ Gördüğünüz gibi çok kafa karıştırıcı ve uzun bir yöntem.
 - [Youtube - Veri Yapıları Ders 2 Listeler](https://www.youtube.com/watch?v=hnE9_7VBKyI&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU)
 - [Youtube - Sıfırdan Python Dersleri Ders 3: Listeler (Lists)](https://www.youtube.com/watch?v=pBMuc4cc_Ck&list=PL3kMAPso9YQ1Ls-5uTTIWWMkJoF_vyj5J)
 
-### C. Linked List - Araştır?
+### C. Linked List (Bağlı Liste)
 
-- Linked-List (Bağlı listeler), yan yana zorunluluğu olmadan veri tutmamızı sağlayan yapılardır. Yeni gelen eleman için hafıza'da yeni bir alan açmamız gerekmez. Array'dan farklı olarak elemanlar hafıza içerisinde farklı yerlerde olabilir fakat son gelen eleman kendinden bir önceki elemana ***her zaman adresini bildirmek*** zorundadır.
+Linked-List (Bağlı listeler), yan yana durma zorunluluğu olmadan veri tutmamızı sağlayan yapılardır. Yeni gelen eleman için hafızada yeni bir alan açmamız gerekmez. Array'dan farklı olarak elemanlar hafıza içerisinde farklı yerlerde olabilir fakat son gelen eleman kendinden bir önceki elemana ***her zaman adresini bildirmek*** zorundadır.
+
+- Listede bir başlangıç (head) elemanı, birde sonuncu (tail) elamanı vardır.
+- Listede aktif (current) eleman şu anda bilgilerine ulaşabileceğimiz elemandır.
+- Düğüm (node) ismi verilen bir elemanda veri saklar. Yeni veri ekleneceğinde bir düğüm oluşturulur ve listeye bağlanır. Eleman silineceğinde ise düğümlerden birisi silinir, kopan bağ tekrar sağlanır.
+- Farklı Linked List'ler vardır.
+  - Tek-Yönlü Bağlı Liste (Singly Linked List)
+  - Çift-Yönlü Bağlı Liste (Doubly Linked List)
+  - Dairesel Listeler (Circular Linked Lists)
+
+> #### C_1. Tek-Yönlü Bağlı Liste (Singly Linked List)
+
+Listedeki elemanlar arasında sadece tek bir bağ vardır. Bu tür bağlı listelerde hareket yönü sadece listenin başından sonuna doğrudur.
+
 ![Linked-List](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/linked-list/figures/linked-list.png)
 
-Yukarıdaki örnekte gördüğünüz üzere, her bir düğüm bir sonrakinin adresini tutar. Her bir önceki eleman bir sonraki eleman ile bağlıdır.
+Yukarıdaki görselde gördüğünüz üzere, her bir düğüm bir sonrakinin adresini tutar. Her bir önceki eleman bir sonraki eleman ile bağlıdır.
 
-> #### C_1. Kaynak Siteler
+> #### C_2. Çift-Yönlü Bağlı Liste (Doubly Linked List)
+
+Listedeki elemanlar arasında iki yönlü bağ vardır. Elemanın bağlantı bilgisi bölümünde iki gösterici bulunur. Bu göstericinin biri kendisinden sonra gelen elemanı diğeri ise kendisinden önce gelen elamanın adres bilgisini tutar.
+![Çift-Yönlü Bağlı Liste (Doubly Linked List)](https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/03/DLL1.png)
+Bu sayede listenin hem başından sonuna hem de listenin sonundan başına doğru hareket edilebilir. Bu yöntem daha esnek bir yapıya sahip olduğundan bazı problemlerin çözümünde daha işlevsel olabilmektedir.
+
+> #### C_3. Dairesel Listeler (Circular Linked Lists)
+
+![Dairesel Listeler (Circular Linked Lists)](https://www.alphacodingskills.com/imgfiles/circular-singly-linked-list.PNG)
+
+**Tek Yönlü Dairesel Bağlı Listeler:** Listedeki elemanlar arasında tek yönlü bağ vardır. Tek yönlü bağlı listelerden tek farkı ise son elemanın göstericisi listenin ilk elamanının adresini göstermesidir. Bu sayede eğer listedeki elemanlardan birinin adresini biliyorsak listedeki bütün elemanlara erişebiliriz.
+
+**İki Yönlü Dairesel Bağlı Listeler:** Hem dairesellik hem de çift bağlılık özelliklerine sahip listelerdir. İlk düğümden önceki düğüm son, son düğümden sonraki düğüm de ilk düğümdür.
+
+> #### C_4. Kaynak Siteler
 
 - [Youtube - Bagli Listeler (Linked Lists) - Veri Yapıları Ders 03](https://www.youtube.com/watch?v=SLz8J56hvj0&list=PLIM5iw4GHbNX8O53Z7Dqi1ZIUxZzpFhR8)
 - [Youtube - Bağlı Liste Sınıfının Tasarımı - Veri Yapıları - Ders 03](https://www.youtube.com/watch?v=e3ZMNXROg9o&list=PLIM5iw4GHbNX8O53Z7Dqi1ZIUxZzpFhR8)
@@ -706,36 +733,66 @@ Adresi #20 olan 6 numaralı hücreyi çıkarmak/silmek istiyoruz. Linked-List'de
 
 - [Doğrusal Veri Yapıları 2 - Bağlı Liste (Linked List)](https://medium.com/@tolgahan.cepel/do%C4%9Frusal-veri-yap%C4%B1lar%C4%B1-2-ba%C4%9Fl%C4%B1-liste-linked-list-8e5d3d84c41f)
 
-### F. Stack (LIFO) - Detaylı Araştır?
+### F. Stack(Yığın) - "LIFO ve FILO"
 
-Stack, LIFO (Last in First out) (En son giren en önce çıkar) mantığına dayanan, elemanlar topluluğundan oluşan bir yapıdır. Gelin hemen örneğimize geçelim. Taşınırken topladığınız koli kutusu düşünün. İçerisinde kitaplar var ve en, boy olarak koliye tam olarak koyuluyor. Mantıken kolinin altı kapalı ve üst üste koymanız gerekmektedir. Yeni taşındığınız yerde çıkartırken en üstekinden başlarsınız. İşte stack (Yığın) da aynı mantıkta çalışıyor.
+***LIFO (Last in First out) En son giren en önce çıkar*** veya ***FILO (First in Last out) İlk giren en son çıkar mantığına dayanan*** elemanlar topluluğundan oluşan bir yapıdır.
 
-Yığınlara eleman eklerken veya çıkartırken bazı methodlar uygulanır. Bunlardan biri push, diğeri ise pop. Push, yığının üzerine eleman eklemek için kullanılır (Koliye kitap koymak). Pop ise, yığından eleman çıkarmak için kullanılır.
-
-- ***Örnek Push ve Pop***
+Eleman ekleme çıkarmaların en üstten (top) yapıldığı veri yapısına  stack(yığın) adı verilir. Bir eleman ekleneceğinde yığının en üstüne konulur. Eleman çıkarılacağı zaman ise yığının en üstündeki eleman çıkarılır.
 ![Örnek Push ve Pop](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/stack/figures/stack.png)
 
-  - Push: Stack'e eleman eklemek (yığının üstüne tabak koymak). Her seferinde koyulan tabak en üstteki yani son tabak olur.
-  - Pop: Stack'ten eleman almak. Yığının en üstünden tabak almak. En son tabak en üstteki olduğu için yığından tabak aldığımızda üstten alırız.
+> #### F_1. Gelin Hemen Örneğimize Geçelim
 
-> #### F_1. Kaynak Siteler
+Taşınırken topladığınız koli kutusu düşünün. İçerisinde kitaplar var ve en, boy olarak koliye tam olarak koyuluyor. Mantıken kolinin altı kapalı ve üst üste koymanız gerekmektedir. Yeni taşındığınız yerde çıkartırken en üstekinden başlarsınız. İşte stack (Yığın) da aynı mantıkta çalışıyor.
+
+Yığınlara eleman eklerken veya çıkartırken bazı methodlar uygulanır. Bunlardan biri push, diğeri ise pop. Push, yığının üzerine eleman eklemek için kullanılır (Koliye kitap koymak). Pop ise, yığından eleman çıkarmak için kullanılır.
+![Örnek Push ve Pop](https://miro.medium.com/v2/resize:fit:720/format:webp/1*Brrjy1HVxQAzR-lQUdpIIQ.png)
+
+***Bilinmesi gereken başlıca terimler vardır;***
+
+- empty stack: Boş yığın.
+- push (eklemek/koymak):Yığına eleman ekleme. Yığının üstüne tabak koymak. Her seferinde koyulan tabak en üstteki yani son tabak olur.
+- pop (çıkarmak/almak):Yığından eleman çıkarma. Yığının en üstünden tabak almak. En son tabak en üstteki olduğu için yığından tabak aldığımızda üstten alırız.
+
+> #### F_2. Örnek Kullanım Yerleri
+
+Bir çok örnek kullanım yeri vardır. ***Bunlardan bazıları;***
+
+- Yazılım uygulamalarındaki Undo işlemleri stack ile yapılır. Undo işlemi için LIFO yapısı kullanılır.
+- Web browser’lardaki Back butonu (önceki sayfaya) stack kullanır. Buradada LIFO yapısı kullanılır.
+- Matematiksel işlemlerdeki operatörler (+,*,/,- gibi) ve operandlar için stack kullanılabilir.
+
+> #### F_3. Kaynak Siteler
 
 - [Youtube - Veri Yapıları Ders 4 Yığıt (Stack) Yapısı](https://www.youtube.com/watch?v=nPl1A6036uk&t)
 - [stack-kod-örneği](https://www.baskent.edu.tr/~tkaracay/etudio/ders/prg/dataStructures/Collections/ClassStack.pdf)
 
-### G. Queue (FIFO) - Detaylı Araştır?
+### G. Queue(Kuyruk) - "FIFO ve LILO"
 
-Queue (Kuyruk), FIFO (First in First out) (İlk giren ilk çıkar) prensibine dayanan, girişlerde ve çıkışlarda belirli bir kurala göre çalışan yapıdır. Stack de verdiğimiz örneği kuyruğa göre uyarlayalım. Biz örnekte altı kapalı bir koli kutusunu düşünmüştük. Şimdi o koli kutusunun altı yırtılmış. Sonuç olarak ne oluyor? İlk giren ilk çıkmış oluyor.
+***FIFO (First in First out) İlk giren ilk çıkar*** veya ***LILO (Last in Last Out) Son giren son çıkar*** mantığına dayanan, girişlerde ve çıkışlarda belirli bir kurala göre çalışan yapıdır.
 
-Queue (Kuyruk)'da eleman eklemesi yaparken enqueue methodunu kullanıyoruz. Eleman silerken ise dequeue methodunu kullanıyoruz.
-
-- ***Örnek engueue ve dequeue***
 ![Örnek engueue ve dequeue](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/queue/figures/queue.png)
 
-  - Enqueue: Yeni elemanın Kuyruğa eklenmesi (yeni birinin sıraya girmesi)
-  - Dequeue: Elemanın Kuyruktan çıkarılması (sırası gelenin sıradan çıkması/işi bitenin sıradan ayrılması)
+> #### G_1. Gelin Hemen Örneğimize Geçelim
 
-> #### G_1. Kaynak Siteler
+Gerçek yaşamda banklarda, duraklarda, otoyollarda kuyruklar oluşmaktadır. Kuyruğu ilk olarak girenler işlemlerini ilk olarak tamamlayıp kuyruktan çıkarlar.
+
+Queue (Kuyruk)'da eleman eklemesi yaparken ***enqueue*** methodunu kullanıyoruz. Eleman silerken ise ***dequeue*** methodunu kullanıyoruz.
+![Örnek engueue ve dequeue](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu30UfiMgMjULENZ_WpnpSWryz97W6yuC-MFtQ5cgOJWFxMJ4z)
+
+***Bilinmesi gereken başlıca terimler vardır;***
+
+- Enqueue: Yeni elemanın Kuyruğa eklenmesi (yeni birinin sıraya girmesi)
+- Dequeue: Elemanın Kuyruktan çıkarılması (sırası gelenin sıradan çıkması/işi bitenin sıradan ayrılması)
+
+> #### G_2. Örnek Kullanım Yerleri
+
+ İşletim sistemleri bünyesinde öncelik kuyruğu, yazıcı kuyruğu gibi birçok uygulama alanı vardır.  Kuyruk modeli, program tasarımında birçok yerde kullanılır. Örneğin, iki birimi arasında iletişim kanalı, ara bellek/tampon bellek oluşturmada bu modele başvurulur.
+
+> #### G_3. Öncelikli Kuyruklar (Priority Queues)
+
+Öncelikli kuyruk uygulamasında kuyruğa girecek verilerin veya nesnelerin birer öncelik değeri vardır ve ekleme bu öncelik değerine bakılarak yapılır.  Eğer eklenecek verinin önceliği en küçük ise, yani en önceliksiz ise, doğrudan kuyruğun sonuna eklenir; diğer durumlarda kuyruk üzerinde arama yapılarak kendi önceliği içerisinde sona eklenir.
+
+> #### G_4. Kaynak Siteler
 
 - [Youtube - Veri Yapıları Ders 5 Kuyruk Kavramı](https://www.youtube.com/watch?v=W-wCqjKSpys&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=6)
 - [Doğrusal Veri Yapıları 4 - Kuyruk (Queue) Kodlu Örnek](https://medium.com/@tolgahan.cepel/do%C4%9Frusal-veri-yap%C4%B1lar%C4%B1-4-kuyruk-queue-dcbd07e8ba77)
@@ -1067,9 +1124,21 @@ Binary Search bu diziyi manipüle ederek şu ifadeye dönüştürüyor. ***[10,1
 
 ### D. Binary Search Tree
 
-Bir düğüm her iki tarafa da referans verebiliyor. Sağ ve sol olarak. Sağ tarafından kendinden büyük elemanlar, sol tarafında ise kendinden küçük elemanlar bulunacak. ![Binary Search Tree](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/binary-search-tree/figures/binary-search-tree.png)
+Bağlı listeler, yığıtlar ve kuyruklar doğrusal (linear) veri yapılarıdır. Ağaçlar ise doğrusal olmayan belirli niteliklere sahip iki boyutlu veri yapılarıdır.
 
-> #### D_1. Örnek Binary Search Tree
+Bir düğüm her iki tarafa da referans verebilir. Sağ ve sol olarak. Sağ tarafından kendinden büyük elemanlar, sol tarafında ise kendinden küçük elemanlar bulunur.
+![Binary Search Tree](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*ynJizzZ4xbFmvmzHezPjKA.png)
+
+> #### D_1. Binary Search Tree Bilinmesi Gerekenler
+
+- Arama işlemi bağlı dizilere göre çok hızlı yapılır.
+- Ağaçlar hiyerarşik ilişkileri göstermek için kullanılır.
+- Her ağaç node’lar ve kenarlardan (edge) oluşur. 
+- Herbir node(düğüm) bir nesneyi gösterir. 
+- Herbir kenar (bağlantı) iki node arasındaki ilişkiyi gösterir.
+- Ağacın en üstteki düğümüne kök (root) adı verilir.
+
+> #### D_2. Örnek Binary Search Tree
 
 Tree'ye eleman eklemek istediğimde root'dan başlıyorum. Baştaki açıklamamızı hatırlayalım. Sağ tarafında kendinden büyük, sol tarafında kendinden küçük elemanlar olmalı.
 
@@ -1079,7 +1148,7 @@ Root'a soruyorum senin değerin ne bana döndüğü cevap 56. Yani soluna eklene
 
 Karşıma 22 değerinde olan düğüm çıkıyor. Eklemek istediğim sayı 22 den büyük olduğu için sağ tarafına bir köşe çekiyorum ve 26 sayısını bağlıyorum.
 
-> #### D_2. Kaynak Siteler
+> #### D_3. Kaynak Siteler
 
 - [Youtube - Binary Search Tree #27](https://www.youtube.com/watch?v=ec0f3Bh-CJE)
 - [Youtube - 4 dakikada Binary Search Tree](https://www.youtube.com/watch?v=fDKIpRe8GW4&t=1s)
