@@ -2,11 +2,11 @@
 
 Veri Yapıları ve Algoritmalar ders notunu hazırlarken bir çok kaynaktan faydalandım. Elimden geldiğince basit ama işe yarar bir not hazırlamaya gayret gösterdim. ***Her konunun sonunda o konuyla alakalı faydalandığım kaynakları belirttim. Belirttiğim kaynaklardaki herşeyi bu nota eklemedim. Her konuyu okuduktan sonra mutlaka kaynaklarda içeriklere de göz atmalısınız.*** Faydalandığım kaynaklardan bazıları;
 
-* Çeşitli Youtube kanalları
-* Udemy, BTK Akademi tarzı eğitim siteleri
-* patika.dev, coderspace, techcareer.net tarzı oluşumlar
-* khanacademy oluşumu
-* Medium sitesinde ki makaleler
+- Çeşitli Youtube kanalları
+- Udemy, BTK Akademi tarzı eğitim siteleri
+- patika.dev, coderspace, techcareer.net tarzı oluşumlar
+- khanacademy oluşumu
+- Medium sitesinde ki makaleler
 
 Ders ile alakalı başlangıç teorik videolar - ***kesinlikle izlenmeli***;
 
@@ -50,7 +50,7 @@ Bu iki durumu tanımlamak için ikili(binary) sistem kullanılır. Her sayıya *
 
 İkilik(Binary) ve Onluk(Decimal) tabanlar
 
-#### C_1. Onluk (Decimal) Gösterimi
+> #### C_1. Onluk (Decimal) Gösterimi
 
 Her basamak için 10 olası değer (0-9) vardır. En sağda ki birler basamağıdır (0-9)
 Sonraki onlar basamağı (10-90)
@@ -61,7 +61,7 @@ Sonraki yüzle basamağı (100-900) şeklinde ilerler.
 - (5 * 10^2) + (0 * 10^1) + (6 * 10^0) = (506)10
 - (6 * 1) + (0 * 10) + (5 * 100) = (506)10
 
-#### C_2. İkili (Binary) Gösterimi
+> #### C_2. İkili (Binary) Gösterimi
 
 Her basamak için sadece 2 olası değer (0 veya 1) vardır. En sağda ki birler basamağıdır (0 ve 1)
 Sonraki ikiler basamağı (1'den 2'ye)
@@ -105,7 +105,8 @@ Veriler Byte(Bayt) ve Byte'ın katları olarak depolanır/hesaplanır(KB, MB, GB
 
 ![Farklı 1 Byte ile gösterim](https://player.slideplayer.biz.tr/10/2798593/data/images/img5.jpg)
 
-#### Hadi gelin ***bit ve byte kavramlarını*** görsel ile örneklendirelim.
+> #### E_1. Hadi gelin ***bit ve byte kavramlarını*** Görsel ile Örneklendirelim
+
 ![bit ve byte kavramları](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/veri-tutulma/figures/veri-tutulma.png)
 
 - (1 Byte = 8 bit)  demiştik. 8 bit yani 2^8 = **256 farklı şey, sembol ifade eder ve bu işimizi görmeyebilir, yetersiz kalabilir.** Bu durumda 256 sembolden daha fazla bir depolama alanı isteyebiliriz. Peki bu durum da ne yapacağız? Aslında çözüm çok basit Byte'ları yan yana koyarak depolama alanımızı arttıracağız.
@@ -120,7 +121,7 @@ Hemen bir örnek çözelim.
 - Binary semboller, kullanan kişiye göre farklılık gösterebilir. Örneğin, 1010 sembolü Ali'ye göre "1" karakterini sembolize ederken, Veli'ye göre "11" sayısını, Ahmet'e göre ise "a" harfini sembolize edebilir.
 ![Veri Sembolleri](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/veri-tutulma/figures/sembol-veri.png)
 
-> #### E_1. Kaynak Siteler
+> #### E_2. Kaynak Siteler
 
 - [Bit Nedir](https://tr.wikipedia.org/wiki/Bit_(bili%C5%9Fim))
 - [Byte Nedir](https://tr.wikipedia.org/wiki/Bayt)
@@ -368,7 +369,7 @@ def PlayHanoi(numberOfDisk, sourcePeg, destinationPeg, auxiliaryPeg):
 PlayHanoi(3,"Start","End","Temp")
 ```
 
-> #### Kaynak Siteler
+> #### F_2. Kaynak Siteler
 
 - [Youtube - C Öz Yineleme (Recursion) - Veri Yapıları Ders 02](https://www.youtube.com/watch?v=qT-Fh2kxR6s&list=PLIM5iw4GHbNX8O53Z7Dqi1ZIUxZzpFhR8)
 - [Youtube - C# Veri Yapıları Ders 8 Rekürsif Yapılar](https://www.youtube.com/watch?v=PNWOP_QoBGI&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU)
@@ -679,6 +680,7 @@ Yukarıdaki örnekte gördüğünüz üzere, her bir düğüm bir sonrakinin adr
 +Array, Veriye sabit sürede ulaşmaya ***Random Access*** denir ve Arraylerin böyle özelliği vardır.
 +Linked List, **eleman ekleme ve silme Array'e göre daha kolay.**
 +Linked Listlerde ilgili elemanı bulmak için tek tek sırasıyla elemanları kontrol etmek gerekir.
+
 - ![LinkedList-vs-Array](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/linked-list-array/figures/array-vs-linkedlist-diff.png)
 
 > #### D_1. Kaynak Siteler
@@ -704,17 +706,17 @@ Adresi #20 olan 6 numaralı hücreyi çıkarmak/silmek istiyoruz. Linked-List'de
 
 - [Doğrusal Veri Yapıları 2 - Bağlı Liste (Linked List)](https://medium.com/@tolgahan.cepel/do%C4%9Frusal-veri-yap%C4%B1lar%C4%B1-2-ba%C4%9Fl%C4%B1-liste-linked-list-8e5d3d84c41f)
 
-### F. Stack (LIFO) - Detaylı Araştır!
+### F. Stack (LIFO) - Detaylı Araştır?
 
 Stack, LIFO (Last in First out) (En son giren en önce çıkar) mantığına dayanan, elemanlar topluluğundan oluşan bir yapıdır. Gelin hemen örneğimize geçelim. Taşınırken topladığınız koli kutusu düşünün. İçerisinde kitaplar var ve en, boy olarak koliye tam olarak koyuluyor. Mantıken kolinin altı kapalı ve üst üste koymanız gerekmektedir. Yeni taşındığınız yerde çıkartırken en üstekinden başlarsınız. İşte stack (Yığın) da aynı mantıkta çalışıyor.
 
 Yığınlara eleman eklerken veya çıkartırken bazı methodlar uygulanır. Bunlardan biri push, diğeri ise pop. Push, yığının üzerine eleman eklemek için kullanılır (Koliye kitap koymak). Pop ise, yığından eleman çıkarmak için kullanılır.
 
-- Örnek Push ve Pop
+- ***Örnek Push ve Pop***
 ![Örnek Push ve Pop](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/stack/figures/stack.png)
-    
-    * Push: Stack'e eleman eklemek (yığının üstüne tabak koymak). Her seferinde koyulan tabak en üstteki yani son tabak olur.
-    * Pop: Stack'ten eleman almak. Yığının en üstünden tabak almak. En son tabak en üstteki olduğu için yığından tabak aldığımızda üstten alırız.
+
+  - Push: Stack'e eleman eklemek (yığının üstüne tabak koymak). Her seferinde koyulan tabak en üstteki yani son tabak olur.
+  - Pop: Stack'ten eleman almak. Yığının en üstünden tabak almak. En son tabak en üstteki olduğu için yığından tabak aldığımızda üstten alırız.
 
 > #### F_1. Kaynak Siteler
 
@@ -727,11 +729,11 @@ Queue (Kuyruk), FIFO (First in First out) (İlk giren ilk çıkar) prensibine da
 
 Queue (Kuyruk)'da eleman eklemesi yaparken enqueue methodunu kullanıyoruz. Eleman silerken ise dequeue methodunu kullanıyoruz.
 
-- Örnek engueue ve dequeue
+- ***Örnek engueue ve dequeue***
 ![Örnek engueue ve dequeue](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/queue/figures/queue.png)
 
-    * Enqueue: Yeni elemanın Kuyruğa eklenmesi (yeni birinin sıraya girmesi)
-    * Dequeue: Elemanın Kuyruktan çıkarılması (sırası gelenin sıradan çıkması/işi bitenin sıradan ayrılması)
+  - Enqueue: Yeni elemanın Kuyruğa eklenmesi (yeni birinin sıraya girmesi)
+  - Dequeue: Elemanın Kuyruktan çıkarılması (sırası gelenin sıradan çıkması/işi bitenin sıradan ayrılması)
 
 > #### G_1. Kaynak Siteler
 
@@ -747,10 +749,10 @@ Arraylerde 0 bazlı bir indexleme vardır. Bazı programlama dillerin de 1 bazl�
 Hash Table(Karma Tablosu), key value prensibine dayanan bir array kümesidir. Key olarak çağırdığınız elemanın değerini (value) yansıtır.
 Hash Table yerine dizileri kullanabilirdik. Fakat her ürünü ve fiyatını tek tek aramak istemediğimiz için hash table kullanıyoruz. Peki bu süreç nasıl işliyor? Hemen bir örnek yapalım. Örneğimiz bir kuru yemiş dükkanından gelecek.
 ![yok](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/hash-table/figures/%C3%B6rnek-ilk-k%C4%B1s%C4%B1m.png)
-    
-    * Bu kısımda ilk olarak bulunan ürün sayımız kadar sayısı olan bir Array oluşturduk. 8 ürün varsa 8 elemanlı bir array. ***Yukarıda ki görselde olduğu gibi;***
-    * Daha sonra hash fonksiyonundan ürünleri (ürün isimlerini) geçirerek fonksiyonun sonucunda çıkan sayısal değeri **index değeri** olarak kullanacağız. ***Yukarıda ki görselde olduğu gibi;***
-    * Her ürün için bir index değeri belirlenmiş oldu ve bu indexler ilk başta oluşturduğumuz Array'in indexleri. Bu indexlerde ürünlerin fiyatlarını tutacağız. ***Aşağıda ki görselde olduğu gibi;***
+
+  - Bu kısımda ilk olarak bulunan ürün sayımız kadar sayısı olan bir Array oluşturduk. 8 ürün varsa 8 elemanlı bir array. ***Yukarıda ki görselde olduğu gibi;***
+  - Daha sonra hash fonksiyonundan ürünleri (ürün isimlerini) geçirerek fonksiyonun sonucunda çıkan sayısal değeri **index değeri** olarak kullanacağız. ***Yukarıda ki görselde olduğu gibi;***
+  - Her ürün için bir index değeri belirlenmiş oldu ve bu indexler ilk başta oluşturduğumuz Array'in indexleri. Bu indexlerde ürünlerin fiyatlarını tutacağız. ***Aşağıda ki görselde olduğu gibi;***
 
 ![yok](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/hash-table/figures/%C3%B6rnek-ikinci-k%C4%B1s%C4%B1m.png)
 Şifrelendiği için artık her badem keyi gönderildiğinde 85TL, fıstık keyi gönderildiğinde ise 69 sonucu verecektir.
@@ -767,13 +769,14 @@ Hash Table yerine dizileri kullanabilirdik. Fakat her ürünü ve fiyatını tek
 Hash Function (Karma Fonksiyonu), karma fonksiyonu olabilmesi için bazı temel şartlar vardır.Bunlar;
 
 - Gönderdiğimiz ***anahtarlar (keys) farklı*** olmasına rağmen aynı sonuçları alıyorsak bu bir ***hash function*** değildir.
-    * *Farklı girdilere farklı sonuç/çıktı vermeli!*
+  - *Farklı girdilere farklı sonuç/çıktı vermeli!*
 - Fonksiyona gönderilen ***anahtarlar aynı*** fakat sonuç farklı ise ***hash function*** değildir.
-    * *Hash Function sonucu her seferinde aynı girdiye aynı sonuç/çıktı vermeli!*
+  - *Hash Function sonucu her seferinde aynı girdiye aynı sonuç/çıktı vermeli!*
 - Hash Table(Karma Tablosu) için kullanılan dizinin boyutu verilen sonuçların sayısı kadar olmalıdır. Kaç key varsa o kadar elemanlı olmalı dizi(array).
-    * *Hash functiondan 8 değer döndü dizinin boyutu 8 elemanlı olmalıdır.*
+  - *Hash functiondan 8 değer döndü dizinin boyutu 8 elemanlı olmalıdır.*
 
 Fakat her zaman tutarlı olmuyor. Bazen **Collision** dediğimiz sorun ortaya çıkıyor.
+
 - Farklı girdiye farklı sonuç veremiyor. Farklı çıktılar aynı sonuçlar doğurabiliyor.
 
 > #### I_1. Kaynak Siteler
@@ -788,8 +791,8 @@ Fakat her zaman tutarlı olmuyor. Bazen **Collision** dediğimiz sorun ortaya ç
 
 Hash Function'da ***farklı iki değerden aynı sayı üretilirse*** bu duruma ***Collison (çarpışma)*** denir. Bu olay istediğimiz bir durum değildir.
 
-- Hash Function'lar bazen farklı durumlar için farklı sonuçlar üretemeyebilir. *Örnek verelim;*
-    * Araçları bir hash function dan geçirelim. Bu fonksiyonumuz **araçların son harflerine** göre değer atasın. Motor ve tır, bunların son harfleri ***"R"*** olduğu için fonksiyon çıktısında aynı değerler verilir ve bu **collision'a neden olur.**
+- Hash Function'lar bazen farklı durumlar için farklı sonuçlar üretemeyebilir. ***Örnek verelim;***
+  - Araçları bir hash function dan geçirelim. Bu fonksiyonumuz **araçların son harflerine** göre değer atasın. Motor ve tır, bunların son harfleri ***"R"*** olduğu için fonksiyon çıktısında aynı değerler verilir ve bu **collision'a neden olur.**
 - Collision sorunuyla az karşılaşabilmek için kaliteli bir hash function olmalı. Bu sayede verimli bir Hash Table elde etmiş oluyoruz.
 - Çarpışma sayısı arttıkça aradığımız şeyi bulma hızı azalır.
 
@@ -807,10 +810,11 @@ Hash Function'da ***farklı iki değerden aynı sayı üretilirse*** bu duruma *
 -Algoritma analizi, var olan kaynaklara göre en uygun algoritmayı seçmek için uygulanır. Peki algoritma analizi en iyi nasıl yapılır? Kulağa karmaşık geliyor ama çok basit. Programlama dillerinden ve donanımlardan bağımsız bir şekilde Algoritma analizi yapılmalıdır. Aksi taktirde en uygun sonuç alınamayabilir.
 - Donanımlar veya programlama dilleri farklı cihazlarda aynı performansı vermeyebilir. Örnek verecek olursak, cep telefonları için uygulama tasarladığımızı varsayalım. Bu uygulamanın performansı Apple telefonlar için farklı, Android telefonlar için farklı, arasında donanım farklı olanlar için ayrı olacaktır. Donanım ve diller ile algoritma analizi pek sağlıklı değildir.
 
-- Kaynak Siteler
-    * [Youtube - Algoritma Analizi #16](https://www.youtube.com/watch?v=Pi32FSu1TNg)
-    * [Asimptotik Analiz, Asimptotik karmaşıklık nedir?](https://egemengulpinar.medium.com/tr-algoritma-analizi-ve-asimtotik-karma%C5%9F%C4%B1kl%C4%B1k-84ad6be27b32)
-    * [Derinlemesine Algoritma Analizi](https://birhankarahasan.com/algoritma-analizi-nedir-zaman-karmasikligi-big-o-gosterimi)
+> #### A_1. Kaynak Siteler
+
+- [Youtube - Algoritma Analizi #16](https://www.youtube.com/watch?v=Pi32FSu1TNg)
+- [Asimptotik Analiz, Asimptotik karmaşıklık nedir?](https://egemengulpinar.medium.com/tr-algoritma-analizi-ve-asimtotik-karma%C5%9F%C4%B1kl%C4%B1k-84ad6be27b32)
+- [Derinlemesine Algoritma Analizi](https://birhankarahasan.com/algoritma-analizi-nedir-zaman-karmasikligi-big-o-gosterimi)
 
 ### B. Ram Modeli
 
@@ -818,14 +822,16 @@ Bir algoritmayı farklı cihazlarda denemek bize pek fazla bir sonuç çıkarmı
 
 Bu hayalî cihaza ***RAM (Random Access Machine)*** diyoruz. Ram, algoritmalar arasındaki farkları belirlemek için kullanacağımız bir araç olacak.
 
-- Her işlemin birim zamanı mevcuttur. Bunlara örnek;
-    * Döngüler kaç defa işlem yapıyorsa (işlem sayısı * kaç kere tekrar edeceği) o kadar birim zaman alır.
-    *Toplama, Çıkarma, and, or gibi *basit aritmetik/logic işlemler* 1 birim zaman alır.
-    * Hafızadan her okuma işlemi 1 birim zaman alır.
+Her işlemin birim zamanı mevcuttur. ***Bunlara örnek;***
 
-- Kaynak Siteler
-    * [Youtube - Ram Modeli(Random Access Machine) #17](https://www.youtube.com/watch?v=lrHoiZig3Z8)
-    * [ChatGPT - RAM Modeli ve Kullanımı](https://chatgpt.com/share/5acbf049-521c-4593-90b5-44b9cc4b4b48)
+- Döngüler kaç defa işlem yapıyorsa (işlem sayısı * kaç kere tekrar edeceği) o kadar birim zaman alır.
+- Toplama, Çıkarma, and, or gibi *basit aritmetik/logic işlemler* 1 birim zaman alır.
+- Hafızadan her okuma işlemi 1 birim zaman alır.
+
+> #### B_1. Kaynak Siteler
+
+- [Youtube - Ram Modeli(Random Access Machine) #17](https://www.youtube.com/watch?v=lrHoiZig3Z8)
+- [ChatGPT - RAM Modeli ve Kullanımı](https://chatgpt.com/share/5acbf049-521c-4593-90b5-44b9cc4b4b48)
 
 ### C. Time Complexity
 
@@ -838,10 +844,11 @@ Kitapları filtrelememiz gerekir. Kalın olanları bir rafa, ince olanları bir 
 
 **Buradaki seçim bize kalmış.** Hangi aralıkta algoritmamızı değerlendirmek istiyorsak ona göre karmaşıklığı baz alabiliriz. Kullanım ihtiyacına göre bu şekillenecektir. *Ancak genel bir tanı itibariyle en kötüyü bilirsek*, ortalama ve en iyi durumu da tahmin etmek için fikrimiz olabilir. ***Genellikle Big O notasyonu hesaplanıp algoritma karmaşıklığı bulunur.***
 
-- Kaynak Siteler
-    * [Youtube - Time Complexity #18](https://www.youtube.com/watch?v=Ie_Ax6KLI80)
-    * [Youtube - Algoritma Analizi ve Big O (Time Complexity, Space Complexity)](https://www.youtube.com/watch?v=wMp0BrWaoz8)
-    * [worst case nedir?](https://bilgisayarkavramlari.com/2008/12/22/en-kotu-durum-analizi-worst-case-analysis/)
+> #### C_1. Kaynak Siteler
+
+- [Youtube - Time Complexity #18](https://www.youtube.com/watch?v=Ie_Ax6KLI80)
+- [Youtube - Algoritma Analizi ve Big O (Time Complexity, Space Complexity)](https://www.youtube.com/watch?v=wMp0BrWaoz8)
+- [worst case nedir?](https://bilgisayarkavramlari.com/2008/12/22/en-kotu-durum-analizi-worst-case-analysis/)
 
 ### D. Nedir Bu “Big O Notation”?
 
@@ -859,7 +866,7 @@ Bu örnek 1000 sayfalık bir sözlükte yapılan bir değerlendirmeydi. Algoritm
 
 ***Worst Case örneği değil! Bir dipnot daha iyi anlaşılması için;* Fakat diyelim ki ilk sayfa da bizim aradığımız kelime. Bu durumda **normal A algoritması çok daha hızlı çalışacaktır** Çünkü 1.sayfadan taramaya başladığı için direkt bulacaktır ama B algoritması sürekli sözlüğün ortasından 2'ye böldüğü için çok daha fazla vakit ve işlem alacaktır. Buna rağmen B algoritmasının Worst Case A algoritmasının worst case'inden daha iyi olacaktır. Çünkü A algoritması için Worst Case en sonuncu sayfa artık sözlük kaç sayfa ise.
 
-#### İşte bu noktada devreye **"Big O Notation"** girer. ***Peki nedir bu Big O Notation?;***
+> #### D_1. İşte bu noktada devreye **"Big O Notation"** girer. ***Peki nedir bu Big O Notation?;***
 
 Bog o natation algoritmanın ne kadar sürede çalışacağını bize söylemeyecej. Bize algoritmamızın çalışma zamanının inputun boyutu ile nasıl değişeceğini söyleyece/gösterecek.
 
@@ -869,10 +876,11 @@ Kısacası A algoritması input size göre sürekli artış gösterirken B algor
 
 Big O notation da yapılacak toplam işlem sayısının input size ile nasıl scale olacağına bakıyoruz. Bizim için fonksiyonun yapısı önemli. İşlem sayısı nasıl artıyor; Linear, karesi ile orantılı, logaritmik mi nasıl? Big o notaion bana bunu vermiş oluyor.
 
-- Kaynak Siteler
-    * [Youtube - Big O Notation #19](https://www.youtube.com/watch?v=AeeSlV64TOI)
-    * [Nedir Bu “Big O Notation”?](https://medium.com/kodcular/nedir-bu-big-o-notation-b8b9f1416d30)
-    * [Algoritma Karmaşıklığı (Big-O)](https://medium.com/algorithms-data-structures/algoritma-karma%C5%9F%C4%B1kl%C4%B1%C4%9F%C4%B1-big-o-5f14316890a4)
+> #### D_2. Kaynak Siteler
+
+- [Youtube - Big O Notation #19](https://www.youtube.com/watch?v=AeeSlV64TOI)
+- [Nedir Bu “Big O Notation”?](https://medium.com/kodcular/nedir-bu-big-o-notation-b8b9f1416d30)
+- [Algoritma Karmaşıklığı (Big-O)](https://medium.com/algorithms-data-structures/algoritma-karma%C5%9F%C4%B1kl%C4%B1%C4%9F%C4%B1-big-o-5f14316890a4)
 
 <hr>
 
@@ -888,40 +896,47 @@ Sıralama algoritmaları kullanmamızdaki amaç, algoritmanın isminden de anla�
 
 Herhangi bir sayıdaki tip verilerin sınırlı bellek ve işlem gücü ile belirli bir sıraya göre dizilmesinin sağlanmasıdır. Burada önemli olan en optimum bellek ve performans ikilisini verecek bir algoritmanın elde edilmesidir.
 
-- Sıralama algoritmalarının bazı kriterlere göre sınıflandırılabiliriz:
-    * **Bellek Kullanımı:** Çalışırken ek bellek ihtiyacı duyan algoritmalarda kullanılabilecek bir ölçüttür buna ek olarak ayrıca da sıralama işleminin yapılması sırasında hafızanın kullanımına göre de sıralama algoritmaları; Harici sıralama (External Sort) ve Dahili Sıralama (Internal Sort).
-    * **Hesaplama Karmaşıklığı:** Oluşturulmuş olan algoritmanın yaptığı işlem sayısının genel bir yapı ile ifade edilmesidir. Temel üç grup ölçek kullanılır. Bunlar en iyi (best), ortalama (average) ve en kötü (worst) durumu olarak belirtilir. İşlem yoğunluğu zaman işleyişiyle paralel olduğundan (ne kadar çok işlem yapılırsa o kadar uzun süre geçer) algoritmanın işleyiş süresini de etkiler.
-    * **Yerdeğiştirmenin Karmaşıklığı:** İçerisinde ek bellek kullanmayan (in place) algoritmalarda kullanılan karşılaştırılabilmesi için önemli bir ölçüttür.
-    * **Durağanlık(stability):** Algoritmanın uygulanması sırasında sıralanmış bir verinin tekrar sıralamaya tabi tutulup tutulmadığını belirten ölçektir.
-    * **Rekürsiflik:** İç içe kendi kendini çağıran algoritmalarda kullanılan bir ölçüttür. Burada en önemli kriter stack dediğimiz maksimum iç içe çağırım kapasitesine dikkat edilmesi ve bu kapasitenin kullanılma sıklığıdır.
-    * **Fakat en önemli kriterler**
-        + Hafıza Verimliliği (Memory efficiency)
-        + Zaman Verimliliği (Time efficiency)
+> #### A_1. Sıralama Algoritmalarını Bazı Kriterlere Göre Sınıflandırılabiliriz
 
-- Aşağıda bazı sıralama algoritmaları verilmiştir:
-    * Seçerek Sıralama (Selection Sort)
-    * Eklemeli Sıralama (Insertion Sort)
-    * Kabuk Sıralaması (Shell Sort)
-    * Birleştirmeli Sıralama (Merge Sort)
-    * Hızlı Sıralama (Quick Sort)
-    * Kabarcık Sıralaması (Bubble Sort)
+- **Bellek Kullanımı:** Çalışırken ek bellek ihtiyacı duyan algoritmalarda kullanılabilecek bir ölçüttür buna ek olarak ayrıca da sıralama işleminin yapılması sırasında hafızanın kullanımına göre de sıralama algoritmaları; Harici sıralama (External Sort) ve Dahili Sıralama (Internal Sort).
+- **Hesaplama Karmaşıklığı:** Oluşturulmuş olan algoritmanın yaptığı işlem sayısının genel bir yapı ile ifade edilmesidir. Temel üç grup ölçek kullanılır. Bunlar en iyi (best), ortalama (average) ve en kötü (worst) durumu olarak belirtilir. İşlem yoğunluğu zaman işleyişiyle paralel olduğundan (ne kadar çok işlem yapılırsa o kadar uzun süre geçer) algoritmanın işleyiş süresini de etkiler.
+- **Yerdeğiştirmenin Karmaşıklığı:** İçerisinde ek bellek kullanmayan (in place) algoritmalarda kullanılan karşılaştırılabilmesi için önemli bir ölçüttür.
+- **Durağanlık(stability):** Algoritmanın uygulanması sırasında sıralanmış bir verinin tekrar sıralamaya tabi tutulup tutulmadığını belirten ölçektir.
+- **Rekürsiflik:** İç içe kendi kendini çağıran algoritmalarda kullanılan bir ölçüttür. Burada en önemli kriter stack dediğimiz maksimum iç içe çağırım kapasitesine dikkat edilmesi ve bu kapasitenin kullanılma sıklığıdır.
+- **Fakat en önemli kriterler**
+  - Hafıza Verimliliği (Memory efficiency)
+  - Zaman Verimliliği (Time efficiency)
 
-#### *Sıralama Algoritmalarının Karşılaştırılması
+> #### A_2. Aşağıda Bazı Sıralama Algoritmaları Verilmiştir
+
+- Seçerek Sıralama (Selection Sort)
+- Eklemeli Sıralama (Insertion Sort)
+- Kabuk Sıralaması (Shell Sort)
+- Birleştirmeli Sıralama (Merge Sort)
+- Hızlı Sıralama (Quick Sort)
+- Kabarcık Sıralaması (Bubble Sort)
+
+> #### A_3. Sıralama Algoritmalarının Karşılaştırılması
 
 Sık kullanılan sıralama algoritmalarının, verinin karmaşıklığına göre gösterdiği performans:
 
 ![Sıralama Algoritmalarının Karşılaştırılması](https://www.halildurmus.com/wp-content/uploads/2021/01/593-Siralama-Algoritmalarini-Karsilastirma-1.png)
 
-- Kaynak Siteler
-    * [Youtube - Sorting #20](https://www.youtube.com/watch?v=v3Z6crtZVek)
-    * [Sıralama Algoritmaları (Sorting Algorithms)](https://www.halildurmus.com/2021/02/22/siralama-algoritmalari-sorting-algorithms/)
-    * [Sıralama Algoritmaları](https://serdarkuzucu.com/siralama-algoritmalari/)
+> #### A_4. Kaynak Siteler
+
+- [Youtube - Sorting #20](https://www.youtube.com/watch?v=v3Z6crtZVek)
+- [Sıralama Algoritmaları (Sorting Algorithms)](https://www.halildurmus.com/2021/02/22/siralama-algoritmalari-sorting-algorithms/)
+- [Sıralama Algoritmaları](https://serdarkuzucu.com/siralama-algoritmalari/)
 
 ### B. Insertion Sort
 
 En basit sorting algoritmalarından biridir.
 
 Yerleştirerek sıralama işlevi belirli bir anda dizinin belirli bir kısmını sıralı tutarak ve bu kısmı her adımda biraz daha genişleterek çalışmaktadır. Sıralı kısım işlev son bulunca dizinin tamamına ulaşmaktadır. Elemanların sırasına uygun olarak listeye tek tek eklenmesi ile gerçekleştirilen sıralamadır.
+
+> #### B_1. Kod Örneği
+
+Aşağıda örnek kod ve çıktısı görülmekte.
 
  ```python
     for i in range(1,len(arr)):
@@ -935,10 +950,11 @@ Yerleştirerek sıralama işlevi belirli bir anda dizinin belirli bir kısmını
 
  ![Eklemeli Sıralama (Insertion Sort) Nasıl Çalışır?](https://www.halildurmus.com/wp-content/uploads/2021/01/Insertion-Sort-Algorithms.gif)
 
- - Kaynak Siteler
-    * [Youtube - 2 dakikada Insertion Sort](https://www.youtube.com/watch?v=JU767SDMDvA&list=PL9xmBV_5YoZOZSbGAXAPIq1BeUf4j20pl&index=4)
-    * [Youtube - Veri Yapıları Ders 34 Insertion Sort](https://www.youtube.com/watch?v=0lpT0XUy29Q&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=35)
-    * [Insertion Sort Data Structure and Algorithm Tutorials](https://www.geeksforgeeks.org/insertion-sort/)
+> #### B_2. Kaynak Siteler
+
+- [Youtube - 2 dakikada Insertion Sort](https://www.youtube.com/watch?v=JU767SDMDvA&list=PL9xmBV_5YoZOZSbGAXAPIq1BeUf4j20pl&index=4)
+- [Youtube - Veri Yapıları Ders 34 Insertion Sort](https://www.youtube.com/watch?v=0lpT0XUy29Q&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=35)
+- [Insertion Sort Data Structure and Algorithm Tutorials](https://www.geeksforgeeks.org/insertion-sort/)
 
 ### C. Selection Sort
 
@@ -950,12 +966,13 @@ Verilen örüntüye ait ***en küçük elemanı buluyor ve en baştaki sayı ile
 
 ![Selection Sort](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/insertion-sort/figures/insertion-sort.png)
 
-- Kaynak Siteler
-    * [Youtube - Insertion Sort #21(Adı yanlış yazılmış)](https://www.youtube.com/watch?v=GBXm2h4Eu-0)
-    * [Youtube - 3 dakikada Selection Sort](https://www.youtube.com/watch?v=JU767SDMDvA&list=PL9xmBV_5YoZOZSbGAXAPIq1BeUf4j20pl&index=4)
-    * [Youtube - Veri Yapıları Ders 32 Selection Sort](https://www.youtube.com/watch?v=Hr-cghhg-Co&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=33)
-    * [Youtube - Veri Yapıları Ders 33 Selection Sort Örnek 2](https://www.youtube.com/watch?v=DzgmtogFFfw&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=34)
-    * [Selection Sort Data Structure and Algorithm Tutorials](https://www.geeksforgeeks.org/selection-sort/)
+> #### C_1. Kaynak Siteler
+
+- [Youtube - Insertion Sort #21(Adı yanlış yazılmış)](https://www.youtube.com/watch?v=GBXm2h4Eu-0)
+- [Youtube - 3 dakikada Selection Sort](https://www.youtube.com/watch?v=g-PGLbMth_g&list=PL9xmBV_5YoZOZSbGAXAPIq1BeUf4j20pl&index=5)
+- [Youtube - Veri Yapıları Ders 32 Selection Sort](https://www.youtube.com/watch?v=Hr-cghhg-Co&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=33)
+- [Youtube - Veri Yapıları Ders 33 Selection Sort Örnek 2](https://www.youtube.com/watch?v=DzgmtogFFfw&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU&index=34)
+- [Selection Sort Data Structure and Algorithm Tutorials](https://www.geeksforgeeks.org/selection-sort/)
 
 ### D. Merge Sort
 
@@ -969,12 +986,13 @@ Peki daha hızlı bir şekilde sıralama yapılabilir mi? Evet, Merge Sort burad
 
 Selection Sort'da, time complexity ***n^2*** olduğundan ötürü çalışma zamanımız artıyordu. Merge sort'da ise ***nlogn*** olduğu için açık ara performans olarak daha iyi diyebiliriz.
 
-- Kaynak Siteler
-  * [Youtube - Merge Sort #22](https://www.youtube.com/watch?v=Sx1VfR7EvnA)
-  * [Youtube - 3 dakikada Merge Sort](https://www.youtube.com/watch?v=4VqmGXwpLqc)
-  * [Youtube - Birleştirme Sıralaması (Merge Sort) ve Parçala Fethet (Divide and Conquer) (Algoritma Analizi 10)](https://www.youtube.com/watch?v=f9CNp_uuNJg)
-  * [4. BİRLEŞTİRMELİ SIRALAMA (MERGE SORT)](http://cagataykiziltan.net/algoritmalar/1-siralama-algoritmalari/4-birlestirmeli-siralama/)
-  * [Birleştirme Sıralaması (Merge Sort)](https://bilgisayarkavramlari.com/2008/08/09/birlestirme-siralamasi-merge-sort/)
+> #### D_1. Kaynak Siteler
+
+- [Youtube - Merge Sort #22](https://www.youtube.com/watch?v=Sx1VfR7EvnA)
+- [Youtube - 3 dakikada Merge Sort](https://www.youtube.com/watch?v=4VqmGXwpLqc)
+- [Youtube - Birleştirme Sıralaması (Merge Sort) ve Parçala Fethet (Divide and Conquer) (Algoritma Analizi 10)](https://www.youtube.com/watch?v=f9CNp_uuNJg)
+- [4. BİRLEŞTİRMELİ SIRALAMA (MERGE SORT)](http://cagataykiziltan.net/algoritmalar/1-siralama-algoritmalari/4-birlestirmeli-siralama/)
+- [Birleştirme Sıralaması (Merge Sort)](https://bilgisayarkavramlari.com/2008/08/09/birlestirme-siralamasi-merge-sort/)
 
 ### E. Quick Sort
 
@@ -984,13 +1002,14 @@ Hızlı sıralama günümüzde çok yaygın olarak kullanılan bir sıralama alg
 
 İlk olarak bir pivot belirler bu pivota göre pivottan küçük ve eşitler sol kısmına, pivottan büyük ve eşitler sağ kısmına yazılır. Parçalanmış kısımlar yeni bir pivot belirlenerek parça pinçik edilir.
 
-- Kaynak Siteler
-  * [Youtube - Quick Sort #23](https://www.youtube.com/watch?v=EikA3rBMD18)
-  * [Youtube - 4 dakikada Quick Sort](https://www.youtube.com/watch?v=JU767SDMDvA&list=PL9xmBV_5YoZOZSbGAXAPIq1BeUf4j20pl&index=4)
-  * [Quick Sort (Hızlı Sıralama Algoritması) Veri Yapıları 13](https://www.youtube.com/watch?v=aubOM9dOy6c)
-  * [Quick Sort (Hızlı Sıralama) Nedir?](https://medium.com/@turgay2317/quick-sort-h%C4%B1zl%C4%B1-s%C4%B1ralama-nedir-2d6555e5f7e2)
-  * [Algoritma Dersleri – Quick Sort](https://www.mobilhanem.com/algoritma-dersleri-quick-sort/)
-  * [Hızlı Sıralama Algoritması (Quick Sort Algorithm)](https://bilgisayarkavramlari.com/2008/08/09/hizli-siralama-algoritmasi-quick-sort-algorithm/)
+> #### E_1. Kaynak Siteler
+
+- [Youtube - Quick Sort #23](https://www.youtube.com/watch?v=EikA3rBMD18)
+- [Youtube - 4 dakikada Quick Sort](https://www.youtube.com/watch?v=JU767SDMDvA&list=PL9xmBV_5YoZOZSbGAXAPIq1BeUf4j20pl&index=4)
+- [Quick Sort (Hızlı Sıralama Algoritması) Veri Yapıları 13](https://www.youtube.com/watch?v=aubOM9dOy6c)
+- [Quick Sort (Hızlı Sıralama) Nedir?](https://medium.com/@turgay2317/quick-sort-h%C4%B1zl%C4%B1-s%C4%B1ralama-nedir-2d6555e5f7e2)
+- [Algoritma Dersleri – Quick Sort](https://www.mobilhanem.com/algoritma-dersleri-quick-sort/)
+- [Hızlı Sıralama Algoritması (Quick Sort Algorithm)](https://bilgisayarkavramlari.com/2008/08/09/hizli-siralama-algoritmasi-quick-sort-algorithm/)
 
 <hr>
 
@@ -1000,9 +1019,10 @@ Hızlı sıralama günümüzde çok yaygın olarak kullanılan bir sıralama alg
 
 Günümüzde veriler gitgide artan bir hal alıyor. Her insanın bir bilgisayarı ve telefonu olduğunu düşünürsek, terabaytlarca veri ediyor. Arama algoritmaları ise istediğim özellikteki verinin elimdeki veri setlerinde aranıp, bulunup getirilmesi demek. Bunun hızlı olmasına önem gösterilir.
 
-- Kaynak Siteler
-  * [Arama Algoritmaları (Search Algorithms)](https://bilgisayarkavramlari.com/2009/11/23/arama-algoritmalari-search-algorithms/)
-  * [Arama Algoritmaları (Search Algorithms) Nedir?](https://enesates03.medium.com/arama-algoritmalar%C4%B1-search-algorithms-nedir-7c8be09d541a)
+> #### A_1. Kaynak Siteler
+
+- [Arama Algoritmaları (Search Algorithms)](https://bilgisayarkavramlari.com/2009/11/23/arama-algoritmalari-search-algorithms/)
+- [Arama Algoritmaları (Search Algorithms) Nedir?](https://enesates03.medium.com/arama-algoritmalar%C4%B1-search-algorithms-nedir-7c8be09d541a)
 
 ### B. Linear Search
 
@@ -1012,39 +1032,59 @@ Linear search, tek tek elemanları dolandıktan sonra istediğim elemanın olup 
 
 - Big-o ya göre incelediğimizde bizim worst case'imiz neydi? Elemanın dizinin sonunda bulunmasıydı. Bu sebepten ötürü n elemanımız varsa big-o notasyonumuz otomatik olarak n oluyor.
 
-- Kaynak Siteler
-  * [Youtube - Linear Search #25](https://www.youtube.com/watch?v=fPGqKlUKh7c)
-  * [Youtube - Her Yazılımcının Bilmesi Gereken Algoritmalar - Lineer Arama(Linear Search) ve Python ile Kodlaması](https://www.youtube.com/watch?v=hPVJJyXFr-c)
-  * [Doğrusal & İkili Arama Algoritmaları (Linear & Binary Search Algorithms)](https://medium.com/@ozgurmehmetakif/do%C4%9Frusal-i%CC%87kili-arama-algoritmalar%C4%B1-linear-binary-search-algorithms-ed5fefc1f003)
-  * [Doğrusal Arama (Linear Search)](https://bilgisayarkavramlari.com/2008/11/09/dogrusal-arama-linear-search/)
+> #### B_1. Kaynak Siteler
+
+- [Youtube - Linear Search #25](https://www.youtube.com/watch?v=fPGqKlUKh7c)
+- [Youtube - Her Yazılımcının Bilmesi Gereken Algoritmalar - Lineer Arama(Linear Search) ve Python ile Kodlaması](https://www.youtube.com/watch?v=hPVJJyXFr-c)
+- [Doğrusal & İkili Arama Algoritmaları (Linear & Binary Search Algorithms)](https://medium.com/@ozgurmehmetakif/do%C4%9Frusal-i%CC%87kili-arama-algoritmalar%C4%B1-linear-binary-search-algorithms-ed5fefc1f003)
+- [Doğrusal Arama (Linear Search)](https://bilgisayarkavramlari.com/2008/11/09/dogrusal-arama-linear-search/)
 
 ### C. Binary Search
 
-İkili arama algoritması, elimizde bulunan veri dizisini sıralı olduğunu varsayıyor, bu durumu değiştirerek sonuca varmak istiyor.
+İkili arama algoritması, elimizde bulunan veri dizisinin sıralı olduğunu varsayıyor, bu durumu değiştirerek sonuca varmak istiyor.
 
-- İkili arama algoritması, diziyi her seferinde ikiye bölerek ikili arama yapar. Sıralı bir listem var ise benim Big-o logn olarak karşımıza çıkıyor.
+İkili arama algoritması, diziyi her seferinde ikiye bölerek ikili arama yapar. Sıralı bir listem var ise Big-o gösterimi ***logn*** olarak karşımıza çıkıyor.
 
-- Aradığım sayı **15** ve benim değer kümem ***[10,15,20,16,22,36,23]*** diyelim. Binary Search bu diziyi manipüle ederek şu ifadeye dönüştürüyor. ***[10,15,16,20,22,23,36]***. *36 sayısını en yüksek sayı, 10 sayısını en düşük sayı ilan ediyor.* Benim aradığım sayı ile ortada kalan sayıyı kıyaslıyor eğer benim aradığım sayım küçükse, ortada ki sayıdan büyük bütün sayıları siliyor. Ve kendine yeni bir ortanca belirliyor. Böylelikle gereksiz arama yapmaktan kurtarıyor. ![Binary Search](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/binary-search/figures/binary-search.png)
+> #### C_1. Örnek Binary Search
 
-- Kaynak Siteler
-  * [Youtube - Binary Search #26](https://www.youtube.com/watch?v=cvsZCh_0H9A)
-  * [Youtube - 4 dakikada Binary Search](https://www.youtube.com/watch?v=fDKIpRe8GW4)
-  - [Youtube - İkili Arama Algoritması(Binary Search Algorithm)](https://www.youtube.com/watch?v=Bi9zq4bS4Hw)
-  * [Doğrusal & İkili Arama Algoritmaları (Linear & Binary Search Algorithms)](https://medium.com/@ozgurmehmetakif/do%C4%9Frusal-i%CC%87kili-arama-algoritmalar%C4%B1-linear-binary-search-algorithms-ed5fefc1f003)
-  * [İkili Arama Algoritması (Binary Search Algorithm)](https://bilgisayarkavramlari.com/2009/12/21/ikili-arama-algoritmasi-binary-search-algorithm/)
-  * [Big O Notation ve Binary Search](https://medium.com/@alifurkangokce/big-o-notation-ve-binary-search-d6f3d4cf4574)
+Aradığım sayı **15** olsun ve değer kümem ***[10,15,20,16,22,36,23]*** elemanlarından oluşsun.
+
+Binary Search bu diziyi manipüle ederek şu ifadeye dönüştürüyor. ***[10,15,16,20,22,23,36]***. *36 sayısını en yüksek sayı, 10 sayısını ise en düşük sayı ilan eder.* ***Adım adım nasıl arama yaptığını görelim;***
+![Binary Search](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/binary-search/figures/binary-search.png)
+
+- Benim aradığım sayı ile ortada kalan sayıyı kıyaslıyor eğer aradığım sayı küçükse, sağda kalan yani ortada ki sayıdan büyük bütün sayıları siliyor.
+  - Aradığım sayı ortada ki sayıdan büyükse bu sefer solda kalan yani küçük sayıları siliyor.
+- Ve kendine yeni bir ortanca belirliyor. Böylelikle gereksiz arama yapmaktan kurtarıyor.
+
+> #### C_2. Kaynak Siteler
+
+- [Youtube - Binary Search #26](https://www.youtube.com/watch?v=cvsZCh_0H9A)
+- [Youtube - 4 dakikada Binary Search](https://www.youtube.com/watch?v=fDKIpRe8GW4)
+- [Youtube - İkili Arama Algoritması(Binary Search Algorithm)](https://www.youtube.com/watch?v=Bi9zq4bS4Hw)
+- [Doğrusal & İkili Arama Algoritmaları (Linear & Binary Search Algorithms)](https://medium.com/@ozgurmehmetakif/do%C4%9Frusal-i%CC%87kili-arama-algoritmalar%C4%B1-linear-binary-search-algorithms-ed5fefc1f003)
+- [İkili Arama Algoritması (Binary Search Algorithm)](https://bilgisayarkavramlari.com/2009/12/21/ikili-arama-algoritmasi-binary-search-algorithm/)
+- [Big O Notation ve Binary Search](https://medium.com/@alifurkangokce/big-o-notation-ve-binary-search-d6f3d4cf4574)
 
 ### D. Binary Search Tree
 
 Bir düğüm her iki tarafa da referans verebiliyor. Sağ ve sol olarak. Sağ tarafından kendinden büyük elemanlar, sol tarafında ise kendinden küçük elemanlar bulunacak. ![Binary Search Tree](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/veri-yapilari-algoritmalar/binary-search-tree/figures/binary-search-tree.png)
 
-- Tree'ye eleman eklemek istediğimde root'dan başlıyorum. Örnek olarak ben 26 sayısını ağaç yapısına eklemek istiyorum. Root'a soruyorum senin değerin ne 56. Baştaki açıklamamızı hatırlayalım. Sağ tarafında kendinden büyük, sol tarafında kendinden küçük elemanlar var. O yüzden sırasıyla 56 ve 30 a kadar ilerliyorum. 30 bana benim sol tarafıma geçmelisin çünkü sen benden küçüksün diyor. Karşıma 22 değerinde olan düğüm çıkıyor ve 22 den büyük olduğum için sağ tarafına bir köşe çekiyorum ve 26 sayısını bağlıyorum.
+> #### D_1. Örnek Binary Search Tree
 
-- Kaynak Siteler
-  * [Youtube - Binary Search Tree #27](https://www.youtube.com/watch?v=ec0f3Bh-CJE)
-  * [Youtube - 4 dakikada Binary Search Tree](https://www.youtube.com/watch?v=fDKIpRe8GW4&t=1s)
-  * [Veri Yapıları — Binary Search Tree Nedir?](https://tsafaelmali.medium.com/binary-search-tree-nedir-2e6fb0621d9)
-  * [Binary Search Tree' yi Anlamak](https://www.buraksenyurt.com/post/Binary-Search-Tree-yi-Anlamak)
+Tree'ye eleman eklemek istediğimde root'dan başlıyorum. Baştaki açıklamamızı hatırlayalım. Sağ tarafında kendinden büyük, sol tarafında kendinden küçük elemanlar olmalı.
+
+***Örnek olarak ben 26 sayısını ağaç yapısına eklemek istiyorum.***
+
+Root'a soruyorum senin değerin ne bana döndüğü cevap 56. Yani soluna eklenecek. Sonrasında 30'a soruyorum ve benim sol tarafıma geçmelisin çünkü sen benden küçüksün diyor.
+
+Karşıma 22 değerinde olan düğüm çıkıyor. Eklemek istediğim sayı 22 den büyük olduğu için sağ tarafına bir köşe çekiyorum ve 26 sayısını bağlıyorum.
+
+> #### D_2. Kaynak Siteler
+
+- [Youtube - Binary Search Tree #27](https://www.youtube.com/watch?v=ec0f3Bh-CJE)
+- [Youtube - 4 dakikada Binary Search Tree](https://www.youtube.com/watch?v=fDKIpRe8GW4&t=1s)
+- [Veri Yapıları — Binary Search Tree Nedir?](https://tsafaelmali.medium.com/binary-search-tree-nedir-2e6fb0621d9)
+- [Binary Search Tree' yi Anlamak](https://www.buraksenyurt.com/post/Binary-Search-Tree-yi-Anlamak)
 
 <hr>
 
@@ -1052,6 +1092,7 @@ Bir düğüm her iki tarafa da referans verebiliyor. Sağ ve sol olarak. Sağ ta
 
 ### A. Minimax Algoritması
 
-- Kaynak Siteler
-  * [Minimax Algoritması ile TicTacToe Oyunu](https://ahmetatasoglu98.medium.com/minimax-algoritmas%C4%B1-ile-tictactoe-oyunu-82fc58d76b61)
-  * [Minimax Ağaçları (Minimax Tree)](https://bilgisayarkavramlari.com/2009/04/29/minimax-agaclari-minimax-tree/)
+> #### A_1. Kaynak Siteler
+
+- [Minimax Algoritması ile TicTacToe Oyunu](https://ahmetatasoglu98.medium.com/minimax-algoritmas%C4%B1-ile-tictactoe-oyunu-82fc58d76b61)
+- [Minimax Ağaçları (Minimax Tree)](https://bilgisayarkavramlari.com/2009/04/29/minimax-agaclari-minimax-tree/)
