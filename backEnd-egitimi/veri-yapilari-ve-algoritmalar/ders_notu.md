@@ -648,9 +648,32 @@ Gördüğünüz gibi çok kafa karıştırıcı ve uzun bir yöntem.
 - [Array Nedir?](https://medium.com/@denizf.b/array-nedir-d9b7afd44ca2)
 - [VERİ YAPILARI(DATA STRUCTURES)](https://medium.com/@abdulkadir.kamci10/veri%CC%87-yapilari-data-structures-4f3de459f930)
 
-### B. List Nedir ve Linked List İle Arasında ki Farklar - Araştır?
+### B. List Nedir ve Linked List İle Arasında ki Farklar
 
-> #### B._1 Kaynak Siteler
+2 farklı liste vardır. Doğrusal liste ve Bağlı liste. ***"2 listenin farkları;***
+Doğrusal listelerde istenildiği zaman liste boyutu azaltılıp artırılamaz. Fakat bağlı listelerde bunlar gerçekleştirilebilir.
+
+> #### B_1. Doğrusal Listeler
+
+- Dizilerin oluşturduğu yapılardır.
+- Bellekte tutulur ve arka arkaya saklanırlar.
+- Yeni ekleman ekleme de dizi elemanları yer değiştirebilir (Plaka Şehir)
+- Bellek boyutu baştan belirlenir.
+- Gereksiz bellek alanı oluşabilir.
+- Belleği gereksiz yorar ekleme ve silme işlemlerinde.
+- Sıralama işlemleri ekleme ve silmede karmaşıklaşır.
+
+> #### B_2. Bağlı Liste
+
+Bağlı listeyi detaylı olarak "C. Linked List (Bağlı Liste)" bölümünde bahsettim.
+
+- Bellek elemanları ardışıl olarak bulunmayan listelerdir.
+- Bağlı listeler iki parametre alır(veri, sonraki elemanın adresi)
+- İlk elemanın adresi bir göstericide tutulur.
+- Son elemanın tuttuğu adres kendisinden sonra bir eleman olmadığı için null'dur.
+- Veriler silindiği zaman listenin boyutu azalmaz.
+
+> #### B._3 Kaynak Siteler
 
 - [Youtube - Veri Yapıları Ders 2 Listeler](https://www.youtube.com/watch?v=hnE9_7VBKyI&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU)
 - [Youtube - Sıfırdan Python Dersleri Ders 3: Listeler (Lists)](https://www.youtube.com/watch?v=pBMuc4cc_Ck&list=PL3kMAPso9YQ1Ls-5uTTIWWMkJoF_vyj5J)
