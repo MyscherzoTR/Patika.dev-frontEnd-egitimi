@@ -20,9 +20,13 @@ Ders ile alakalı başlangıç teorik videolar - ***kesinlikle izlenmeli***;
 
 ## 1. Temel Kavramlar
 
-### A. Algoritma nedir
+### A. Algoritma Nedir
 
 Algoritma belirli bir durumdan başlayıp belirli bir sonuçta biten problemlere çözüm getiren adımlar bütünüdür. ***Veya*** Bir işi bitirmek için gerçekleştirilmesi gereken adımlar bütünüdür.
+
+"Algoritma" kelimesi, 9. yüzyılda yaşamış Horasan doğumlu matematikçi Ebu Cafer Muhammed İbn-i Musa el Harezmi'nin (al-Khowarizm) adından gelmektedir. 📚
+
+Augusta Ada King, Lovelace Kontesi (10 Aralık 1815 - 27 Kasım 1852), İngiliz matematikçi ve yazar olarak bilinir. Charles Babbage'in Analitik Makine üzerindeki çalışmalarıyla tanınır. Makine hakkındaki notları, bir bilgisayar tarafından işlenmek üzere yazılan ilk algoritmayı içerir. Bundan dolayı genel kanı dünyanın ilk bilgisayar programcısı olduğudur. 💪📝
 
 > #### A_1. Kaynak Siteler
 
