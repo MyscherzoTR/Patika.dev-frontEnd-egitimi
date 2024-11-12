@@ -682,6 +682,7 @@ Bağlı listeyi detaylı olarak "C. Linked List (Bağlı Liste)" bölümünde ba
 - [Youtube - Veri Yapıları Ders 2 Listeler](https://www.youtube.com/watch?v=hnE9_7VBKyI&list=PLKnjBHu2xXNNwV1Twc3UtaMBqGJx3CCrU)
 - [Youtube - Python - List #24](https://www.youtube.com/watch?v=8z4jqIRY-Dg&list=PL53hPTfoALoDMBdl373jh2iRchUBqJz1V&index=1)
 - [Youtube - Python - Sıfırdan Python Dersleri Ders 3: Listeler (Lists)](https://www.youtube.com/watch?v=pBMuc4cc_Ck&list=PL3kMAPso9YQ1Ls-5uTTIWWMkJoF_vyj5J)
+- [Youtube - Python - Python Dersleri -12 / Listeler](https://www.youtube.com/watch?v=hGSOVvshxqg&list=PLfAfrKyDRWrFBOaQdkxBFurPD-o6Lo_E2&index=13)
 
 ### C. Linked List (Bağlı Liste)
 
